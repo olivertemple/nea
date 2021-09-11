@@ -5,8 +5,8 @@
 \usepackage{titlesec}
 \usepackage{graphicx}
 
-\setcounter{secnumdepth}{4}
-
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{4}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -28,12 +28,18 @@
 \subsection{Project Description}
 Path finding algorithms are essential in many aspects computer science, especially in games and simulations. However, they can be complex things that are hard to visualize, especially when being taught about them. Path finding algorithm visualizers do exist, however, I feel that none of them are perfect, and that they lack features.
 
-Because of this, I am going to make a path finding visualizer that ticks all of the boxes. 
+Because of this, I am going to make a path finding visualizer that ticks all of the boxes. It will be simple and easy to use, have advanced customization and have the ability to run a path finding algorithms given by the user.
 
-
+\subsection{Research}
+\subsubsection{Overview}
+To complete this project, I will need a strong understanding of maze generation and path finding algorithms, how they work and how to model them, knowledge of react and javascript to create a website for the visualization as well as user opinions on what features are needed.
+\subsubsection{Research Log}
+\paragraph*{Class}
+I was introduced to path finding algorithms in one of my lessons, where we learned what they were used for and some examples, as well as how they can be modeled. For example, modelling the maze as a graph with weighted nodes of 1 and 0, for the walls and space respectively. The algorithms we looked at were Dijkstra's and A*. We also looked at Prim's algorithm, recursive backtracking, depth fist search and Kruskal's algorithms for maze generation.
 
 \subsection{Project Background}
-\subsubsection{Example 1}
+\subsubsection{Current Systems}
+\paragraph{Example 1}
 \href{https://clementmihailescu.github.io/Pathfinding-Visualizer/
 }{https://clementmihailescu.github.io/Pathfinding-Visualizer
 }
@@ -59,7 +65,7 @@ These mazes can then be solved with a number of different path finding algorithm
     \item Depth-first Search
 \end{itemize}
 \includegraphics[width=\linewidth]{assets/Existing Solutions/example 1.PNG}
-\paragraph{pros}
+\subparagraph*{pros}
 \begin{itemize}
     \item Many different algorithms to choose from.
     \item Start and end nodes can be moved.
@@ -67,15 +73,14 @@ These mazes can then be solved with a number of different path finding algorithm
     \item If nodes are moved after visualization has run, then the visualization will update.
     \item "Bomb" node, adds a via point that the path must go through.
 \end{itemize}
-\paragraph{cons}
+\subparagraph*{cons}
 \begin{itemize}
     \item The visualization is too slow.
     \item If maze is altered by user after visualization has run, then the visualization will not update.
-    \item 
 \end{itemize}
 
 
-\subsubsection{Example 2}
+\paragraph{Example 2}
 \href{https://qiao.github.io/PathFinding.js/visual/
 }{https://qiao.github.io/PathFinding.js/visual/
 }
@@ -92,18 +97,18 @@ In this example, mazes have to be drawn by the user. The maze can then be solved
     \item Trace
 \end{itemize}
 \includegraphics[width=\linewidth]{assets/Existing Solutions/example 2.PNG}
-\paragraph{pros}
+\subparagraph*{pros}
 \begin{itemize}
     \item More options to choose from within each algorithm.
 \end{itemize}
-\paragraph{cons}
+\subparagraph*{cons}
 \begin{itemize}
     \item No maze generation.
     \item Visualization does not update when maze or start/finnish nodes are changed.
 \end{itemize}
 
 
-\subsubsection{Example 3}
+\paragraph{Example 3}
 \href{https://pathfindout.com/
 }{https://pathfindout.com/
 }
@@ -116,7 +121,7 @@ In this example, mazes can be generated or drawn, however, mazes can only be gen
     \item Depth First Search
 \end{itemize}
 \includegraphics[width=\linewidth]{assets/Existing Solutions/example 3.PNG}
-\paragraph{pros}
+\subparagraph*{pros}
 \begin{itemize}
     \item Different weighted nodes available.
     \item Shows how many nodes visited.
@@ -125,13 +130,40 @@ In this example, mazes can be generated or drawn, however, mazes can only be gen
     \item Weights of specific node types can be changed.
     \item Node size can be changed.
 \end{itemize}
-\paragraph{cons}
+\subparagraph*{cons}
 \begin{itemize}
     \item Sometimes generates mazes that cannot be solved.
     \item Cannot edit maze after visualization has run.
     \item Only one maze generation algorithm.
     \item Fewer path finding algorithms to solve the maze.
 \end{itemize}
+
+\subsubsection{Prospective Users}
+The users of this system will most likely consist of teachers and students who are learning about path finding algorithms as it will clearly show how the algorithms function.
+\paragraph{Questions To Users}
+I asked some prospective users some questions about what they would like to see in the visualizer.
+\begin{enumerate}
+    \item[Q1.]What algorithms would you like to see for maze generation?
+    \item[Q2.]What algorithms would you like to see for solving the maze?
+    \item[Q3.]What additional features would you like to see in the path finding visualization?
+    \item[Q4.]Would it be useful to be able to write your own path finding algorithms that can be run in the visualization?  
+\end{enumerate}
+\subsection{Objectives}
+\subsubsection{Generate Mazes}
+The website should be able to generate mazes using a number of different algorithms, including, but not limited to: Prim's algorithm, recursive division and random generation. There should also be a brief description of the algorithm that has been selected.
+
+\subsubsection{User Drawn Mazes}
+The user should be able to draw mazes and obstacles easily on the grid using the mouse.
+
+\subsubsection{Solve Mazes}
+The website should be able to solve mazes using a number of different algorithms, including, but not limited to: A* search, Dijkstra's algorithms, depth-first search and breadth-first search. There should also be a brief description of the algorithm that has been selected.
+
+The website should also be able to take in an algorithm written by the user, and use it to solve the maze. This will be done by supplying documentation on what parameters need to be taken in and what will need to be returned from the function for the visualizer to work.
+\subsubsection{Update Visualization}
+If the maze is altered or and nodes moved once the visualization has been run, then it should update without rerunning the visualization
+
+\subsubsection{Special Nodes}
+There should be "special" nodes that are different from walls or space. For example, nodes with different weights or a "via point" node that the path must go through.
 \section{Design}
 
 \section{Evidence of Completeness}
