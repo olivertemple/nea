@@ -1,0 +1,103 @@
+\documentclass{article}
+
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Path-finding Algorithms and Solving Mazes}
+\lhead{EMC Proposal}
+\cfoot{\thepage}
+
+\title{Path-finding Algorithms and Solving Mazes}
+
+\author{Oliver Temple}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Introduction}
+\subsection{Motivation}
+I like programming and path finding algorithms are cool, so are maze generation algorithms.
+\subsection{Background}
+There are many path finding algorithms and maze generating algorithms around today. For example, a few of the more popular ones are Dijkstra's algorithm and the A* algorithm for path finding and Kruskal's algorithm and recursive division for maze generation.
+\subsubsection{A* Algorithm}
+The A* algorithm is a very popular choice for a path finding algorithm, as it is fairly flexible and can be used in a wide range of contexts. It can be used to find the shortest path between two points.\cite{astart}
+
+\subsubsection{Dijkstra's Algorithm}
+In Dijkstra's algorithm, adjacent nodes are checked for the target node, moving outwards until the target node is found. It repeatedly looks at adjacent but not yet visited nodes. It is guarantied to find the shortest path from the starting node to the finishing node, however, it can run slowly for large mazes.
+\cite{astart}
+
+\subsubsection{Kruskal's Algorithm}
+Kruskal's algorithm works by assuming all of the edges on each node are walls. A random node is selected, and if it connects to a node that is not connected to anything, then the wall is removed. \cite{Kruskal}
+\subsubsection{Recursive Division}
+Recursive division works by taking an initially empty field and bisecting it with a wall, either horizontally or vertically, and adding a single passage in the wall. This step is repeated either side of the wall, continuing recursively until the maze has been created.\cite{Recursive}
+
+\section{Objectives}
+\subsection{Main Objectives}
+\begin{enumerate}
+    \item Research and understand different types of path-finding and maze generating algorithms.
+    \begin{enumerate}
+        \item Focus on a few key algorithms.
+        \begin{enumerate}
+            \item Dijkstra's Algorithm.
+            \item A* Algorithm.
+            \item Kruskal's Algorithm.
+            \item Recursive Division
+        \end{enumerate}
+        \item Continue on to research more algorithms.
+        \begin{enumerate}
+            \item Prim's Algorithm.
+            \item Greedy Algorithms.
+            \item Swarm Algorithms.
+            \item Breadth First Search.
+            \item Depth First Search.
+        \end{enumerate}
+    \end{enumerate}
+    
+    \item Write the algorithms using pseudocode.
+    \item Create a web app to visualize the algorithms. \cite{example}
+    \begin{enumerate}
+        \item Use maze object that will store node objects.
+        \item Show the visualization in realtime.
+        \item Allow user to draw their own maze.
+    \end{enumerate}
+\end{enumerate}
+\subsection{Extensions if time permitting}
+\begin{enumerate}
+    \item Attempt to create my own path finding algorithm as an extension.
+    \begin{enumerate}
+        \item What makes a good path finding algorithms?
+        \item What makes a path finding algorithm efficient?
+        \item Heuristic vs optimum solution.
+        \item Time complexity of path finding algorithms.
+    \end{enumerate}
+    \item Scan mazes in using a camera and solve using path finding algorithms.
+\end{enumerate}
+\section{Methodology}
+\subsection{Reaserch}
+When researching algorithms I will use websites on the internet, as they allow me to learn about the algorithms easily. For example \url{http://theory.stanford.edu/~amitp/GameProgramming/} has some very useful information on the A* algorithm and \url{https://weblog.jamisbuck.org/2011/1/3/maze-generation-kruskal-s-algorithm} has some on Kruskal's algorithm.
+
+To understand the algorithms, I will write them is pseudocode. This will allow me to easily code them in javascript, as each step of each algorithms will be clearly shown.
+
+\subsection{Programming}
+For the programming I will use web based technologies, as i want to make a web app. More specifically, i will use react, a library for javascript, as I will be able to use state management to alter the properties of the nodes easily.  
+
+\section{Timeline}
+\begin{thebibliography}{9}
+    \bibitem{astart}
+    A* Algorithm
+    \\\texttt{http://theory.stanford.edu/~amitp/GameProgramming/AStarComparison.html}
+    \bibitem{Kruskal}
+    Kruskal's Algorithm
+    \\\texttt{https://weblog.jamisbuck.org/2011/1/3/maze-generation-kruskal-s-algorithm}
+    \bibitem{Recursive}
+    Recursive Division
+    \\\texttt{http://weblog.jamisbuck.org/2011/1/12/maze-generation-recursive-division-algorithm}
+    \bibitem{example}
+    Example of web visualization.
+    \\\texttt{https://clementmihailescu.github.io/Pathfinding-Visualizer/}
+\end{thebibliography}
+\end{document}
