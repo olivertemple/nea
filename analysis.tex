@@ -4,6 +4,20 @@
 \usepackage{hyperref}
 \usepackage{titlesec}
 \usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\newcommand{\comment}[1]{}
+
+
+\tikzstyle{decision} = [diamond, draw, 
+    text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{block} = [rectangle, draw, 
+    text width=8em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{start} = [rectangle, draw, 
+    text width=4.5em, text badly centered, rounded corners, node distance=3cm]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black]
+
 
 \setcounter{secnumdepth}{5}
 \setcounter{tocdepth}{4}
@@ -164,9 +178,39 @@ If the maze is altered or and nodes moved once the visualization has been run, t
 
 \subsubsection{Special Nodes}
 There should be "special" nodes that are different from walls or space. For example, nodes with different weights or a "via point" node that the path must go through.
-\section{Design}
+\section{Documented Design}
+\subsection{Flow Chart}
+\includegraphics[width=\linewidth]{assets/flow chart.PNG}
 
-\section{Evidence of Completeness}
+\comment{
+\begin{tikzpicture}[node distance = 2cm, auto]
+    \node[start] (init) {start};
+    \node [io, below of = init] (1) {User selects maze algorithm};
+    \node[block, below of = 1] (2) {Generate maze using selected algorithm};
+    \node [io, below of=2](3){User selects path finding algorithm};
+    \node[decision, below of=3](4){Start button pressed?};
+    \node[block, below of=4, yshift=-1cm](5){Visualization runs};
+    \node[decision, below of=5](6){Reset button pressed?};
+    \node[decision, right of=6, xshift=1cm](7){Nodes moved?};
+    \node[block, below of=7, xshift=0.25cm, yshift=-0.5cm](8){Update visualization};
+    \node[block, below of=6, yshift=-0.5cm](9){Visualization resets};
+
+    \path[line] (init) -- (1);
+    \path[line] (1) -- (2);
+    \path[line] (2) -- (3);
+    \path[line] (3) -- (4);
+    \path[line] (4) -- node {no}(4);
+    \path[line] (4) -- node {yes}(5);
+    \path[line] (5) -- (6);
+    \path[line] (6) -- node {no}(7);
+    \path[line] (6) -- node {yes}(9);
+    \path[line] (7) -- node {yes}(8);
+    \path[line] (7) -- node {no}(6);
+    \path[line] (8) -- (6);
+    \path[line, anchor=west] (9) -- (init);
+\end{tikzpicture}}
+
+\section{Evidence of Completeness}  
 %out of 15 marks, argument for why the project is complete. Which algorithms have been used?
 \section{Technical Solution}
 
