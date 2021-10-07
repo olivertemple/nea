@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.25)  14 SEP 2021 11:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.25)  28 SEP 2021 11:08
 entering extended mode
 **"c:/Users/ollie/OneDrive - Exeter College/CS NEA/analysis.tex"
 (c:/Users/ollie/OneDrive - Exeter College/CS NEA/analysis.tex
@@ -357,7 +357,29 @@ File: pgfmodulematrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \tikz@expandcount=\count283
  (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-))) (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.code.tex
+))) (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+ (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count284
+\float@exts=\toks29
+\float@box=\box59
+\@float@everytoks=\toks30
+\@floatcapt=\box60
+) (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks31
+\c@algorithm=\count285
+) (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count286
+\c@ALC@line=\count287
+\c@ALC@rem=\count288
+\c@ALC@depth=\count289
+\ALC@tlm=\skip61
+\algorithmicindent=\skip62
+) (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.code.tex
 File: tikzlibraryshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
  (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.geometric.code.tex
 File: tikzlibraryshapes.geometric.code.tex 2020/12/27 v3.1.8b (3.1.8b)
@@ -365,14 +387,14 @@ File: tikzlibraryshapes.geometric.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 File: pgflibraryshapes.geometric.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )) (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.misc.code.tex
 File: tikzlibraryshapes.misc.code.tex 2020/12/27 v3.1.8b (3.1.8b)
- (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.misc.code.tex
+
+(C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.misc.code.tex
 File: pgflibraryshapes.misc.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )) (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.symbols.code.tex
 File: tikzlibraryshapes.symbols.code.tex 2020/12/27 v3.1.8b (3.1.8b)
  (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.symbols.code.tex
 File: pgflibraryshapes.symbols.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-))
-(C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.arrows.code.tex
+)) (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.arrows.code.tex
 File: tikzlibraryshapes.arrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
  (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.arrows.code.tex
 File: pgflibraryshapes.arrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
@@ -380,26 +402,26 @@ File: pgflibraryshapes.arrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 File: tikzlibraryshapes.multipart.code.tex 2020/12/27 v3.1.8b (3.1.8b)
  (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfnodepartlowerbox=\box59
-\pgfnodeparttwobox=\box60
-\pgfnodepartthreebox=\box61
-\pgfnodepartfourbox=\box62
-\pgfnodeparttwentybox=\box63
-\pgfnodepartnineteenbox=\box64
-\pgfnodeparteighteenbox=\box65
-\pgfnodepartseventeenbox=\box66
-\pgfnodepartsixteenbox=\box67
-\pgfnodepartfifteenbox=\box68
-\pgfnodepartfourteenbox=\box69
-\pgfnodepartthirteenbox=\box70
-\pgfnodeparttwelvebox=\box71
-\pgfnodepartelevenbox=\box72
-\pgfnodeparttenbox=\box73
-\pgfnodepartninebox=\box74
-\pgfnodeparteightbox=\box75
-\pgfnodepartsevenbox=\box76
-\pgfnodepartsixbox=\box77
-\pgfnodepartfivebox=\box78
+\pgfnodepartlowerbox=\box61
+\pgfnodeparttwobox=\box62
+\pgfnodepartthreebox=\box63
+\pgfnodepartfourbox=\box64
+\pgfnodeparttwentybox=\box65
+\pgfnodepartnineteenbox=\box66
+\pgfnodeparteighteenbox=\box67
+\pgfnodepartseventeenbox=\box68
+\pgfnodepartsixteenbox=\box69
+\pgfnodepartfifteenbox=\box70
+\pgfnodepartfourteenbox=\box71
+\pgfnodepartthirteenbox=\box72
+\pgfnodeparttwelvebox=\box73
+\pgfnodepartelevenbox=\box74
+\pgfnodeparttenbox=\box75
+\pgfnodepartninebox=\box76
+\pgfnodeparteightbox=\box77
+\pgfnodepartsevenbox=\box78
+\pgfnodepartsixbox=\box79
+\pgfnodepartfivebox=\box80
 ))) (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
  (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.code.tex
@@ -407,30 +429,30 @@ File: pgflibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \arrowsize=\dimen256
 )) (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count284
-\l__pdf_internal_box=\box79
+\l__color_backend_stack_int=\count290
+\l__pdf_internal_box=\box81
 ) (analysis.aux)
 \openout1 = `analysis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-Package hyperref Info: Link coloring OFF on input line 36.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+Package hyperref Info: Link coloring OFF on input line 40.
  (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
@@ -438,38 +460,38 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count285
+\c@section@level=\count291
 )
-LaTeX Info: Redefining \ref on input line 36.
-LaTeX Info: Redefining \pageref on input line 36.
-LaTeX Info: Redefining \nameref on input line 36.
+LaTeX Info: Redefining \ref on input line 40.
+LaTeX Info: Redefining \pageref on input line 40.
+LaTeX Info: Redefining \nameref on input line 40.
  (analysis.out) (analysis.out)
 \@outlinefile=\write4
 \openout4 = `analysis.out'.
 
  (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count286
+\scratchcounter=\count292
 \scratchdimen=\dimen257
-\scratchbox=\box80
-\nofMPsegments=\count287
-\nofMParguments=\count288
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count289
+\scratchbox=\box82
+\nofMPsegments=\count293
+\nofMParguments=\count294
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count295
 \MPscratchDim=\dimen258
-\MPnumerator=\count290
-\makeMPintoPDFobject=\count291
-\everyMPtoPDFconversion=\toks30
+\MPnumerator=\count296
+\makeMPintoPDFobject=\count297
+\everyMPtoPDFconversion=\toks33
 ) (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 39.
+(Font)              <12> on input line 43.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 39.
+(Font)              <8> on input line 43.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 39.
+(Font)              <6> on input line 43.
  (analysis.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 2.
@@ -482,57 +504,62 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1
 
 {C:/Users/ollie/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-Overfull \hbox (19.43062pt too wide) in paragraph at lines 59--62
+Overfull \hbox (19.43062pt too wide) in paragraph at lines 63--66
 [] []|\OT1/cmr/bx/n/10 1.3.1.1 Ex-am-ple 1[] []\OT1/cmr/m/n/10 https://clementmihailescu.github.io/Pathfinding-Visualizer
  []
 
 [2]
-<assets/Existing Solutions/example 1.PNG, id=143, 2057.43657pt x 1234.6125pt>
+<assets/Existing Solutions/example 1.PNG, id=168, 2057.43657pt x 1234.6125pt>
 File: assets/Existing Solutions/example 1.PNG Graphic file (type png)
 <use assets/Existing Solutions/example 1.PNG>
-Package pdftex.def Info: assets/Existing Solutions/example 1.PNG  used on input line 81.
+Package pdftex.def Info: assets/Existing Solutions/example 1.PNG  used on input line 85.
 (pdftex.def)             Requested size: 345.0pt x 207.01787pt.
  [3 <./assets/Existing Solutions/example 1.PNG>]
-<assets/Existing Solutions/example 2.PNG, id=151, 2058.94218pt x 1239.12938pt>
+<assets/Existing Solutions/example 2.PNG, id=176, 2058.94218pt x 1239.12938pt>
 File: assets/Existing Solutions/example 2.PNG Graphic file (type png)
 <use assets/Existing Solutions/example 2.PNG>
-Package pdftex.def Info: assets/Existing Solutions/example 2.PNG  used on input line 113.
+Package pdftex.def Info: assets/Existing Solutions/example 2.PNG  used on input line 117.
 (pdftex.def)             Requested size: 345.0pt x 207.624pt.
  [4 <./assets/Existing Solutions/example 2.PNG>]
-Overfull \hbox (7.86174pt too wide) in paragraph at lines 121--122
+Overfull \hbox (7.86174pt too wide) in paragraph at lines 125--126
 []\OT1/cmr/m/n/10 Visualization does not up-date when maze or start/finnish nodes are changed. 
  []
 
-<assets/Existing Solutions/example 3.PNG, id=158, 2058.18938pt x 1242.14063pt>
+<assets/Existing Solutions/example 3.PNG, id=183, 2058.18938pt x 1242.14063pt>
 File: assets/Existing Solutions/example 3.PNG Graphic file (type png)
 <use assets/Existing Solutions/example 3.PNG>
-Package pdftex.def Info: assets/Existing Solutions/example 3.PNG  used on input line 137.
+Package pdftex.def Info: assets/Existing Solutions/example 3.PNG  used on input line 141.
 (pdftex.def)             Requested size: 345.0pt x 208.20436pt.
-[5 <./assets/Existing Solutions/example 3.PNG>] [6]
-<assets/flow chart.PNG, id=168, 400.49625pt x 662.90518pt>
+[5 <./assets/Existing Solutions/example 3.PNG>] [6] [7]
+<assets/flow chart.PNG, id=198, 400.49625pt x 662.90518pt>
 File: assets/flow chart.PNG Graphic file (type png)
 <use assets/flow chart.PNG>
-Package pdftex.def Info: assets/flow chart.PNG  used on input line 183.
-(pdftex.def)             Requested size: 345.0pt x 571.07863pt.
- [7]
-Overfull \vbox (71.4397pt too high) has occurred while \output is active []
-
- [8 <./assets/flow chart.PNG>] [9] (analysis.aux)
+Package pdftex.def Info: assets/flow chart.PNG  used on input line 206.
+(pdftex.def)             Requested size: 345.01894pt x 497.9363pt.
+ [8] [9 <./assets/flow chart.PNG>]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 244.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 260.
+ (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 260.
+ [10] (analysis.aux)
 Package rerunfilecheck Info: File `analysis.out' has not changed.
-(rerunfilecheck)             Checksum: A91516F7CBD3322CADB28909AF1568CE;3104.
+(rerunfilecheck)             Checksum: 0EC49B6B680914405CC1E4149B4B2F66;3867.
  ) 
 Here is how much of TeX's memory you used:
- 20905 strings out of 479334
- 415259 string characters out of 2857084
- 711245 words of memory out of 3000000
- 37975 multiletter control sequences out of 15000+200000
+ 21244 strings out of 479334
+ 419858 string characters out of 2857084
+ 716725 words of memory out of 3000000
+ 38273 multiletter control sequences out of 15000+200000
  408020 words of font info for 42 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,11n,89p,516b,391s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\ollie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on analysis.pdf (9 pages, 614419 bytes).
+ 87i,12n,89p,516b,577s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\ollie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on analysis.pdf (10 pages, 660649 bytes).
 PDF statistics:
- 213 PDF objects out of 1000 (max. 8388607)
- 34 named destinations out of 1000 (max. 500000)
- 225 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 282 PDF objects out of 1000 (max. 8388607)
+ 58 named destinations out of 1000 (max. 500000)
+ 265 words of extra memory for PDF output out of 10000 (max. 10000000)
 

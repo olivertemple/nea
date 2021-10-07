@@ -5,6 +5,10 @@
 \usepackage{titlesec}
 \usepackage{graphicx}
 \usepackage{tikz}
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
 \usetikzlibrary{shapes,arrows}
 \newcommand{\comment}[1]{}
 
@@ -152,16 +156,35 @@ In this example, mazes can be generated or drawn, however, mazes can only be gen
     \item Fewer path finding algorithms to solve the maze.
 \end{itemize}
 
+\subsubsection{Proposed Solution}
+I will make a path-finding visualization that encompasses as many of the merits of the existing solutions as possible, while also tackling as many of the drawbacks.
+\begin{itemize}
+    \item Research the different algorithms needed and write the corresponding pseudoscode.
+    \item Create a mockup of the user interface.
+    \item Create the user interface in react native.
+    \item Code the algorithms in javascript.
+    \item Add additional features suggested by end users.
+    \item Test visualization and check that it meets all of the objectives.
+\end{itemize}
 \subsubsection{Prospective Users}
 The users of this system will most likely consist of teachers and students who are learning about path finding algorithms as it will clearly show how the algorithms function.
 \paragraph{Questions To Users}
 I asked some prospective users some questions about what they would like to see in the visualizer.
+\paragraph*{Questions}
 \begin{enumerate}
     \item[Q1.]What algorithms would you like to see for maze generation?
     \item[Q2.]What algorithms would you like to see for solving the maze?
     \item[Q3.]What additional features would you like to see in the path finding visualization?
     \item[Q4.]Would it be useful to be able to write your own path finding algorithms that can be run in the visualization?  
 \end{enumerate}
+\paragraph*{Answers}
+\begin{enumerate}
+    \item[A1.]I would like to see recursive division and Prim's algorithms used for maze generation, as well as Kruskal's (less important). This is because Kruskal's and Prims are similar but each has their own advantages/disadvantages and recursive division is completely different.
+    \item[A2.]I would like to see Dijkstra's algorithm and A* search, as these are very popular algorithms and one is a heuristic.
+    \item[A3.]Option to add your own png image for the drawing of final path - "a sussy imposter running around the maze".
+    \item[A4.]I would find it useful to be able to code my own algorithms. This would allow me to use the visualization with other, lesser known algorithms that I may need.
+\end{enumerate}
+The answers to these questions confirms what is required from the visualization, which will be reflected in the objectives. The need for contrasting algorithms is something that I will consider when deciding what algorithms to use.
 \subsection{Objectives}
 \subsubsection{Generate Mazes}
 The website should be able to generate mazes using a number of different algorithms, including, but not limited to: Prim's algorithm, recursive division and random generation. There should also be a brief description of the algorithm that has been selected.
@@ -180,7 +203,7 @@ If the maze is altered or and nodes moved once the visualization has been run, t
 There should be "special" nodes that are different from walls or space. For example, nodes with different weights or a "via point" node that the path must go through.
 \section{Documented Design}
 \subsection{Flow Chart}
-\includegraphics[width=\linewidth]{assets/flow chart.PNG}
+\includegraphics[width=\linewidth, height=17.5cm]{assets/flow chart.PNG}
 
 \comment{
 \begin{tikzpicture}[node distance = 2cm, auto]
@@ -210,8 +233,40 @@ There should be "special" nodes that are different from walls or space. For exam
     \path[line, anchor=west] (9) -- (init);
 \end{tikzpicture}}
 
+\subsection{User Interface}
+I have used Figma to create a design mockup of how the user interface will look. This allows me to plan what user inputs will be needed.
+%TODO add figma screen shot
+
+\subsection{Algorithms}
+\subsubsection{Maze generating algorithms}
+\paragraph{Recursive division}
+\begin{algorithm}
+    \caption{Recursive Division}
+    \begin{algorithmic}[1]
+        \REQUIRE $n \geq 0 \vee x \neq 0$
+        \ENSURE $y = x^n$
+        \STATE $y \leftarrow 1$
+        \IF{$n < 0$}
+        \STATE $X \leftarrow 1 / x$
+        \STATE $N \leftarrow -n$
+        \ELSE
+        \STATE $X \leftarrow x$
+        \STATE $N \leftarrow n$
+        \ENDIF
+        \WHILE{$N \neq 0$}
+        \IF{$N$ is even}
+        \STATE $X \leftarrow X \times X$
+        \STATE $N \leftarrow N / 2$
+        \ELSE[$N$ is odd]
+        \STATE $y \leftarrow y \times X$
+        \STATE $N \leftarrow N - 1$
+        \ENDIF
+        \ENDWHILE
+    \end{algorithmic}
+    \end{algorithm}
 \section{Evidence of Completeness}  
 %out of 15 marks, argument for why the project is complete. Which algorithms have been used?
+
 \section{Technical Solution}
 
 \section{Testing}
