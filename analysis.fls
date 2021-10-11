@@ -758,8 +758,8 @@ INPUT .\analysis.toc
 INPUT analysis.toc
 INPUT analysis.toc
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
-OUTPUT analysis.toc
 INPUT C:\Users\ollie\AppData\Local\MiKTeX\pdftex\config\pdftex.map
+OUTPUT analysis.toc
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
 INPUT .\assets\Existing Solutions\example 1.PNG
@@ -790,10 +790,41 @@ INPUT .\assets\flow chart.PNG
 INPUT .\assets\flow chart.PNG
 INPUT .\assets\flow chart.PNG
 INPUT .\assets\flow chart.PNG
-INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\base\omscmr.fd
-INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\base\omscmr.fd
-INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\base\omscmr.fd
-INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\base\omscmr.fd
+INPUT .\assets\gui.PNG
+INPUT .\assets\gui.PNG
+INPUT assets\gui.PNG
+INPUT .\assets\gui.PNG
+INPUT .\assets\gui.PNG
+INPUT .\assets\gui.PNG
+INPUT .\assets\gui.PNG
+INPUT .\assets\class diagrams\generator.PNG
+INPUT .\assets\class diagrams\generator.PNG
+INPUT assets\class diagrams\generator.PNG
+INPUT .\assets\class diagrams\generator.PNG
+INPUT .\assets\class diagrams\generator.PNG
+INPUT .\assets\class diagrams\generator.PNG
+INPUT .\assets\class diagrams\generator.PNG
+INPUT .\assets\class diagrams\solver.PNG
+INPUT .\assets\class diagrams\solver.PNG
+INPUT assets\class diagrams\solver.PNG
+INPUT .\assets\class diagrams\solver.PNG
+INPUT .\assets\class diagrams\solver.PNG
+INPUT .\assets\class diagrams\solver.PNG
+INPUT .\assets\class diagrams\solver.PNG
+INPUT .\assets\class diagrams\maze.PNG
+INPUT .\assets\class diagrams\maze.PNG
+INPUT assets\class diagrams\maze.PNG
+INPUT .\assets\class diagrams\maze.PNG
+INPUT .\assets\class diagrams\maze.PNG
+INPUT .\assets\class diagrams\maze.PNG
+INPUT .\assets\class diagrams\maze.PNG
+INPUT .\assets\class diagrams\node.PNG
+INPUT .\assets\class diagrams\node.PNG
+INPUT assets\class diagrams\node.PNG
+INPUT .\assets\class diagrams\node.PNG
+INPUT .\assets\class diagrams\node.PNG
+INPUT .\assets\class diagrams\node.PNG
+INPUT .\assets\class diagrams\node.PNG
 INPUT analysis.aux
 INPUT .\analysis.out
 INPUT .\analysis.out
@@ -803,17 +834,9 @@ INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
-INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
-INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
-INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
-INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
-INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
-INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
-INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb

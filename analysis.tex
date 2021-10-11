@@ -235,35 +235,21 @@ There should be "special" nodes that are different from walls or space. For exam
 
 \subsection{User Interface}
 I have used Figma to create a design mockup of how the user interface will look. This allows me to plan what user inputs will be needed.
-%TODO add figma screen shot
+\newline
+\includegraphics[width=\linewidth]{assets/gui.PNG}
+\subsection{Class Diagrams}
+\includegraphics[width=0.5\linewidth]{assets/class diagrams/generator.PNG}
+\includegraphics[width=0.5\linewidth]{assets/class diagrams/solver.PNG}
+\includegraphics[width=0.5\linewidth]{assets/class diagrams/maze.PNG}
+\includegraphics[width=0.5\linewidth]{assets/class diagrams/node.PNG}
+
+
+\subsection{Data Strucure}
+The Grid for the maze will be stored in a 2D array with each item being a Node with the information about it. For example, a 2x2 grid would look like: [[Node, Node], [Node, Node]]
 
 \subsection{Algorithms}
 \subsubsection{Maze generating algorithms}
-\paragraph{Recursive division}
-\begin{algorithm}
-    \caption{Recursive Division}
-    \begin{algorithmic}[1]
-        \REQUIRE $n \geq 0 \vee x \neq 0$
-        \ENSURE $y = x^n$
-        \STATE $y \leftarrow 1$
-        \IF{$n < 0$}
-        \STATE $X \leftarrow 1 / x$
-        \STATE $N \leftarrow -n$
-        \ELSE
-        \STATE $X \leftarrow x$
-        \STATE $N \leftarrow n$
-        \ENDIF
-        \WHILE{$N \neq 0$}
-        \IF{$N$ is even}
-        \STATE $X \leftarrow X \times X$
-        \STATE $N \leftarrow N / 2$
-        \ELSE[$N$ is odd]
-        \STATE $y \leftarrow y \times X$
-        \STATE $N \leftarrow N - 1$
-        \ENDIF
-        \ENDWHILE
-    \end{algorithmic}
-    \end{algorithm}
+
 \section{Evidence of Completeness}  
 %out of 15 marks, argument for why the project is complete. Which algorithms have been used?
 
