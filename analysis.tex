@@ -6,9 +6,6 @@
 \usepackage{graphicx}
 \usepackage{tikz}
 
-\usepackage{algorithm}
-\usepackage{algorithmic}
-
 \usetikzlibrary{shapes,arrows}
 \newcommand{\comment}[1]{}
 
@@ -249,6 +246,69 @@ The Grid for the maze will be stored in a 2D array with each item being a Node w
 
 \subsection{Algorithms}
 \subsubsection{Maze generating algorithms}
+\paragraph{prims}
+\begin{verbatim}
+
+    function prims(Grid){
+        let start = [0,0]
+        let inMaze = [start]
+        let frontier = [
+            [[start[0],start[1]+1],["left"]],
+            [[start[0]+1, start[1]],["top"]]
+        ]
+        
+        while (frontier.length > 0){
+            let new = frontier.pop(randint(0, frontier.length - 1))
+            let toAdd = new[0]
+            let wall = new[1][randint(0, new[1].length - 1)]
+            inMaze.push(toAdd)
+            
+            if (wall == "bottom"){
+                Grid.grid[toAdd[0]][toAdd[1]].wallBottom = False
+            }
+            
+            if (wall == "left"){
+                Grid.grid[toAdd[0]][toAdd[1]].wallLeft = False
+            }
+            
+            if (wall == "top" and toAdd[0] > 0){
+                Grid.grid[toAdd[0]-1][toAdd[1]].wallBottom = False
+            }
+            
+            if (wall == "right" and toAdd[1] < Grid.width){
+                Grid.grid[toAdd[0]][toAdd[1]+1].wallLeft = False
+            }
+            
+            let possible = [
+                [toAdd[0]-1, toAdd[1]],
+                [toAdd[0]+1,toAdd[1]],
+                [toAdd[0],toAdd[1]-1],
+                [toAdd[0], toAdd[1]+1]
+            ]
+            
+            for i in range 4{
+                p = possible[i]
+                walls = ["bottom", "top", "right", "left"]
+                wall = walls[i]
+                
+                if (0<=p[0]<Grid.height and 0<=p[1]<Grid.width){
+                    if p not in inMaze{
+                        found = False
+                        for v in frontier{
+                            if (v[0] == p){
+                                v[1].push(wall)
+                                found = True
+                            }
+                        }
+                        if not found{
+                            frontier.push([p, [wall]])
+                        }
+                    }
+                }
+            }
+        }
+    }
+\end{verbatim}
 
 \section{Evidence of Completeness}  
 %out of 15 marks, argument for why the project is complete. Which algorithms have been used?

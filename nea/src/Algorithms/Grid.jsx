@@ -1,35 +1,45 @@
 export default class Grid{
     constructor(height, width){
-        this.Grid = []
+        this.height = height;
+        this.width = width;
 
-        //Fills the grid with walls around the edge and empty spaces in the middle
-        for (let i = 0; i <= height; i++){
-            let row = []
-            for (let j = 0; j <= width; j++){
-                if (i === 0 || i === height || j === 0 || j === width){
-                    //Adds edges
-                    row.push(1)
-                }else{
-                    //Fills the middle
-                    row.push(0)
-                }
-            }
-            this.Grid.push(row)
-        }
+        this.grid = this.generateGrid();
     }
 
-    draw(orientation, split, width, height){
-        switch(orientation){
-            case "vertical":
-                for (let i = 0; i <= height; i++){
-                    this.Grid[i][split] = 1
-                }
-            
-            case "horizontal":
-                for (let i = 0; i <= width; i++){
-                    this.Grid[split][i] = 1
-                }
+    generateGrid(){
+        let grid = [];
+        let i;
+        for (i=0; i<this.height; i++){
+            let row = [];
+            let j;
+            for (j=0; j<this.width; j++){
+                row.push(new Node(j, i, "space"));
+            }
+            row.push(new Node(j, i, "space"));
+            grid.push(row);
         }
-        console.log(this.Grid)
+
+        let row = [];
+        let j;
+        for (j=0; j<this.width + 1; j++){
+            row.push(new Node(j, i, "space"));
+        }
+        grid.push(row);
+        
+        return grid;
+    }
+}
+
+
+class Node{
+    constructor(x, y, type){
+        this.x = x;
+        this.y = y;
+        this.type = type;
+
+        this.set = null;
+
+        this.wallLeft = true;
+        this.wallBottom = true;
     }
 }

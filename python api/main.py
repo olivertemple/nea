@@ -5,10 +5,14 @@ class Node:
         self.x = x
         self.y = y
         self.type = type
-        self.contents = ""
+
+        self.set = None
 
         self.wallLeft = True
         self.wallBottom = True
+
+    def __str__(self):
+        return f"x:{self.x}, y:{self.y}, type:{self.type}, set:{self.set}, wallLeft:{self.wallLeft}, wallBottom:{self.wallBottom}"
 
 class Grid:
     def __init__(self, height, width):
@@ -23,18 +27,17 @@ class Grid:
             row = []
             for j in range(self.width):
                 row.append(Node(j, i, "space"))
-            row.append(Node(i, j+1, "space"))
+            row.append(Node(j, i, "space"))
             grid.append(row)
         
         row = []
         for j in range(self.width + 1):
-            row.append(Node(i+1, j, "space"))
+            row.append(Node(j, i, "space"))
         grid.append(row)
 
         return grid
 
     def printGrid(self):
-
         width = self.width
         height = self.height
 
@@ -50,7 +53,7 @@ class Grid:
                 cell += "  "
                 print(cell, end="")
             print("|")
-            
+
             for j in range(width):
                 cell = ""
                 if self.grid[i][j].wallLeft:
@@ -63,15 +66,9 @@ class Grid:
                 else:
                     cell += "  "
                 print(cell, end="")  
-            print("|")
-
-
-
-    #!226 single thread - Will H
-        
+            print("|")        
 
 myGenerator = Generator();
-
-myGrid = Grid(20,40)
-Generator.prims(myGrid)
+myGrid = Grid(10,20)
+myGenerator.prims(myGrid);
 myGrid.printGrid()
