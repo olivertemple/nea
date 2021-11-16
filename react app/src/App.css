@@ -25,10 +25,12 @@
 
 .wall_left{
   border-left: 2px black solid;
+  transition-duration: .2s;
 }
 
 .wall_bottom{
   border-bottom: 2px black solid;
+  transition-duration: .2s;
 }
 
 .wall_right{
