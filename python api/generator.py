@@ -13,7 +13,6 @@ class Generator:
 
     def runKruskal(self, Grid, availableWalls):
         joined = []
-        Grid.printGrid()
         while len(availableWalls) > 0 :
             wall = random.choice(availableWalls) 
             availableWalls.remove(wall)

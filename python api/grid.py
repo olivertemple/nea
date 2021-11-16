@@ -1,5 +1,3 @@
-from generator import Generator
-
 class Node:
     def __init__(self, x, y, type):
         self.x = x
@@ -14,12 +12,37 @@ class Node:
     def __str__(self):
         return f"x:{self.x}, y:{self.y}, type:{self.type}, set:{self.set}, wallLeft:{self.wallLeft}, wallBottom:{self.wallBottom}"
 
+    def __dict__(self):
+        return {
+            "x": self.x,
+            "y": self.y,
+            "type": self.type,
+            "wallLeft": self.wallLeft,
+            "wallBottom": self.wallBottom
+        }
+
 class Grid:
     def __init__(self, height, width):
         self.height = height
         self.width = width
 
         self.grid = self.generateGrid()
+
+    def serialize(self):
+        obj = {
+            "height": self.height,
+            "width": self.width,
+            "grid": []
+        }
+        for row in self.grid:
+            row_inner = []
+            for item in row:
+                row_inner.append(item.__dict__())
+            obj["grid"].append(row_inner)
+        
+        return obj
+                
+        
 
     def generateGrid(self):
         grid = []
@@ -68,7 +91,3 @@ class Grid:
                 print(cell, end="")  
             print("|")        
 
-myGenerator = Generator();
-myGrid = Grid(10,20)
-myGenerator.prims(myGrid);
-myGrid.printGrid()
