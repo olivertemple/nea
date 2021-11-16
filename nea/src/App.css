@@ -4,11 +4,23 @@
 }
 
 .node{
-  height:20px;
+  height:40px;
   width:40px;
 }
+
+.node_start{
+  background-color: #ff0000;
+}
+
+.node_end{
+  background-color: #00ff00;
+}
+.hover{
+  background-color: #00ff00;
+}
+
 .node_active{
-  background-color: black;
+  background-color: blue;
 }
 
 .wall_left{
@@ -27,15 +39,11 @@
   border-top: 2px black solid;
 }
 
-tbody{
-  border-top: 2px black solid;
-}
 
 :not(.wall_left) {
   border-left: 2px white solid;
 }
-/*
-:not(.wall_bottom){
-  border-bottom: 2px white solid;
-}*/
 
+:not(.wall_bottom) {
+  border-bottom: 2px white solid;
+}
