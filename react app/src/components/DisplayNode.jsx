@@ -55,12 +55,14 @@ export default class DisplayNode extends React.Component{
         if (this.props.wallBottom){
             this.classList.push("wall_bottom")
         }
+        if (this.props.type === "path"){
+            this.classList.push("node_path")
+        }
         if (this.props.pos[0] === this.props.start[0] && this.props.pos[1] === this.props.start[1]){
             this.classList.push("node_start")
             this.draggable = true
             this.start = true
         }
-
         if (this.props.pos[0] === this.props.end[0] && this.props.pos[1] === this.props.end[1]){
             this.classList.push("node_end")
             this.draggable = true
@@ -68,8 +70,8 @@ export default class DisplayNode extends React.Component{
         }
 
         return(
-            <div style={this.state.style} className={this.classList.join(" ")} draggable={this.draggable} onDragStart={this.handelDragStart} onDrop={this.handelDrop} onDragOver={this.handelDragOver} onDragLeave={this.handelDragLeave} onDragEnd={this.handelDragEnd}>
-            </div>
+            <td style={this.state.style} className={this.classList.join(" ")} draggable={this.draggable} onDragStart={this.handelDragStart} onDrop={this.handelDrop} onDragOver={this.handelDragOver} onDragLeave={this.handelDragLeave} onDragEnd={this.handelDragEnd}>
+            </td>
         )
     }
     

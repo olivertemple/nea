@@ -6,6 +6,8 @@ class Node:
         self.type = type
 
         self.set = None
+        
+        self.distance = "infinity"
 
         self.wallLeft = True
         self.wallBottom = True

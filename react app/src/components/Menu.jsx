@@ -8,13 +8,18 @@ export default class Menu extends Component {
     render() {
         return(
             <div className="menu">
-                <label htmlFor="algorithms">Choose a maze generation algorithm</label>
-                <select name="algorithms" id="algorithms" onChange={(e) => {this.props.setAlgorithm(e.target.value)}}>
-                    <option value="select">select</option>
+                <button className="button settings">Settings</button>
+                <select className="algorithms" name="algorithms" id="algorithms" onChange={(e) => {this.props.setAlgorithm(e.target.value)}}>
+                    <option value="select">Select Generating Algorithm</option>
                     <option value="prims">Prims</option>
                     <option value="recursive_backtracking">recursive backtracking</option>
                 </select>
-                <button onClick={this.props.generate}>Press to generate</button>
+                <button className="button" onClick={this.props.generate}>Run</button>
+                <select className="algorithms" name="algorithms" id="algorithms" onChange={(e) => {this.props.setSolve(e.target.value)}}>
+                    <option value="select">Select Solving Algorithm</option>
+                    <option value="dijkstra">Dijkstra</option>
+                </select>
+                <button className="button clear" onClick={this.props.clearGrid}>Clear</button>
             </div>
         )
     }

@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.25)  12 OCT 2021 10:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.25)  23 NOV 2021 10:25
 entering extended mode
-**"c:/Users/ollie/OneDrive - Exeter College/CS NEA/analysis.tex"
-(c:/Users/ollie/OneDrive - Exeter College/CS NEA/analysis.tex
+**"c:/Users/ollie/OneDrive - Exeter College/CS NEA/documents/analysis.tex"
+(c:/Users/ollie/OneDrive - Exeter College/CS NEA/documents/analysis.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> xparse <2020-03-03> (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
@@ -357,7 +357,29 @@ File: pgfmodulematrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \tikz@expandcount=\count283
  (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-))) (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.code.tex
+))) (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count284
+\lst@gtempboxa=\box59
+\lst@token=\toks29
+\lst@length=\count285
+\lst@currlwidth=\dimen256
+\lst@column=\count286
+\lst@pos=\count287
+\lst@lostspace=\dimen257
+\lst@width=\dimen258
+\lst@newlines=\count288
+\lst@lineno=\count289
+\lst@maxwidth=\dimen259
+ (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count290
+\lst@skipnumbers=\count291
+\lst@framebox=\box60
+) (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+ (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.code.tex
 File: tikzlibraryshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
  (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.geometric.code.tex
 File: tikzlibraryshapes.geometric.code.tex 2020/12/27 v3.1.8b (3.1.8b)
@@ -367,12 +389,12 @@ File: pgflibraryshapes.geometric.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 File: tikzlibraryshapes.misc.code.tex 2020/12/27 v3.1.8b (3.1.8b)
  (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.misc.code.tex
 File: pgflibraryshapes.misc.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)) (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.symbols.code.tex
+))
+(C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.symbols.code.tex
 File: tikzlibraryshapes.symbols.code.tex 2020/12/27 v3.1.8b (3.1.8b)
  (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.symbols.code.tex
 File: pgflibraryshapes.symbols.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-))
-(C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.arrows.code.tex
+)) (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.arrows.code.tex
 File: tikzlibraryshapes.arrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
  (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.arrows.code.tex
 File: pgflibraryshapes.arrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
@@ -380,57 +402,57 @@ File: pgflibraryshapes.arrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 File: tikzlibraryshapes.multipart.code.tex 2020/12/27 v3.1.8b (3.1.8b)
  (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfnodepartlowerbox=\box59
-\pgfnodeparttwobox=\box60
-\pgfnodepartthreebox=\box61
-\pgfnodepartfourbox=\box62
-\pgfnodeparttwentybox=\box63
-\pgfnodepartnineteenbox=\box64
-\pgfnodeparteighteenbox=\box65
-\pgfnodepartseventeenbox=\box66
-\pgfnodepartsixteenbox=\box67
-\pgfnodepartfifteenbox=\box68
-\pgfnodepartfourteenbox=\box69
-\pgfnodepartthirteenbox=\box70
-\pgfnodeparttwelvebox=\box71
-\pgfnodepartelevenbox=\box72
-\pgfnodeparttenbox=\box73
-\pgfnodepartninebox=\box74
-\pgfnodeparteightbox=\box75
-\pgfnodepartsevenbox=\box76
-\pgfnodepartsixbox=\box77
-\pgfnodepartfivebox=\box78
+\pgfnodepartlowerbox=\box61
+\pgfnodeparttwobox=\box62
+\pgfnodepartthreebox=\box63
+\pgfnodepartfourbox=\box64
+\pgfnodeparttwentybox=\box65
+\pgfnodepartnineteenbox=\box66
+\pgfnodeparteighteenbox=\box67
+\pgfnodepartseventeenbox=\box68
+\pgfnodepartsixteenbox=\box69
+\pgfnodepartfifteenbox=\box70
+\pgfnodepartfourteenbox=\box71
+\pgfnodepartthirteenbox=\box72
+\pgfnodeparttwelvebox=\box73
+\pgfnodepartelevenbox=\box74
+\pgfnodeparttenbox=\box75
+\pgfnodepartninebox=\box76
+\pgfnodeparteightbox=\box77
+\pgfnodepartsevenbox=\box78
+\pgfnodepartsixbox=\box79
+\pgfnodepartfivebox=\box80
 ))) (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
  (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\arrowsize=\dimen256
+\arrowsize=\dimen260
 )) (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count284
-\l__pdf_internal_box=\box79
+\l__color_backend_stack_int=\count292
+\l__pdf_internal_box=\box81
 ) (analysis.aux)
 \openout1 = `analysis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-Package hyperref Info: Link coloring OFF on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+Package hyperref Info: Link coloring OFF on input line 81.
  (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
@@ -438,38 +460,39 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count285
+\c@section@level=\count293
 )
-LaTeX Info: Redefining \ref on input line 37.
-LaTeX Info: Redefining \pageref on input line 37.
-LaTeX Info: Redefining \nameref on input line 37.
+LaTeX Info: Redefining \ref on input line 81.
+LaTeX Info: Redefining \pageref on input line 81.
+LaTeX Info: Redefining \nameref on input line 81.
  (analysis.out) (analysis.out)
 \@outlinefile=\write4
 \openout4 = `analysis.out'.
 
  (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count286
-\scratchdimen=\dimen257
-\scratchbox=\box80
-\nofMPsegments=\count287
-\nofMParguments=\count288
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count289
-\MPscratchDim=\dimen258
-\MPnumerator=\count290
-\makeMPintoPDFobject=\count291
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count294
+\scratchdimen=\dimen261
+\scratchbox=\box82
+\nofMPsegments=\count295
+\nofMParguments=\count296
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count297
+\MPscratchDim=\dimen262
+\MPnumerator=\count298
+\makeMPintoPDFobject=\count299
+\everyMPtoPDFconversion=\toks31
 ) (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 )
+\c@lstlisting=\count300
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 40.
+(Font)              <12> on input line 84.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 40.
+(Font)              <8> on input line 84.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 40.
+(Font)              <6> on input line 84.
  (analysis.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 2.
@@ -482,101 +505,188 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout5 = `analysis.toc'.
 
 
-Overfull \hbox (19.43062pt too wide) in paragraph at lines 60--63
+Overfull \hbox (19.43062pt too wide) in paragraph at lines 104--107
 [] []|\OT1/cmr/bx/n/10 1.3.1.1 Ex-am-ple 1[] []\OT1/cmr/m/n/10 https://clementmihailescu.github.io/Pathfinding-Visualizer
  []
 
 [2]
-<assets/Existing Solutions/example 1.PNG, id=178, 2057.43657pt x 1234.6125pt>
+<assets/Existing Solutions/example 1.PNG, id=197, 2057.43657pt x 1234.6125pt>
 File: assets/Existing Solutions/example 1.PNG Graphic file (type png)
 <use assets/Existing Solutions/example 1.PNG>
-Package pdftex.def Info: assets/Existing Solutions/example 1.PNG  used on input line 82.
+Package pdftex.def Info: assets/Existing Solutions/example 1.PNG  used on input line 126.
 (pdftex.def)             Requested size: 345.0pt x 207.01787pt.
  [3 <./assets/Existing Solutions/example 1.PNG>]
-<assets/Existing Solutions/example 2.PNG, id=186, 2058.94218pt x 1239.12938pt>
+<assets/Existing Solutions/example 2.PNG, id=206, 2058.94218pt x 1239.12938pt>
 File: assets/Existing Solutions/example 2.PNG Graphic file (type png)
 <use assets/Existing Solutions/example 2.PNG>
-Package pdftex.def Info: assets/Existing Solutions/example 2.PNG  used on input line 114.
+Package pdftex.def Info: assets/Existing Solutions/example 2.PNG  used on input line 158.
 (pdftex.def)             Requested size: 345.0pt x 207.624pt.
  [4]
-Overfull \hbox (7.86174pt too wide) in paragraph at lines 122--123
+Overfull \hbox (7.86174pt too wide) in paragraph at lines 166--167
 []\OT1/cmr/m/n/10 Visualization does not up-date when maze or start/finnish nodes are changed. 
  []
 
-<assets/Existing Solutions/example 3.PNG, id=192, 2058.18938pt x 1242.14063pt>
+<assets/Existing Solutions/example 3.PNG, id=212, 2058.18938pt x 1242.14063pt>
 File: assets/Existing Solutions/example 3.PNG Graphic file (type png)
 <use assets/Existing Solutions/example 3.PNG>
-Package pdftex.def Info: assets/Existing Solutions/example 3.PNG  used on input line 138.
+Package pdftex.def Info: assets/Existing Solutions/example 3.PNG  used on input line 182.
 (pdftex.def)             Requested size: 345.0pt x 208.20436pt.
 [5 <./assets/Existing Solutions/example 2.PNG>] [6 <./assets/Existing Solutions/example 3.PNG>] [7]
-<assets/flow chart.PNG, id=208, 400.49625pt x 662.90518pt>
+<assets/structure.jpg, id=228, 372.64218pt x 202.50656pt>
+File: assets/structure.jpg Graphic file (type jpg)
+<use assets/structure.jpg>
+Package pdftex.def Info: assets/structure.jpg  used on input line 253.
+(pdftex.def)             Requested size: 345.0pt x 187.49174pt.
+
+Overfull \hbox (42.54642pt too wide) in paragraph at lines 252--254
+\OT1/cmr/m/n/10 Lambda. [] 
+ []
+
+[8]
+<assets/flow chart.PNG, id=233, 400.49625pt x 662.90518pt>
 File: assets/flow chart.PNG Graphic file (type png)
 <use assets/flow chart.PNG>
-Package pdftex.def Info: assets/flow chart.PNG  used on input line 203.
+Package pdftex.def Info: assets/flow chart.PNG  used on input line 255.
 (pdftex.def)             Requested size: 345.01894pt x 497.9363pt.
- [8]
-<assets/gui.PNG, id=213, 777.33267pt x 448.67625pt>
+ [9 <./assets/structure.jpg>]
+<assets/gui.PNG, id=238, 777.33267pt x 448.67625pt>
 File: assets/gui.PNG Graphic file (type png)
 <use assets/gui.PNG>
-Package pdftex.def Info: assets/gui.PNG  used on input line 236.
+Package pdftex.def Info: assets/gui.PNG  used on input line 288.
 (pdftex.def)             Requested size: 345.0pt x 199.13657pt.
- [9 <./assets/flow chart.PNG>]
-<assets/class diagrams/generator.PNG, id=219, 263.69946pt x 230.57571pt>
+ [10 <./assets/flow chart.PNG>]
+<assets/class diagrams/generator.PNG, id=244, 316.93407pt x 277.78781pt>
 File: assets/class diagrams/generator.PNG Graphic file (type png)
 <use assets/class diagrams/generator.PNG>
-Package pdftex.def Info: assets/class diagrams/generator.PNG  used on input line 238.
-(pdftex.def)             Requested size: 172.5pt x 150.83644pt.
-<assets/class diagrams/solver.PNG, id=220, 261.97874pt x 215.08928pt>
+Package pdftex.def Info: assets/class diagrams/generator.PNG  used on input line 290.
+(pdftex.def)             Requested size: 172.5pt x 151.19847pt.
+<assets/class diagrams/solver.PNG, id=245, 261.97874pt x 215.08928pt>
 File: assets/class diagrams/solver.PNG Graphic file (type png)
 <use assets/class diagrams/solver.PNG>
-Package pdftex.def Info: assets/class diagrams/solver.PNG  used on input line 239.
+Package pdftex.def Info: assets/class diagrams/solver.PNG  used on input line 291.
 (pdftex.def)             Requested size: 172.5pt x 141.62787pt.
-<assets/class diagrams/maze.PNG, id=221, 258.9675pt x 242.62071pt>
+<assets/class diagrams/maze.PNG, id=246, 180.675pt x 194.01053pt>
 File: assets/class diagrams/maze.PNG Graphic file (type png)
 <use assets/class diagrams/maze.PNG>
-Package pdftex.def Info: assets/class diagrams/maze.PNG  used on input line 240.
-(pdftex.def)             Requested size: 172.5pt x 161.6184pt.
-<assets/class diagrams/node.PNG, id=222, 217.67036pt x 260.68822pt>
+Package pdftex.def Info: assets/class diagrams/maze.PNG  used on input line 292.
+(pdftex.def)             Requested size: 172.5pt x 185.23257pt.
+<assets/class diagrams/node.PNG, id=247, 316.18124pt x 378.66469pt>
 File: assets/class diagrams/node.PNG Graphic file (type png)
 <use assets/class diagrams/node.PNG>
-Package pdftex.def Info: assets/class diagrams/node.PNG  used on input line 241.
-(pdftex.def)             Requested size: 172.5pt x 206.60175pt.
+Package pdftex.def Info: assets/class diagrams/node.PNG  used on input line 293.
+(pdftex.def)             Requested size: 172.5pt x 206.5906pt.
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 238--242
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 290--294
 [] []
  []
 
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 238--242
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 290--294
 [] [] 
  []
 
-[10 <./assets/gui.PNG>] [11 <./assets/class diagrams/generator.PNG> <./assets/class diagrams/solver.PNG> <./assets/class diagrams/maze.PNG> <./assets/class diagrams/node.PNG>]
-Overfull \hbox (6.74693pt too wide) in paragraph at lines 311--311
-[]            \OT1/cmtt/m/n/10 let new = frontier.pop(randint(0, frontier.length - 1))[] 
+[11 <./assets/gui.PNG>] [12 <./assets/class diagrams/generator.PNG> <./assets/class diagrams/solver.PNG> <./assets/class diagrams/maze.PNG> <./assets/class diagrams/node.PNG>]
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 355--355
+[]                \OT1/cmtt/m/n/10 Grid.grid[toAdd[0] - 1][toAdd[1]].wallBottom = false[] 
  []
 
 
-Overfull \hbox (1.49698pt too wide) in paragraph at lines 311--311
-[]                \OT1/cmtt/m/n/10 Grid.grid[toAdd[0]-1][toAdd[1]].wallBottom = False[] 
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 355--355
+[]                \OT1/cmtt/m/n/10 Grid.grid[toAdd[0]][toAdd[1] + 1].wallLeft = false[] 
  []
 
-[12] [13] (analysis.aux)
+
+Overfull \hbox (111.74602pt too wide) in paragraph at lines 355--355
+[]                \OT1/cmtt/m/n/10 if p[0] >= 0 and p[0] < Grid.height and p[1] >= 0 and p[1] < Grid.width[] 
+ []
+
+[13]
+Overfull \hbox (48.74657pt too wide) in paragraph at lines 419--419
+[]    \OT1/cmtt/m/n/10 function recursive_backtracking_run(Grid, unvisited, current, previous)[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 419--419
+[]        \OT1/cmtt/m/n/10 if current.x > 0 and Grid.grid[current.y][current.x - 1] in unvisited[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 419--419
+[]        \OT1/cmtt/m/n/10 if current.y > 0 and Grid.grid[current.y - 1][current.x] in unvisited[] 
+ []
+
+
+Overfull \hbox (127.49588pt too wide) in paragraph at lines 419--419
+[]        \OT1/cmtt/m/n/10 if current.x < Grid.width - 1 and Grid.grid[current.y][current.x + 1] in unvisited[] 
+ []
+
+
+Overfull \hbox (132.74583pt too wide) in paragraph at lines 419--419
+[]        \OT1/cmtt/m/n/10 if current.y < Grid.height - 1 and Grid.grid[current.y + 1][current.x] in unvisited[] 
+ []
+
+
+Overfull \hbox (111.74602pt too wide) in paragraph at lines 419--419
+[]            \OT1/cmtt/m/n/10 orientation <- orientation_options[rand(0, orientation_options.length - 1)][] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 419--419
+[]                \OT1/cmtt/m/n/10 connecting_cell <- Grid.grid[current.y][current.x - 1][] 
+ []
+
+[14]
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 419--419
+[]                \OT1/cmtt/m/n/10 connecting_cell <- Grid.grid[current.y + 1][current.x][] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 419--419
+[]                \OT1/cmtt/m/n/10 connecting_cell <- Grid.grid[current.y][current.x + 1][] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 419--419
+[]                \OT1/cmtt/m/n/10 connecting_cell <- Grid.grid[current.y - 1][current.x][] 
+ []
+
+
+Overfull \hbox (85.49625pt too wide) in paragraph at lines 419--419
+[]            \OT1/cmtt/m/n/10 recursive_backtracking_run(Grid, unvisited, connecting_cell, previous)[] 
+ []
+
+
+Overfull \hbox (43.49661pt too wide) in paragraph at lines 419--419
+[]                \OT1/cmtt/m/n/10 recursive_backtracking_run(Grid, unvisited, new, previous)[] 
+ []
+
+(C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 424.
+ (../python api/lambda_function.py [15]) (../python api/generator.py [16] [17]) (../python api/grid.py [18] [19]) (../react app/src/App.js
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <8> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 1.
+ [20]) (../react app/src/components/Menu.jsx [21]) (../react app/src/components/MenuKey.jsx) (../react app/src/components/DisplayGrid.jsx [22]
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 41.
+ (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
+File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+) [23]) (../react app/src/components/DisplayNode.jsx [24]) [25] (analysis.aux)
 Package rerunfilecheck Info: File `analysis.out' has not changed.
-(rerunfilecheck)             Checksum: A70BDD0F2A60E3F99E5B503D504A7F9A;4056.
+(rerunfilecheck)             Checksum: 0072E7FADF7B6CBA76732A9377039275;4620.
  ) 
 Here is how much of TeX's memory you used:
- 20956 strings out of 479334
- 416419 string characters out of 2857084
- 717253 words of memory out of 3000000
- 38009 multiletter control sequences out of 15000+200000
- 408188 words of font info for 43 fonts, out of 3000000 for 9000
+ 23517 strings out of 479334
+ 451885 string characters out of 2857084
+ 1486089 words of memory out of 3000000
+ 39978 multiletter control sequences out of 15000+200000
+ 408653 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,11n,89p,516b,471s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\ollie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on analysis.pdf (13 pages, 754842 bytes).
+ 87i,12n,89p,526b,2090s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\ollie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt0800.pk> <C:\Users\ollie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on analysis.pdf (25 pages, 898151 bytes).
 PDF statistics:
- 283 PDF objects out of 1000 (max. 8388607)
- 45 named destinations out of 1000 (max. 500000)
- 306 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 995 PDF objects out of 1000 (max. 8388607)
+ 582 named destinations out of 1000 (max. 500000)
+ 343 words of extra memory for PDF output out of 10000 (max. 10000000)
 

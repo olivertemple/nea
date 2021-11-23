@@ -15,17 +15,21 @@
 \contentsline {subsubsection}{\numberline {1.4.1}Generate Mazes}{8}{subsubsection.1.4.1}%
 \contentsline {subsubsection}{\numberline {1.4.2}User Drawn Mazes}{8}{subsubsection.1.4.2}%
 \contentsline {subsubsection}{\numberline {1.4.3}Solve Mazes}{8}{subsubsection.1.4.3}%
-\contentsline {subsubsection}{\numberline {1.4.4}Update Visualization}{8}{subsubsection.1.4.4}%
+\contentsline {subsubsection}{\numberline {1.4.4}User written algorithms}{8}{subsubsection.1.4.4}%
 \contentsline {subsubsection}{\numberline {1.4.5}Special Nodes}{8}{subsubsection.1.4.5}%
-\contentsline {section}{\numberline {2}Documented Design}{9}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Flow Chart}{9}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}User Interface}{10}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Class Diagrams}{11}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Data Strucure}{11}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Algorithms}{11}{subsection.2.5}%
-\contentsline {subsubsection}{\numberline {2.5.1}Maze generating algorithms}{11}{subsubsection.2.5.1}%
-\contentsline {paragraph}{\numberline {2.5.1.1}prims}{11}{paragraph.2.5.1.1}%
-\contentsline {section}{\numberline {3}Evidence of Completeness}{13}{section.3}%
-\contentsline {section}{\numberline {4}Technical Solution}{13}{section.4}%
-\contentsline {section}{\numberline {5}Testing}{13}{section.5}%
-\contentsline {section}{\numberline {6}Evaluation}{13}{section.6}%
+\contentsline {section}{\numberline {2}Documented Design}{8}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Visualization Structure}{8}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Flow Chart}{10}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}User Interface}{11}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Class Diagrams}{12}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Data Structures}{12}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Grid}{12}{subsubsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.5.2}Prims}{12}{subsubsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.6}Algorithms}{13}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {2.6.1}Maze generating algorithms}{13}{subsubsection.2.6.1}%
+\contentsline {paragraph}{\numberline {2.6.1.1}prims}{13}{paragraph.2.6.1.1}%
+\contentsline {paragraph}{\numberline {2.6.1.2}Recusive backtracking}{14}{paragraph.2.6.1.2}%
+\contentsline {section}{\numberline {3}Evidence of Completeness}{15}{section.3}%
+\contentsline {section}{\numberline {4}Technical Solution}{15}{section.4}%
+\contentsline {section}{\numberline {5}Testing}{25}{section.5}%
+\contentsline {section}{\numberline {6}Evaluation}{25}{section.6}%

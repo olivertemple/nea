@@ -3,16 +3,24 @@
   flex-direction: row;
 }
 
+.grid{
+  display: flex;
+  justify-content: center;
+  background-color: #DDDDDD;
+  margin:15px;
+  border-radius: 5px;
+}
+
 .node{
   height:40px;
   width:40px;
 }
 
-.node_start{
+.node_end{
   background-color: #ff0000;
 }
 
-.node_end{
+.node_start{
   background-color: #00ff00;
 }
 .hover{
@@ -41,11 +49,71 @@
   border-top: 2px black solid;
 }
 
-
-:not(.wall_left) {
-  border-left: 2px white solid;
+.node_path{
+  background-color: grey;
 }
 
-:not(.wall_bottom) {
-  border-bottom: 2px white solid;
+.node:not(.wall_left) {
+  border-left: 2px #FFFFFF00 solid;
+}
+
+.node:not(.wall_bottom) {
+  border-bottom: 2px #FFFFFF00 solid;
+}
+
+.menu{
+  padding:20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.algorithms, .button{
+  background-color: #ADD8E6;
+  padding:7.5px;
+  border-radius: 5px;
+  border:none;
+  outline: none;
+}
+
+.clear{
+  background-color: red;
+}
+
+.settings{
+  background-color: #AEAEAE;
+}
+
+.key{
+  background-color: #DDDDDD;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin:15px;
+  border-radius: 5px;
+}
+
+.key_item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap:10px;
+}
+
+.key_node_end{
+  background-color: #ff0000;
+  height:20px;
+  width:20px;
+}
+
+.key_node_start{
+  background-color: #00ff00;
+  height:20px;
+  width:20px;
+}
+
+.key_node_via-point{
+  background-color: #0000ff;
+  height:20px;
+  width:20px;
 }

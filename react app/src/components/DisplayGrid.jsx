@@ -13,13 +13,24 @@ export default class DisplayGrid extends Component{
         this.setDragObject = this.setDragObject.bind(this);
     }
 
+    raiseNodes(){
+        this.props.getNodes({
+            start:this.state.start,
+            end:this.state.end
+        })
+    }
+
     handelDrop(pos){
         switch (this.state.dragObject){
             case "start":
-                this.setState({start: pos});
+                this.setState({start: pos}, () => {
+                    this.raiseNodes();
+                });
                 break;
             case "end":
-                this.setState({end: pos});
+                this.setState({end: pos}, () => {
+                    this.raiseNodes();
+                });
                 break;
             default:
                 break;
@@ -38,11 +49,11 @@ export default class DisplayGrid extends Component{
                 <tbody className="column">
                     {Array.from(Array(this.props.grid.height).keys()).map((_, i) => {
                         return(
-                                <tr className={`row wall_right ${i === 0 ? "wall_top" : ""}`}>
+                                <tr className={`row wall_right ${i === 0 ? "wall_top" : ""}`} key={i}>
 
                                     {Array.from(Array(this.props.grid.width).keys()).map((_, j) => {
                                         return(
-                                            <DisplayNode key={i+j} wallLeft={this.props.grid.grid[i][j].wallLeft} wallBottom={this.props.grid.grid[i][j].wallBottom} pos={[i, j]} start={this.state.start} handelDrop = {this.handelDrop} end={this.state.end} setDragObject={this.setDragObject}/>
+                                            <DisplayNode key={j} wallLeft={this.props.grid.grid[i][j].wallLeft} wallBottom={this.props.grid.grid[i][j].wallBottom} pos={[i, j]} start={this.state.start} handelDrop = {this.handelDrop} end={this.state.end} setDragObject={this.setDragObject} type={this.props.grid.grid[i][j].type}/>
                                         )
                                     })}
                                 </tr>
@@ -58,13 +69,13 @@ export default class DisplayGrid extends Component{
     render(){
         if (this.props.grid){
             return(
-                <div style={{padding:10}}>
+                <div className="grid" style={{padding:10}}>
                     <this.renderTable />
                 </div>
             )
         }else{
             return(
-                <div></div>
+                <div className="grid"></div>
             )
         }
         
