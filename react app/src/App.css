@@ -1,6 +1,7 @@
 .row{
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .grid{
@@ -16,13 +17,7 @@
   width:40px;
 }
 
-.node_end{
-  background-color: #ff0000;
-}
 
-.node_start{
-  background-color: #00ff00;
-}
 .hover{
   background-color: #00ff00;
 }
@@ -50,7 +45,15 @@
 }
 
 .node_path{
-  background-color: grey;
+  background-color: yellow;
+}
+
+.node_end{
+  background-color: #ff0000;
+}
+
+.node_start{
+  background-color: #00ff00;
 }
 
 .node:not(.wall_left) {
@@ -74,6 +77,7 @@
   border-radius: 5px;
   border:none;
   outline: none;
+  cursor: pointer;
 }
 
 .clear{
@@ -116,4 +120,18 @@
   background-color: #0000ff;
   height:20px;
   width:20px;
+}
+
+.text_input{
+  width:50px;
+  height:20px;
+}
+
+.settings_container{
+  position:absolute;
+  background-color: #AEAEAE;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding:5px 20px 5px 20px;
+  box-shadow: #00000085 0px 0px 30px 0px;
 }

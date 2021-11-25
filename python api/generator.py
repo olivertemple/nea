@@ -1,11 +1,8 @@
 import random
-
 class Generator:
     def __init__(self):
         pass
-
-    #setup for recursive backtracking
-    def recursive_backtracking(self, Grid):
+    def recursive_backtracking(self, Grid):#setup for recursive backtracking
         #create a list of all nodes in maze
         unvisited = []
         for row in Grid.grid:
@@ -18,9 +15,7 @@ class Generator:
 
         #start recursive backtracking
         self.recursive_backtracking_run(Grid, unvisited, start, [])
-    
-    #recursive backtracking algorithm
-    def recursive_backtracking_run(self, Grid, unvisited, current, previous):
+    def recursive_backtracking_run(self, Grid, unvisited, current, previous):#recursive backtracking algorithm
         #work out which walls can be removed
         orientation_options = []
         if current.x > 0 and Grid.grid[current.y][current.x-1] in unvisited:
@@ -66,14 +61,7 @@ class Generator:
             if len(previous) > 0:
                 new = previous.pop()
                 self.recursive_backtracking_run(Grid, unvisited, new, previous)
-
-                
-
-
-        
-
-    #generate a maze using prims algorithm
-    def prims(self, Grid):
+    def prims(self, Grid):#generate a maze using prims algorithm
         #start at the top left node
         inMaze = [[0, 0]]
         #create a list of nodes connected to the start node

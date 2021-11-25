@@ -1,11 +1,8 @@
+import random
 class Solver:
     def __init__(self):
         pass
-
-    def f(self, current, start, steps):
-        return abs(current.x - start.x) + abs(current.y - start.y) + steps
-
-    def get_adjacent_paths(self, Grid, node):
+    def get_adjacent_paths(self, Grid, node):#Get adjacent nodes in the grid that are not blocked by a wall
         paths = []
         if node.x > 0 and not node.wallLeft:
             paths.append(Grid.grid[node.y][node.x - 1])
@@ -17,20 +14,16 @@ class Solver:
             paths.append(Grid.grid[node.y + 1][node.x])
         
         return paths
-
-
-    def dijkstra(self, Grid, start, end):
+    def dijkstra(self, Grid, start, end):#Dijkstra's algorithm for solving the grid
         start.distance = 0
         unvisited = [start]
-        visited = []
-        path = []
         found = False
         while not found:
             try:
                 current = unvisited.pop(0)
-                visited.append(current)
+                current.visited = True
                 for node in self.get_adjacent_paths(Grid, current):
-                    if node not in visited:
+                    if not node.visited:
                         node.distance = current.distance + 1
                         unvisited.append(node)
                     if node == end:
@@ -40,6 +33,7 @@ class Solver:
                 pass
         
         current = end
+        path = [end]
         while current != start:
             connecting = self.get_adjacent_paths(Grid, current)
             min = None
@@ -49,6 +43,25 @@ class Solver:
                         min = node
             path.append(min)
             current = min
-        print(path)
         for node in path:
+            node.type = "path"
+
+    def dfs(self, Grid, start, end):
+        stack = [start]
+        while len(stack) > 0:
+            current = stack[-1]
+            current.visited = True
+            if current == end:
+                break
+            possible = []
+            for node in self.get_adjacent_paths(Grid, current):
+                if not node.visited:
+                    possible.append(node)
+            
+            if len(possible) > 0:
+                stack.append(random.choice(possible))
+            else:
+                stack.pop()
+        
+        for node in stack:
             node.type = "path"

@@ -9,11 +9,8 @@ def lambda_handler(event, context):
     height = event["queryStringParameters"]["height"]
     if event["queryStringParameters"]["type"] == "empty_maze":
         myGrid = Grid(int(width), int(height))
-    else:
+    elif event["queryStringParameters"]["type"] == "generate":
         generate_algorithm = event["queryStringParameters"]["generate"]
-        solve_algorithm = event["queryStringParameters"]["solve"]
-        start = eval(event["queryStringParameters"]["start"])
-        end = eval(event["queryStringParameters"]["end"])
         
         #create a new generator to generate the maze
         myGenerator = Generator();
@@ -26,25 +23,35 @@ def lambda_handler(event, context):
             myGenerator.prims(myGrid)
         elif generate_algorithm == "recursive_backtracking":
             myGenerator.recursive_backtracking(myGrid)
-        start_node = myGrid.grid[start[1]][start[0]]
-        end_node = myGrid.grid[end[1]][end[0]]
+
+    elif event["queryStringParameters"]["type"] == "solve":
+        grid = json.loads(event["body"])
+
+        myGrid = Grid(int(grid["width"]), int(grid["height"]))
+        myGrid.load(grid["grid"])
         
+        solve_algorithm = event["queryStringParameters"]["solve"]
+        start = eval(event["queryStringParameters"]["start"])
+        end = eval(event["queryStringParameters"]["end"])
+        start_node = myGrid.grid[start[0]][start[1]]
+        end_node = myGrid.grid[end[0]][end[1]]
         mySolver = Solver()
 
         if solve_algorithm == "dijkstra":
             mySolver.dijkstra(myGrid, start_node, end_node)
+        elif solve_algorithm == "dfs":
+            mySolver.dfs(myGrid, start_node, end_node)
 
     #return the json of the grid
     return {
         'statusCode': 200,
         'body': json.dumps(myGrid.serialize())
     }
-
-#for development purposes
-if __name__ == "__main__":
+if __name__ == "__main__":#for development purposes
     myGenerator = Generator()
-    myGrid = Grid(22,22)
-    myGenerator.recursive_backtracking(myGrid)
+    myGrid = Grid(15,15)
+    myGenerator.prims(myGrid)
     myGrid.printGrid()
     mySolver = Solver()
-    mySolver.dijkstra(myGrid, myGrid.grid[0][0], myGrid.grid[21][21])
+    mySolver.dfs(myGrid, myGrid.grid[0][0], myGrid.grid[14][14])
+    myGrid.printGrid()

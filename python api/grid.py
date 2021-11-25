@@ -5,37 +5,43 @@ class Node:
         self.y = y
         self.type = type
 
-        self.set = None
+        self.visited = False
         
         self.distance = "infinity"
 
         self.wallLeft = True
         self.wallBottom = True
-
-    #for development purposes
-    def __str__(self):
-        return f"x:{self.x}, y:{self.y}, type:{self.type}, set:{self.set}, wallLeft:{self.wallLeft}, wallBottom:{self.wallBottom}"
-
-    #for returning the grid, the node must be serialized into a dictionary
-    def serialize(self):
+    def __str__(self):#for development purposes
+        return f"x:{self.x}, y:{self.y}, type:{self.type}, wallLeft:{self.wallLeft}, wallBottom:{self.wallBottom}, distance:{self.distance}"
+    def load(self, wallLeft, wallBottom):#when loading the grid, the walls must be set from the received grid
+        self.wallBottom = wallBottom
+        self.wallLeft = wallLeft
+    def serialize(self):#for returning the grid, the node must be serialized into a dictionary
         return {
             "x": self.x,
             "y": self.y,
-            "type": self.type,
             "wallLeft": self.wallLeft,
-            "wallBottom": self.wallBottom
+            "wallBottom": self.wallBottom,
+            "type": self.type,
+
         }
 
-#Grid class for the grid
-class Grid:
+class Grid:#Grid class for the grid
     def __init__(self, height, width):
         self.height = height
         self.width = width
 
         self.grid = self.generateGrid()
-
-    #for returning the grid, the grid must be serialized into a dictionary
-    def serialize(self):
+    def load(self, grid):#load the grid from the grid received from the react app
+        self.grid = []
+        for row in grid:
+            row_inner = []
+            for item in row:
+                node = Node(item["x"], item["y"], "space")
+                node.load(item["wallLeft"], item["wallBottom"])
+                row_inner.append(node)
+            self.grid.append(row_inner)
+    def serialize(self):#for returning the grid, the grid must be serialized into a dictionary
         obj = {
             "height": self.height,
             "width": self.width,
@@ -48,9 +54,7 @@ class Grid:
             obj["grid"].append(row_inner)
         
         return obj
-                
-    #generate the grid
-    def generateGrid(self):
+    def generateGrid(self):#generate the grid
         grid = []
         for i in range(self.height):
             row = []
@@ -65,9 +69,7 @@ class Grid:
         grid.append(row)
 
         return grid
-
-    #for development purposes
-    def printGrid(self):
+    def printGrid(self):#for development purposes
         width = self.width
         height = self.height
 
@@ -80,7 +82,10 @@ class Grid:
                     cell += "|"
                 else:
                     cell += " "
-                cell += "  "
+                if self.grid[i][j].type == "path":
+                    cell += "XX"
+                else:
+                    cell += "  "
                 print(cell, end="")
             print("|")
 
