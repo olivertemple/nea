@@ -41,6 +41,8 @@ def lambda_handler(event, context):
             mySolver.dijkstra(myGrid, start_node, end_node)
         elif solve_algorithm == "dfs":
             mySolver.dfs(myGrid, start_node, end_node)
+        elif solve_algorithm == "bfs":
+            mySolver.bfs(myGrid, start_node, end_node)
 
     #return the json of the grid
     return {
@@ -53,5 +55,5 @@ if __name__ == "__main__":#for development purposes
     myGenerator.prims(myGrid)
     myGrid.printGrid()
     mySolver = Solver()
-    mySolver.dfs(myGrid, myGrid.grid[0][0], myGrid.grid[14][14])
+    mySolver.bfs(myGrid, myGrid.grid[0][0], myGrid.grid[14][14])
     myGrid.printGrid()

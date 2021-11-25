@@ -65,3 +65,23 @@ class Solver:
         
         for node in stack:
             node.type = "path"
+    
+    def bfs(self, Grid, start, end):
+        queue = [start]
+        while len(queue) > 0:
+            current = queue[0]
+            current.visited = True
+            if current == end:
+                break
+            possible = []
+            for node in self.get_adjacent_paths(Grid, current):
+                if not node.visited:
+                    possible.append(node)
+            
+            if len(possible) > 0:
+                queue = [random.choice(possible), *queue]
+            else:
+                queue.pop(0)
+        for node in queue:
+            node.type = "path"
+
