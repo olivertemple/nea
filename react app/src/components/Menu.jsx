@@ -19,6 +19,7 @@ export default class Menu extends Component {
                     <option value="select">Select Solving Algorithm</option>
                     <option value="dijkstra">Dijkstra</option>
                     <option value="dfs">Depth First Search</option>
+                    <option value="bfs">Breadth First Search</option>
                 </select>
                 <button className="button clear" onClick={this.props.clearGrid}>Reset</button>
             </div>

@@ -57,12 +57,32 @@ export default class DisplayNode extends React.Component{
             this.classList.push("node_start")
             this.draggable = true
             this.start = true
+        }else{
+            this.classList.filter(x => {return x != "node_start"})
         }
         //add attributes for the end node
         if (this.props.pos[0] === this.props.end[0] && this.props.pos[1] === this.props.end[1]){
             this.classList.push("node_end")
             this.draggable = true
             this.end=true
+        }else{
+            this.classList.filter(x => {return x != "node_end"})
+        }
+
+        if(this.props.index){
+            if (this.props.type != "path"){
+                this.state.style = {
+                    animation: "visit_node 2s linear forwards",
+                    animationDelay: `${this.props.index * 0.1}s`
+                }
+            }else{
+                this.state.style = {
+                    animation: "visit_node_path 2s linear forwards",
+                    animationDelay: `${this.props.index * 0.1}s`
+                }
+            }
+        }else{
+            this.state.style = {}
         }
         return(
             <td style={this.state.style} className={this.classList.join(" ")} draggable={this.draggable} onDragStart={this.handelDragStart} onDrop={this.handelDrop} onDragOver={this.handelDragOver} onDragLeave={this.handelDragLeave}>

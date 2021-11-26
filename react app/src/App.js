@@ -30,7 +30,7 @@ class App extends Component {
     this.setSize = this.setSize.bind(this);
     this.setStart = this.setStart.bind(this);
     this.setEnd = this.setEnd.bind(this);
-
+    this.should_solve = this.should_solve.bind(this);
   }
   componentDidMount(){
     this.clearGrid();
@@ -64,10 +64,34 @@ class App extends Component {
       this.should_solve()
     })
   }
-  should_solve(){//if the maze is already solved, then solve again. Only run when the start or end nodes are changed
+  async should_solve(){//if the maze is already solved, then solve again. Only run when the start or end nodes are changed
     if (this.solved){
-      this.solveGrid();   
+      this.clear_node_index().then(() => {
+        this.solveGrid();
+      })
     }
+  }
+
+  async clear_node_index(){
+    return new Promise((resolve, reject) => {
+      let grid = this.state.grid.grid
+      for (let i=0; i<this.state.size.height; i++){
+        for(let j=0; j<this.state.size.width; j++){
+          grid[i][j].index = null;
+        }
+      }
+
+      this.setState({
+        grid: {
+          grid: grid,
+          height: this.state.grid.height,
+          width: this.state.grid.width
+        }
+      }, () => {
+        resolve();
+      })
+    })
+    
   }
   async fetchGrid(){//generate a new maze from the python API using the selected algorithm
     if (this.state.algorithm){
@@ -83,6 +107,7 @@ class App extends Component {
     } 
   }
   async solveGrid(){//send the maze to the python API to be solved with the requested algorithm
+    await this.clear_node_index();
     if (this.maze && this.state.solve){
       let grid = await fetch(
         "https://jkrlv64tsl.execute-api.eu-west-2.amazonaws.com/default/NEA?type=solve&width="+this.state.size.width+"&height="+this.state.size.height+"&solve="+this.state.solve+"&start="+this.state.nodes.start+"&end="+this.state.nodes.end, {

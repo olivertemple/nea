@@ -16,12 +16,15 @@ class Solver:
         return paths
     def dijkstra(self, Grid, start, end):#Dijkstra's algorithm for solving the grid
         start.distance = 0
+        index = 0
         unvisited = [start]
         found = False
         while not found:
             try:
                 current = unvisited.pop(0)
                 current.visited = True
+                current.index = index
+                index += 1
                 for node in self.get_adjacent_paths(Grid, current):
                     if not node.visited:
                         node.distance = current.distance + 1
@@ -48,6 +51,8 @@ class Solver:
 
     def dfs(self, Grid, start, end):
         stack = [start]
+        start.index = 0
+        index = 1
         while len(stack) > 0:
             current = stack[-1]
             current.visited = True
@@ -59,7 +64,11 @@ class Solver:
                     possible.append(node)
             
             if len(possible) > 0:
-                stack.append(random.choice(possible))
+                to_append = random.choice(possible)
+                to_append.index = index
+                to_append.parent = current
+                index += 1
+                stack.append(to_append)
             else:
                 stack.pop()
         
@@ -68,20 +77,24 @@ class Solver:
     
     def bfs(self, Grid, start, end):
         queue = [start]
+        start.index = 0
+        index = 1
         while len(queue) > 0:
-            current = queue[0]
+            current = queue.pop(0)
             current.visited = True
+
             if current == end:
                 break
-            possible = []
+
             for node in self.get_adjacent_paths(Grid, current):
                 if not node.visited:
-                    possible.append(node)
-            
-            if len(possible) > 0:
-                queue = [random.choice(possible), *queue]
-            else:
-                queue.pop(0)
-        for node in queue:
-            node.type = "path"
-
+                    node.parent = current
+                    node.index = index
+                    index += 1
+                    queue.append(node)
+        
+        while current != start:
+            current.type = "path"
+            current = current.parent
+        
+        start.type = "path"

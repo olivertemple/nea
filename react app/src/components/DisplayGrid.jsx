@@ -36,7 +36,7 @@ export default class DisplayGrid extends Component{
                                 <tr className={`row wall_right ${i === 0 ? "wall_top" : ""}`} key={i}>
                                     {Array.from(Array(this.props.grid.width).keys()).map((_, j) => {
                                         return(
-                                            <DisplayNode key={j} wallLeft={this.props.grid.grid[i][j].wallLeft} wallBottom={this.props.grid.grid[i][j].wallBottom} pos={[i, j]} start={this.props.nodes.start} handelDrop = {this.handelDrop} end={this.props.nodes.end} setDragObject={this.setDragObject} type={this.props.grid.grid[i][j].type}/>
+                                            <DisplayNode key={j} wallLeft={this.props.grid.grid[i][j].wallLeft} wallBottom={this.props.grid.grid[i][j].wallBottom} pos={[i, j]} start={this.props.nodes.start} handelDrop = {this.handelDrop} end={this.props.nodes.end} setDragObject={this.setDragObject} type={this.props.grid.grid[i][j].type} index={this.props.grid.grid[i][j].index}/>
                                         )
                                     })}
                                 </tr>

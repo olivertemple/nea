@@ -44,16 +44,12 @@
   border-top: 2px black solid;
 }
 
-.node_path{
-  background-color: yellow;
-}
-
 .node_end{
-  background-color: #ff0000;
+  background-color: #ff0000 !important;
 }
 
 .node_start{
-  background-color: #00ff00;
+  background-color: #00ff00 !important;
 }
 
 .node:not(.wall_left) {
@@ -134,4 +130,26 @@
   margin-top: 10px;
   padding:5px 20px 5px 20px;
   box-shadow: #00000085 0px 0px 30px 0px;
+}
+
+
+@keyframes visit_node {
+  0% {
+    background-color: inherit;
+  }
+  100% {
+    background-color: peru;
+  }
+}
+
+@keyframes visit_node_path{
+  0% {
+    background-color: inherit;
+  }
+  80%{
+    background-color: peru;
+  }
+  100% {
+    background-color: yellow;
+  }
 }

@@ -5,10 +5,12 @@ class Node:
         self.y = y
         self.type = type
 
+        self.index = None
+
         self.visited = False
         
         self.distance = "infinity"
-
+        self.parent = None
         self.wallLeft = True
         self.wallBottom = True
     def __str__(self):#for development purposes
@@ -23,7 +25,7 @@ class Node:
             "wallLeft": self.wallLeft,
             "wallBottom": self.wallBottom,
             "type": self.type,
-
+            "index":self.index
         }
 
 class Grid:#Grid class for the grid
