@@ -20,6 +20,7 @@ export default class Menu extends Component {
                     <option value="dijkstra">Dijkstra</option>
                     <option value="dfs">Depth First Search</option>
                     <option value="bfs">Breadth First Search</option>
+                    <option value="greedy">Greedy</option>
                 </select>
                 <button className="button clear" onClick={this.props.clearGrid}>Reset</button>
             </div>

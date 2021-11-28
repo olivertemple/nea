@@ -55,5 +55,5 @@ if __name__ == "__main__":#for development purposes
     myGenerator.prims(myGrid)
     myGrid.printGrid()
     mySolver = Solver()
-    mySolver.dfs(myGrid, myGrid.grid[0][0], myGrid.grid[14][14])
+    mySolver.greedy(myGrid, myGrid.grid[0][0], myGrid.grid[14][14])
     myGrid.printGrid()

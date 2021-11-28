@@ -98,3 +98,35 @@ class Solver:
             current = current.parent
         
         start.type = "path"
+
+    def manhattan(self, node1, node2):
+        return abs(node1.x - node2.x) + abs(node1.y - node2.y)
+
+    def greedy(self, Grid, start, end):
+        queue = [start]
+        start.index = 0
+        index = 1
+        while len(queue) > 0:
+            current = queue.pop(0)
+            current.visited = True
+
+            if current == end:
+                break
+
+            for node in self.get_adjacent_paths(Grid, current):
+                if not node.visited:
+                    node.parent = current
+                    node.index = index
+                    index += 1
+                    node.distance = self.manhattan(node, end)
+                    for item in queue:
+                        if item.distance > node.distance:
+                            queue.insert(queue.index(item), node)
+                            break
+                    queue.append(node)
+        
+        while current != start:
+            current.type = "path"
+            current = current.parent
+        
+        start.type = "path"
