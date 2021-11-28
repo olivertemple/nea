@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/nea/static/css/main.2d87743f.chunk.css",
+    "main.js": "/nea/static/js/main.1d494694.chunk.js",
+    "main.js.map": "/nea/static/js/main.1d494694.chunk.js.map",
+    "runtime-main.js": "/nea/static/js/runtime-main.cb476caa.js",
+    "runtime-main.js.map": "/nea/static/js/runtime-main.cb476caa.js.map",
+    "static/js/2.00117a02.chunk.js": "/nea/static/js/2.00117a02.chunk.js",
+    "static/js/2.00117a02.chunk.js.map": "/nea/static/js/2.00117a02.chunk.js.map",
+    "static/js/3.25aba221.chunk.js": "/nea/static/js/3.25aba221.chunk.js",
+    "static/js/3.25aba221.chunk.js.map": "/nea/static/js/3.25aba221.chunk.js.map",
+    "index.html": "/nea/index.html",
+    "static/css/main.2d87743f.chunk.css.map": "/nea/static/css/main.2d87743f.chunk.css.map",
+    "static/js/2.00117a02.chunk.js.LICENSE.txt": "/nea/static/js/2.00117a02.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cb476caa.js",
+    "static/js/2.00117a02.chunk.js",
+    "static/css/main.2d87743f.chunk.css",
+    "static/js/main.1d494694.chunk.js"
+  ]
+}
