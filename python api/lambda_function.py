@@ -43,17 +43,12 @@ def lambda_handler(event, context):
             mySolver.dfs(myGrid, start_node, end_node)
         elif solve_algorithm == "bfs":
             mySolver.bfs(myGrid, start_node, end_node)
+        elif solve_algorithm == "greedy":
+            heuristic = event["queryStringParameters"]["heuristic"]
+            mySolver.greedy(myGrid, start_node, end_node, heuristic)
 
     #return the json of the grid
     return {
         'statusCode': 200,
         'body': json.dumps(myGrid.serialize())
     }
-if __name__ == "__main__":#for development purposes
-    myGenerator = Generator()
-    myGrid = Grid(15,15)
-    myGenerator.prims(myGrid)
-    myGrid.printGrid()
-    mySolver = Solver()
-    mySolver.greedy(myGrid, myGrid.grid[0][0], myGrid.grid[14][14])
-    myGrid.printGrid()

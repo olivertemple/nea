@@ -1,7 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class MenuKey extends Component {
-    render(){
+export default function MenuKey(props){//key for showing the different types of node
         return(
             <div className="key">
                 <div className="key_item">
@@ -13,10 +12,13 @@ export default class MenuKey extends Component {
                     <p>Finish Node</p>
                 </div>
                 <div className="key_item">
-                    <div className="key_node_via-point"></div>
-                    <p>Via Point</p>
+                    <div className="key_node_path"></div>
+                    <p>Path Node</p>
+                </div>
+                <div className="key_item">
+                    <div className="key_node_visited_node"></div>
+                    <p>Visited Node</p>
                 </div>
             </div>
         )
-    }
 }

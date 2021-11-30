@@ -1,4 +1,4 @@
-import random
+import math
 class Solver:
     def __init__(self):
         pass
@@ -48,6 +48,7 @@ class Solver:
             current = min
         for node in path:
             node.type = "path"
+        Grid.maxIndex = index
 
     def dfs(self, Grid, start, end):
         stack = [start]
@@ -64,16 +65,21 @@ class Solver:
                     possible.append(node)
             
             if len(possible) > 0:
-                to_append = random.choice(possible)
+                to_append = possible[0]
                 to_append.index = index
                 to_append.parent = current
                 index += 1
                 stack.append(to_append)
             else:
                 stack.pop()
+            
         
-        for node in stack:
-            node.type = "path"
+        while current != start:
+            current.type = "path"
+            current = current.parent
+        
+        start.type = "path"
+        Grid.maxIndex = index
     
     def bfs(self, Grid, start, end):
         queue = [start]
@@ -98,11 +104,15 @@ class Solver:
             current = current.parent
         
         start.type = "path"
+        Grid.maxIndex = index
 
     def manhattan(self, node1, node2):
         return abs(node1.x - node2.x) + abs(node1.y - node2.y)
 
-    def greedy(self, Grid, start, end):
+    def euclidean(self, node1, node2):
+        return math.sqrt((node1.x - node2.x)**2 + (node1.y - node2.y)**2)
+
+    def greedy(self, Grid, start, end, heuristic):
         queue = [start]
         start.index = 0
         index = 1
@@ -118,7 +128,10 @@ class Solver:
                     node.parent = current
                     node.index = index
                     index += 1
-                    node.distance = self.manhattan(node, end)
+                    if heuristic == "manhattan":
+                        node.distance = self.manhattan(node, end)
+                    elif heuristic == "euclidean":
+                        node.distance = self.euclidean(node, end)
                     for item in queue:
                         if item.distance > node.distance:
                             queue.insert(queue.index(item), node)
@@ -130,3 +143,4 @@ class Solver:
             current = current.parent
         
         start.type = "path"
+        Grid.maxIndex = index

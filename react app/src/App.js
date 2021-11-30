@@ -3,25 +3,28 @@ import { Component } from 'react';
 import DisplayGrid from './components/DisplayGrid';
 import Menu from './components/Menu';
 import MenuKey from './components/MenuKey';
+import Footer from './components/Footer';
 class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      grid: null,
-      algorithm: null,
-      solve:null,
+      grid: null,//the grid of nodes
+      algorithm: null,//algorithm for generating the maze
+      solve:null,//algorithm for solving the maze
       nodes:{
-        start: [0,0],
-        end: [null, null]
+        start: [0,0],//position of the start node
+        end: [null, null]//position of the end node
       },
-      size: {
+      size: {//size of the maze
         width:15,
         height:15
-      }
+      },
+      heuristic: "euclidean"
     }
 
     this.solved = false;
     this.maze = false;
+    //bind the methods to the object so that the "this" keyword refers to the object no matter where the method is called from
     this.fetchGrid = this.fetchGrid.bind(this);
     this.setAlgorithm = this.setAlgorithm.bind(this);
     this.clearGrid = this.clearGrid.bind(this);
@@ -31,15 +34,23 @@ class App extends Component {
     this.setStart = this.setStart.bind(this);
     this.setEnd = this.setEnd.bind(this);
     this.should_solve = this.should_solve.bind(this);
+    this.setHeuristic = this.setHeuristic.bind(this);
   }
+
   componentDidMount(){
+    //generate a new maze empty when the page loads
     this.clearGrid();
   }
+
+  setHeuristic(heuristic){//set the heuristic for the greedy algorithm
+    this.setState({heuristic: heuristic});
+  }
+
   setSize(size){//set the size of the grid when changed in settings
     this.setState({
       size: size
-    }, () => {
-      if (size.width > 0 && size.height > 0){
+    }, () => {//setState is asynchronous, so we need to wait for it to finish before running the following code 
+      if (size.width > 0 && size.height > 0){//if the size is valid, generate a new maze
         this.clearGrid();
       }
     })
@@ -50,8 +61,8 @@ class App extends Component {
         start: node,
         end: this.state.nodes.end
       }
-    }, () => {
-      this.should_solve()
+    }, () => {//setState is asynchronous, so we need to wait for it to finish before running the following code
+      this.should_solve()//solve the maze again if it is already solved
     })
   }
   setEnd(node){//set the end node
@@ -60,27 +71,30 @@ class App extends Component {
         start: this.state.nodes.start,
         end: node
       }
-    }, () => {
-      this.should_solve()
+    }, () => {//setState is asynchronous, so we need to wait for it to finish before running the following code
+      this.should_solve()//solve the maze again if it is already solved
     })
   }
+
   async should_solve(){//if the maze is already solved, then solve again. Only run when the start or end nodes are changed
     if (this.solved){
-      this.clear_node_index().then(() => {
+      this.clear_node_index()//clear the index of the nodes, as the maze is being solved again
+      .then(() => {
         this.solveGrid();
       })
     }
   }
 
-  async clear_node_index(){
-    return new Promise((resolve, reject) => {
+  async clear_node_index(){//clear the index of the nodes so that the maze can be solved again
+    return new Promise(resolve => {//since there are asynchronous calls, we need to wait for them to finish before running the code after the clear_node_index function, hence we use a promise that is resolved once this code is finished
       let grid = this.state.grid.grid
+      //iterate through the grid and clear the index of the nodes
       for (let i=0; i<this.state.size.height; i++){
         for(let j=0; j<this.state.size.width; j++){
           grid[i][j].index = null;
         }
       }
-
+      //update the state with the grid that has been cleared of the index's
       this.setState({
         grid: {
           grid: grid,
@@ -88,58 +102,58 @@ class App extends Component {
           width: this.state.grid.width
         }
       }, () => {
-        resolve();
+        resolve(); // resolve the promise once the state has been updated
       })
     })
     
   }
   async fetchGrid(){//generate a new maze from the python API using the selected algorithm
-    if (this.state.algorithm){
-      let grid = await fetch("https://jkrlv64tsl.execute-api.eu-west-2.amazonaws.com/default/NEA?type=generate&width="+this.state.size.width+"&height="+this.state.size.height+"&generate="+this.state.algorithm)
-      grid = await grid.json();
-      this.setState({
+    if (this.state.algorithm){//check that there is an algorithm selected for generating the maze
+      let grid = await fetch(`https://jkrlv64tsl.execute-api.eu-west-2.amazonaws.com/default/NEA?type=generate&width=${this.state.size.width}&height=${this.state.size.height}&generate=${this.state.algorithm}`)//fetch the generated grid from the python API
+      grid = await grid.json();//convert the response to json
+      this.setState({//update the state with the new grid
         grid:grid
       })
-      this.solved = false;
-      this.maze = true;
-    }else{
+      this.solved = false;//the maze is no longer solved
+      this.maze = true;//set the maze to true as a maze has been generated
+    }else{//If there is no algorithm selected to generate the maze, alert the user
       alert("Please select a maze generating algorithm")
     } 
   }
   async solveGrid(){//send the maze to the python API to be solved with the requested algorithm
-    await this.clear_node_index();
-    if (this.maze && this.state.solve){
+    await this.clear_node_index();//clear the index of the nodes, as the maze is being solved again
+    if (this.maze && this.state.solve){//check that there is a maze and that there is an algorithm selected for solving the maze
       let grid = await fetch(
-        "https://jkrlv64tsl.execute-api.eu-west-2.amazonaws.com/default/NEA?type=solve&width="+this.state.size.width+"&height="+this.state.size.height+"&solve="+this.state.solve+"&start="+this.state.nodes.start+"&end="+this.state.nodes.end, {
+        `https://jkrlv64tsl.execute-api.eu-west-2.amazonaws.com/default/NEA?type=solve&width=${this.state.size.width}&height=${this.state.size.height}&solve=${this.state.solve}&start=${this.state.nodes.start}&end=${this.state.nodes.end}&heuristic=${this.state.heuristic}`, {
         method: "POST",
-        body: JSON.stringify(this.state.grid)
-      })
-      grid = await grid.json();
-      this.setState({
+        body: JSON.stringify(this.state.grid)//set the body of the request to the grid
+      })//send the maze to the python API to be solved, with the selected algorithm as a parameter
+      grid = await grid.json();//convert the response to json
+      this.setState({//update the state with the new grid
         grid:grid
       })
-      this.solved = true;
+      this.solved = true;//the maze is now solved
     }else{
-      if (!this.maze){
+      if (!this.maze){//if there is no maze, alert the user that there is no maze to solve
         alert("Please generate a maze")
       }else{
-        alert("Please select a solving algorithm")
+        alert("Please select a solving algorithm")//If there is no algorithm selected to solve the maze, alert the user
       }
     }
     
   }
   async clearGrid(){//generate an empty maze from the API
-    let grid = await fetch("https://jkrlv64tsl.execute-api.eu-west-2.amazonaws.com/default/NEA?type=empty_maze&width="+this.state.size.width+"&height="+this.state.size.height)
-    grid = await grid.json();
-    this.setState({
-      grid:grid,
-      nodes:{
+    let grid = await fetch(`https://jkrlv64tsl.execute-api.eu-west-2.amazonaws.com/default/NEA?type=empty_maze&width=${this.state.size.width}&height=${this.state.size.height}`)//fetch the empty grid from the python API
+    grid = await grid.json();//convert the response to json
+    this.setState({//update the state
+      grid:grid,//update the state with the new grid
+      nodes:{//set the start and end nodes to default positions
         start: [0,0],
         end: [this.state.size.height - 1, this.state.size.width - 1]
       }
     })
-    this.maze = false;
-    this.solved = false;
+    this.maze = false;//there is no longer a maze to solve
+    this.solved = false;//the maze is no longer solved
   }
   setAlgorithm(algorithm){//set the maze generating algorithm
     this.setState({
@@ -154,9 +168,28 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        <Menu setAlgorithm={this.setAlgorithm} setSolve={this.setSolve} generate={this.fetchGrid} clearGrid={this.clearGrid} solve={this.solveGrid} size={this.state.size} setSize={this.setSize}/>
+        <Menu
+          setAlgorithm={this.setAlgorithm}//callback function to set the generation algorithm from the menu
+          setSolve={this.setSolve}//callback function to set the solving algorithm from the menu
+          generate={this.fetchGrid}//callback function to generate a new maze from the menu
+          clearGrid={this.clearGrid}//callback function to clear the maze from the menu
+          solve={this.solveGrid}//callback function to solve the maze from the menu
+          size={this.state.size}//the size of the maze
+          setSize={this.setSize}//callback function to set the size of the maze from the menu
+          setHeuristic={this.setHeuristic}//callback function to set the heuristic from the menu
+        />
         <MenuKey />
-        <DisplayGrid grid={this.state.grid} nodes={this.state.nodes} size={this.state.size} setStart={this.setStart} setEnd={this.setEnd}/>
+        <DisplayGrid
+          grid={this.state.grid}//the grid of the maze
+          nodes={this.state.nodes}//the start and end nodes
+          size={this.state.size}//the size of the maze
+          setStart={this.setStart}//callback function to set the start node
+          setEnd={this.setEnd}//callback function to set the end node
+          generateAlgorithm={this.state.algorithm}//the algorithm used to generate the maze
+          solveAlgorithm={this.state.solve}//the algorithm used to solve the maze
+          heuristic={this.state.heuristic}//the heuristic used for the greedy algorithm
+        />
+        <Footer />
       </div>
     );
   }

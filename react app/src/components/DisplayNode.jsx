@@ -5,6 +5,7 @@ export default class DisplayNode extends React.Component{
         this.state = {
             style:{}
         }
+        //bind the methods to the object so that the "this" keyword refers to the object no matter where the method is called from
         this.handelDragStart = this.handelDragStart.bind(this);
         this.handelDragLeave = this.handelDragLeave.bind(this);
         this.handelDragOver = this.handelDragOver.bind(this);
@@ -17,7 +18,6 @@ export default class DisplayNode extends React.Component{
         this.setState({style:{}});
         this.props.handelDrop(this.props.pos)
     }
-
     handelDragOver(e){//when another node is dragged over this node, set the style of the node to be pink
         e.preventDefault();
         this.setState({
@@ -31,7 +31,7 @@ export default class DisplayNode extends React.Component{
             style:{}
         })
     }
-    render(){
+    render(){//render the node as a table cell
         //generate a list of css classes for this node
         this.classList = ["node"];
         //set default values for the node
@@ -50,41 +50,43 @@ export default class DisplayNode extends React.Component{
             this.classList.push("node_path")
         }else{
             //Remove the "node_path" item from the classList if it isn't a path, as when maze is resolved the nodes would remain a path node if it was a path node before.
-            this.classList.filter(x => {return x != "node_path"})
+            this.classList.filter(x => {return x !== "node_path"})
         }
-        //add attributes for the start node
+        //add attributes for the start node or remove them if this node is no longer the start node
         if (this.props.pos[0] === this.props.start[0] && this.props.pos[1] === this.props.start[1]){
             this.classList.push("node_start")
             this.draggable = true
             this.start = true
         }else{
-            this.classList.filter(x => {return x != "node_start"})
+            this.classList.filter(x => {return x !== "node_start"})
+            this.start = false
         }
-        //add attributes for the end node
+        //add attributes for the end node or remove them if this node is no longer the end node
         if (this.props.pos[0] === this.props.end[0] && this.props.pos[1] === this.props.end[1]){
             this.classList.push("node_end")
             this.draggable = true
             this.end=true
         }else{
-            this.classList.filter(x => {return x != "node_end"})
+            this.classList.filter(x => {return x !== "node_end"})
+            this.end=false
         }
 
-        if(this.props.index){
-            if (this.props.type != "path"){
+        if(this.props.index){//Each node is given an index when it is visited so the order of the visited nodes can be visualized
+            if (this.props.type !== "path"){//Add css animations for to show the visited nodes
                 this.state.style = {
                     animation: "visit_node 2s linear forwards",
                     animationDelay: `${this.props.index*0.1}s`
                 }
-            }else{
+            }else{//Add css animations for to show the path nodes
                 this.state.style = {
                     animation: "visit_node_path 2s linear forwards",
-                    animationDelay: `${this.props.index * 0.1}s`
-                }
+                    animationDelay: `${this.props.index*0.1}s`
+                } 
             }
         }else{
+            //removes the colour if the node is no longer visited after the maze is solved again
             if (!this.state.style.backgroundColor){
-                this.state.style = {
-                }
+                this.state.style = {}
             }
         }
         return(
@@ -92,5 +94,4 @@ export default class DisplayNode extends React.Component{
             </td>
         )
     }
-    
 }
