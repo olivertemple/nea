@@ -74,13 +74,13 @@ export default class DisplayNode extends React.Component{
         if(this.props.index){//Each node is given an index when it is visited so the order of the visited nodes can be visualized
             if (this.props.type !== "path"){//Add css animations for to show the visited nodes
                 this.state.style = {
-                    animation: "visit_node 2s linear forwards",
-                    animationDelay: `${this.props.index*0.1}s`
+                    animation: `visit_node 2s linear forwards`,
+                    animationDelay: `${this.props.index*this.props.speed}s`
                 }
             }else{//Add css animations for to show the path nodes
                 this.state.style = {
                     animation: "visit_node_path 2s linear forwards",
-                    animationDelay: `${this.props.index*0.1}s`
+                    animationDelay: `${this.props.index*this.props.speed}s`
                 } 
             }
         }else{

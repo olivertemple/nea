@@ -7,7 +7,7 @@
 \usepackage{tikz}
 \usepackage{listings}
 \usepackage{xcolor}
-
+\usepackage[font=itshape]{quoting}
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
@@ -85,16 +85,64 @@
 
 \section{analysis}
 \subsection{Project Description}
-Path finding algorithms are essential in many aspects computer science, especially in games and simulations. However, they can be complex things that are hard to visualize, especially when being taught about them. Path finding algorithm visualizers do exist, however, I feel that none of them are perfect.
+Path finding algorithms are essential in many aspects of computer science, from computer games to solving complex real world problems, however they can be complex things to visualize, especially when learning about them for the first time. This project's aim to create a path finding visualization tool that will generate and solve mazes, and to provide a general understanding of the algorithms used. 
 
-Because of this, I am going to make a path finding visualizer that ticks all of the boxes. It will be simple and easy to use, have advanced customization and have the ability to run a path finding algorithms given by the user.
+There are a number of different algorithms that can be used to solve and generate mazes, and this project will focus on the more common ones like Dijkstra's, Depth First Search, Prims and more. I intend to include algorithms that are different from each other to show the advantages and disadvantages of each.
 
 \subsection{Research}
 \subsubsection{Overview}
 To complete this project, I will need a strong understanding of maze generation and path finding algorithms, how they work and how to model them, knowledge of react and javascript to create a website for the visualization as well as user opinions on what features are needed.
 \subsubsection{Research Log}
-\paragraph*{Class}
 I was introduced to path finding algorithms in one of my lessons, where we learned what they were used for and some examples, as well as how they can be modeled. For example, modelling the maze as a graph with weighted nodes of 1 and 0, for the walls and space respectively. The algorithms we looked at were Dijkstra's and A*. We also looked at Prim's algorithm, recursive backtracking, depth fist search and Kruskal's algorithms for maze generation.
+
+\paragraph{Maze Generating Algorithms}
+\subparagraph*{Prims}
+In class, we were taught about Prim's algorithm, and how it works. I used the information that our teacher gave us to write my own implementation of Prim's algorithm.
+\subparagraph*{Recursive Backtracking}
+When researching recursive backtracking I can across a website that said:
+\begin{quoting}
+    Here's the mile-high view of recursive backtracking:
+    \begin{enumerate}
+        \item Choose a starting point in the field.
+        \item Randomly choose a wall at that point and carve a passage through to the adjacent cell, but only if the adjacent cell has not been visited yet. This becomes the new current cell.
+        \item If all adjacent cells have been visited, back up to the last cell that has uncarved walls and repeat.
+        \item The algorithm ends when the process has backed all they way up to the starting point. 
+    \end{enumerate}
+\end{quoting}
+\url{https://weblog.jamisbuck.org/2010/12/27/maze-generation-recursive-backtracking}
+I used this along with another visualization that I found to write my own recursive backtracking algorithm.
+
+\paragraph{Path Finding Algorithms}
+\subparagraph*{Depth First Search}
+For the depth first search, I looked \url{https://isaaccomputerscience.org/concepts/dsa_pathfinding_dfs_bfs?examBoard=ocr&stage=a_level}, a resource I often use for studying. I used their easy to understand description to write my own implementation of depth first search. Their website said:
+\begin{quoting}
+    A depth-first search begins at the start node and then searches as far as possible down a branch of the graph, moving forward until there are no more nodes along the current branch to be explored. If the target node is found along the way, the search can stop. Otherwise, it must backtrack and find another branch to explore.
+
+    This process uses a stack as a supporting data structure to keep track of the nodes that have not been fully explored. As each node is discovered, it is added to the stack.
+\end{quoting}
+
+\subparagraph*{Breadth First Search}
+Isaaccomputerscience also have a page on breadth first search, also containing a simple description that I used to implement my own breadth first search.
+\begin{quoting}
+    The algorithm starts searching at a designated start node and searches through all the adjacent nodes (neighbours) before moving on. You can think of this process as moving out in waves from a given point. Another simple way to visualise a breadth-first search algorithm is to imagine that you are making a cake one layer at a time. You can't add the next layer unless the previous one is complete.
+
+    This process uses a queue as a supporting data structure to keep track of the nodes that have not been fully explored. As each node is discovered, it is added to the queue.
+\end{quoting} 
+
+\subparagraph*{Dijkstra's}
+For dijkstr's, i found this website:\url{https://daemianmack.org/posts/2019/12/mazes-for-programmers-dijkstras-algorithm.html}, that had a very good description of Dijkstra's algorithm. 
+\begin{quoting}
+    \begin{enumerate}
+        \item Determine the starting point of the grid.
+        \item Record the cost of reaching that cell: 0.
+        \item Find that cell's navigable neighbors.
+        \item For each neighbor, record the cost of reaching that neighbor: 1.
+        \item For each neighbor, repeat steps 3-5, taking care not to revisit already-visited cells.
+    \end{enumerate}
+\end{quoting}
+
+\subparagraph*{Greedy Search}
+Having researched the other path finding algorithms, and learnt about greedy algorithms in class, I used the knowledge I already had to write my own greedy search algorithm.
 
 \subsection{Project Background}
 \subsubsection{Current Systems}
@@ -223,64 +271,54 @@ I asked some prospective users some questions about what they would like to see 
 \paragraph*{Answers}
 \begin{enumerate}
     \item[A1.]I would like to see recursive backtracking and Prim's algorithms used for maze generation, as well as Kruskal's (less important). This is because Kruskal's and Prims are similar but each has their own advantages and disadvantages and recursive backtracking is different and uses recursion.
-    \item[A2.]I would like to see Dijkstra's algorithm and A* search, as these are very popular algorithms and one is a heuristic, allowing the visualization to show the difference between an algorithm and a heuristic.
+    \item[A2.]I would like to see an algorithm(such as Dijkstra's) as well as a heuristic(such as A* or a greedy search), as this will show the difference between a heuristic and an algorithm.
     \item[A3.]Option to add your own png image for the drawing of final path - "a sussy imposter running around the maze".
-    \item[A4.]I would find it useful to be able to code my own algorithms. This would allow me to use the visualization with other, lesser known algorithms that I may need.
+    \item[A4.]I would find it useful to be able to code my own algorithms. This would allow me to use the visualization with other, lesser known algorithms that I may want to visualize.
 \end{enumerate}
 The answers to these questions confirms what is required from the visualization, which will be reflected in the objectives. The need for contrasting algorithms is something that I will consider when deciding what algorithms to use.
 \subsection{Objectives}
 \subsubsection{Generate Mazes}
-The website should be able to generate mazes using multiple algorithms, including, but not limited to: Prim's algorithm, recursive backtracking and random generation. There should also be a brief description of the algorithm that has been selected and its advantages and disadvantages.
-
-\subsubsection{User Drawn Mazes}
-The user should be able to draw mazes and obstacles easily on the grid using the mouse.
+The website should be able to generate mazes using multiple algorithms, including, but not limited to: Prim's algorithm and recursive backtracking. There should also be a brief description of the algorithm that has been selected.
 
 \subsubsection{Solve Mazes}
-The website should be able to solve mazes using multiple algorithms, including, but not limited to: A* search, Dijkstra's algorithms, depth-first search and breadth-first search. There should also be a brief description of the algorithm that has been selected and its advantages and disadvantages.
+The website should be able to solve mazes using multiple algorithms, including, but not limited to: greedy search, Dijkstra's algorithms, depth-first search and breadth-first search. There should also be a brief description of the algorithm that has been selected.
+
+\subsubsection{Customisation}
+The user should be able to customize aspects of the visualization, including:
+\begin{itemize}
+    \item Size of the maze.
+    \item Speed of the animation.
+    \item The heuristic used in any heuristic algorithms.
+\end{itemize}
 
 \subsubsection{User written algorithms}
 The website should be able to run algorithms written by the user for both maze generation and solving. This will be done by supplying documentation on what parameters need to be taken in and what will need to be returned from the function for the visualizer to work.
 
-%\subsubsection{Update Visualization}
-%If the maze is altered or and nodes moved once the visualization has been run, then it should update without rerunning the visualization.
+\subsubsection{Update Visualization}
+If the start or end nodes are moved once the visualization has been run, then it should update without the user having to rerun the visualization.
 
 \subsubsection{Special Nodes}
 There should be "special" nodes that are different from walls or space. For example, nodes with different weights or a "via point" node that the path must go through.
 
 \section{Documented Design}
 \subsection{Visualization Structure}
-There will be a python API for generating and solving the mazes, and a react website that will visualize the algorithms. There will be two API endpoints, on for generating the mazes and on for solving the mazes, hosted using AWS Lambda. 
+
+There will be a python API for generating and solving the mazes, and a react website that will visualize the algorithms. There will be one API endpoint, however different parameters will be passed to determine weather the api should solve or generate, and which algorithms to use. These parameters will be:
+\begin{itemize}
+    \item width
+    \item height
+    \item type (solve/generate/empty maze)
+    \item generate (algorithm for generation)
+    \item solve (algorithm for solving)
+    \item start
+    \item end
+\end{itemize} 
+
+When solving the maze, the maze will be sent to the API as part of the body of the request.
+\newline
 \includegraphics[width=\linewidth]{assets/structure.jpg}
 \subsection{Flow Chart}
 \includegraphics[width=\linewidth, height=17.5cm]{assets/flow chart.PNG}
-
-\comment{
-\begin{tikzpicture}[node distance = 2cm, auto]
-    \node[start] (init) {start};
-    \node [io, below of = init] (1) {User selects maze algorithm};
-    \node[block, below of = 1] (2) {Generate maze using selected algorithm};
-    \node [io, below of=2](3){User selects path finding algorithm};
-    \node[decision, below of=3](4){Start button pressed?};
-    \node[block, below of=4, yshift=-1cm](5){Visualization runs};
-    \node[decision, below of=5](6){Reset button pressed?};
-    \node[decision, right of=6, xshift=1cm](7){Nodes moved?};
-    \node[block, below of=7, xshift=0.25cm, yshift=-0.5cm](8){Update visualization};
-    \node[block, below of=6, yshift=-0.5cm](9){Visualization resets};
-
-    \path[line] (init) -- (1);
-    \path[line] (1) -- (2);
-    \path[line] (2) -- (3);
-    \path[line] (3) -- (4);
-    \path[line] (4) -- node {no}(4);
-    \path[line] (4) -- node {yes}(5);
-    \path[line] (5) -- (6);
-    \path[line] (6) -- node {no}(7);
-    \path[line] (6) -- node {yes}(9);
-    \path[line] (7) -- node {yes}(8);
-    \path[line] (7) -- node {no}(6);
-    \path[line] (8) -- (6);
-    \path[line, anchor=west] (9) -- (init);
-\end{tikzpicture}}
 
 \subsection{User Interface}
 I have used Figma to create a design mockup of how the user interface will look. This allows me to plan what user inputs will be needed.
@@ -292,14 +330,38 @@ I have used Figma to create a design mockup of how the user interface will look.
 \includegraphics[width=0.5\linewidth]{assets/class diagrams/maze.PNG}
 \includegraphics[width=0.5\linewidth]{assets/class diagrams/node.PNG}
 
-
-\subsection{Data Structures}
-\subsubsection{Grid}
-The Grid for the maze will be stored in a 2D array with each item being a Node object. For example, a 2x2 grid would look like: [[Node, Node], [Node, Node]]
-
+\subsection{Algorithms}
 \subsubsection{Prims}
-For prim's algorithm maze generation, multi-dimensional arrays will be used for storing the nodes that are in the maze and the "frontier" -  a list of nodes that are adjacent to the current node and have not been visited. The frontier will be a 3D array, for example, [[[x, y], [available walls]], [[x, y], [available walls]], ...].
+Prim's algorithm will have two lists, an inMaze list and a frontier, to store the nodes that are in the maze and in the frontier respectively. To start, the nodes adjacent to the start node will be added to the frontier. Then a random wall will be taken from the frontier, and the wall will be removed from the maze. The node that was connected by removing the wall will then be added to the inMaze list. Any nodes that are adjacent to the new node and not in the maze will be added to the frontier. This will continue while there are nodes in the frontier.
 
+\subsubsection{Recursive Backtracking}
+Recursive backtracking will use a stack to store the previous nodes that have been visited. The stack will be a list of Nodes that are added to the stack as they are visited. If the algorithm reaches a node that has no unvisited adjacent nodes, then the algorithm will backtrack to the last node that was visited by popping off of the stack. This will continue until the algorithm backtracks to the start node.
+
+\subsubsection{Dijkstra's}
+Dijkstra's algorithm works by keeping a priority queue of the nodes that have not been visited, however, all connections have the same weights, as it is solving a maze. The queue will be a list of Nodes, with their distance initially set to "infinity". The algorithm will then search outwards from the start node, adding the distance from the start to each node as it is discovered, until the end node is reached. The algorithm will then backtrack from the end node to the start node, choosing the node with the lowest distance at each step.
+
+\subsubsection{Depth First Search}
+Depth first search(dfs) works by keeping a stack of the nodes that need to be visited, and adding to the stack as new nodes are discovered. When the nodes are added to the stack, the "parent" attribute of the nodes will be updated so that a path can be drawn. If there are no unvisited nodes connected to the current node, then the algorithm will backtrack by popping a node off of the stack. This will continue until the stack is empty or the end node is reached, at which point the algorithm will return and a path will be drawn.
+
+\subsubsection{Breadth First Search}
+Breadth first search(bfs) is similar to dfs, however a queue should be used instead of a stack. The queue will be a list of Nodes, with new Nodes being added to the end of the list as they are discovered. When the nodes are added to the queue, the "parent" attribute of the nodes will be updated so that a path can be drawn. The algorithm will keep searching until the queue is empty or the end node is reached, at which point the algorithm will return and a path will be drawn.
+
+\subsubsection{Greedy Search}
+Greedy search works by keeping a priority queue, with the heuristic distance from the node to the end node being the priority. The algorithm will start from the start node, searching outwards, adding nodes to the priority queue as they are discovered, with the "parent" attribute being updated so that the path can be drawn. The algorithm will keep searching until the queue is empty or the end node is reached, at which point the algorithm will return and a path will be drawn.
+\paragraph*{Heuristic}
+Different heuristics can be used for the greedy search. The heuristic I will include are manhattan distance and euclidean distance, as these are some of the most common heuristics.
+
+\subparagraph*{Manhattan Distance}
+Manhattan is calculated by
+\begin{equation}
+    h(n) = |x_{current\ node} - x_{end\ node}| + |y_{current\ node} - y_{end\ node}|
+\end{equation}
+\subparagraph*{Euclidean Distance}
+Euclidean is calculated by
+\begin{equation}
+    h(n) = \sqrt{(x_{current\ node} - x_{end\ node})^2 + (y_{current\ node} - y_{end\ node})^2}
+\end{equation}
+\comment{
 \subsection{Algorithms}
 \subsubsection{Maze generating algorithms}
 Pseudoscode for the maze generation algorithms.
@@ -417,6 +479,7 @@ Pseudoscode for the maze generation algorithms.
         end if
     end function
 \end{verbatim}
+}
 \section{Evidence of Completeness}  
 %out of 15 marks, argument for why the project is complete. Which algorithms have been used?
 

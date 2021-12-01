@@ -50,6 +50,7 @@ export default class DisplayGrid extends Component{
                                                 setDragObject={this.setDragObject} // callback function to set weather the start or end node is being dragged
                                                 type={this.props.grid.grid[i][j].type} //type of node
                                                 index={this.props.grid.grid[i][j].index} //index of the node for visualization
+                                                speed={this.props.speed} //speed of the animation
                                             /> 
                                         )
                                     })}

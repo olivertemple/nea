@@ -29,12 +29,13 @@ class Solver:
                     if not node.visited:
                         node.distance = current.distance + 1
                         unvisited.append(node)
+                                
                     if node == end:
                         found = True
                         break
             except:
                 pass
-        
+
         current = end
         path = [end]
         while current != start:
@@ -48,7 +49,6 @@ class Solver:
             current = min
         for node in path:
             node.type = "path"
-        Grid.maxIndex = index
 
     def dfs(self, Grid, start, end):
         stack = [start]
@@ -73,13 +73,11 @@ class Solver:
             else:
                 stack.pop()
             
-        
         while current != start:
             current.type = "path"
             current = current.parent
         
         start.type = "path"
-        Grid.maxIndex = index
     
     def bfs(self, Grid, start, end):
         queue = [start]
@@ -104,7 +102,6 @@ class Solver:
             current = current.parent
         
         start.type = "path"
-        Grid.maxIndex = index
 
     def manhattan(self, node1, node2):
         return abs(node1.x - node2.x) + abs(node1.y - node2.y)

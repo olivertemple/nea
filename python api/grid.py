@@ -32,7 +32,6 @@ class Grid:#Grid class for the grid
     def __init__(self, height, width):
         self.height = height
         self.width = width
-        self.maxIndex = 0
         self.grid = self.generateGrid()
     def load(self, grid):#load the grid from the grid received from the react app
         self.grid = []
@@ -47,7 +46,6 @@ class Grid:#Grid class for the grid
         obj = {
             "height": self.height,
             "width": self.width,
-            "maxIndex":self.maxIndex,
             "grid": []
         }
         for row in self.grid:

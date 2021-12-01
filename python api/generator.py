@@ -4,10 +4,9 @@ import sys
 class Generator:
     def __init__(self):
         pass
-
     #setup for recursive backtracking
     def recursive_backtracking(self, Grid):
-        sys.setrecursionlimit(2000)
+        sys.setrecursionlimit(2000)#set the recursion limit to 2000
         #create a list of all nodes in maze
         unvisited = []
         for row in Grid.grid:
@@ -68,11 +67,6 @@ class Generator:
             if len(previous) > 0:
                 new = previous.pop()
                 self.recursive_backtracking_run(Grid, unvisited, new, previous)
-
-                
-
-
-        
 
     #generate a maze using prims algorithm
     def prims(self, Grid):

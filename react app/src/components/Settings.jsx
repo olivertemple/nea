@@ -38,7 +38,7 @@ export default class Settings extends React.Component {
     renderSettings(){//render the settings dropdown menu
         return(
             <div className="settings_container">
-                <div className="row" style={{gap:10}}>
+                <div className="column">
                     <p>Size</p>
                     <input className="text_input" type="number" value={this.props.size.height} min={1} onChange={e => this.handelSizeChange(e)}/>
                 </div>
@@ -49,6 +49,10 @@ export default class Settings extends React.Component {
                         <option value="euclidean">Euclidean</option>
                     </select>
                 </div>
+                <div className="column">
+                    <p>Speed</p>
+                    <input type="range" defaultValue={this.props.speed} min={0.01} max={0.3} step={0.01} onChange={(e) => {this.props.setSpeed(e.target.value)}} />    
+                </div> 
                
             </div>
         )

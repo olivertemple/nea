@@ -608,6 +608,29 @@ INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.c
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.cfg
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.cfg
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\xcolor\xcolor.sty
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\quoting\quoting.sty
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\quoting\quoting.sty
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\quoting\quoting.sty
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\quoting\quoting.sty
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\quoting\quoting.sty
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\quoting\quoting.sty
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\quoting\quoting.sty
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\quoting\quoting.sty
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\quoting\quoting.sty
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\quoting\quoting.sty
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\quoting\quoting.sty
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\kvoptions\kvoptions.sty
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryshapes.code.tex
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryshapes.code.tex
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryshapes.geometric.code.tex
@@ -736,6 +759,8 @@ INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tf
 INPUT C:\Users\ollie\AppData\Local\MiKTeX\pdftex\config\pdftex.map
 OUTPUT analysis.toc
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
 INPUT .\assets\Existing Solutions\example 1.PNG
 INPUT .\assets\Existing Solutions\example 1.PNG
@@ -807,7 +832,6 @@ INPUT .\assets\class diagrams\node.PNG
 INPUT .\assets\class diagrams\node.PNG
 INPUT .\assets\class diagrams\node.PNG
 INPUT .\assets\class diagrams\node.PNG
-INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
@@ -837,29 +861,29 @@ INPUT ..\react app\src\App.js
 INPUT ..\react app\src\App.js
 INPUT ..\react app\src\App.js
 INPUT ..\react app\src\App.js
-INPUT ..\react app\src\components\Menu.jsx
-INPUT ..\react app\src\components\Menu.jsx
-INPUT ..\react app\src\components\Menu.jsx
-INPUT ..\react app\src\components\Menu.jsx
-INPUT ..\react app\src\components\Menu.jsx
-INPUT ..\react app\src\components\Menu.jsx
-INPUT ..\react app\src\components\MenuKey.jsx
-INPUT ..\react app\src\components\MenuKey.jsx
-INPUT ..\react app\src\components\MenuKey.jsx
-INPUT ..\react app\src\components\MenuKey.jsx
-INPUT ..\react app\src\components\MenuKey.jsx
-INPUT ..\react app\src\components\MenuKey.jsx
-INPUT ..\react app\src\components\DisplayGrid.jsx
-INPUT ..\react app\src\components\DisplayGrid.jsx
-INPUT ..\react app\src\components\DisplayGrid.jsx
-INPUT ..\react app\src\components\DisplayGrid.jsx
-INPUT ..\react app\src\components\DisplayGrid.jsx
-INPUT ..\react app\src\components\DisplayGrid.jsx
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\base\ts1cmtt.fd
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\base\ts1cmtt.fd
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\base\ts1cmtt.fd
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex\latex\base\ts1cmtt.fd
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tctt0800.tfm
+INPUT ..\react app\src\components\Menu.jsx
+INPUT ..\react app\src\components\Menu.jsx
+INPUT ..\react app\src\components\Menu.jsx
+INPUT ..\react app\src\components\Menu.jsx
+INPUT ..\react app\src\components\Menu.jsx
+INPUT ..\react app\src\components\Menu.jsx
+INPUT ..\react app\src\components\MenuKey.jsx
+INPUT ..\react app\src\components\MenuKey.jsx
+INPUT ..\react app\src\components\MenuKey.jsx
+INPUT ..\react app\src\components\MenuKey.jsx
+INPUT ..\react app\src\components\MenuKey.jsx
+INPUT ..\react app\src\components\MenuKey.jsx
+INPUT ..\react app\src\components\DisplayGrid.jsx
+INPUT ..\react app\src\components\DisplayGrid.jsx
+INPUT ..\react app\src\components\DisplayGrid.jsx
+INPUT ..\react app\src\components\DisplayGrid.jsx
+INPUT ..\react app\src\components\DisplayGrid.jsx
+INPUT ..\react app\src\components\DisplayGrid.jsx
 INPUT ..\react app\src\components\DisplayNode.jsx
 INPUT ..\react app\src\components\DisplayNode.jsx
 INPUT ..\react app\src\components\DisplayNode.jsx
@@ -877,6 +901,12 @@ INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
@@ -885,6 +915,12 @@ INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr5.pfb
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr5.pfb
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti10.pfb
+INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti10.pfb
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
 INPUT C:\Users\ollie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt8.pfb

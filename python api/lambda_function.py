@@ -52,3 +52,11 @@ def lambda_handler(event, context):
         'statusCode': 200,
         'body': json.dumps(myGrid.serialize())
     }
+
+if __name__ == "__main__":
+    myGrid = Grid(15,15)
+    myGenerator = Generator()
+    myGenerator.prims(myGrid)
+    mySolver = Solver()
+    mySolver.dijkstra(myGrid, myGrid.grid[0][0], myGrid.grid[14][14])
+    myGrid.printGrid()

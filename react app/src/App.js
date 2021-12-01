@@ -19,7 +19,8 @@ class App extends Component {
         width:15,
         height:15
       },
-      heuristic: "euclidean"
+      heuristic: "euclidean",
+      speed:0.1
     }
 
     this.solved = false;
@@ -35,6 +36,7 @@ class App extends Component {
     this.setEnd = this.setEnd.bind(this);
     this.should_solve = this.should_solve.bind(this);
     this.setHeuristic = this.setHeuristic.bind(this);
+    this.setSpeed = this.setSpeed.bind(this);
   }
 
   componentDidMount(){
@@ -45,7 +47,10 @@ class App extends Component {
   setHeuristic(heuristic){//set the heuristic for the greedy algorithm
     this.setState({heuristic: heuristic});
   }
-
+  setSpeed(speed){//set the speed of the animation
+    this.clearGrid();
+    this.setState({speed: speed});
+  }
   setSize(size){//set the size of the grid when changed in settings
     this.setState({
       size: size
@@ -177,6 +182,8 @@ class App extends Component {
           size={this.state.size}//the size of the maze
           setSize={this.setSize}//callback function to set the size of the maze from the menu
           setHeuristic={this.setHeuristic}//callback function to set the heuristic from the menu
+          setSpeed={this.setSpeed}//callback function to set the speed from the menu
+          speed={this.state.speed}//the speed of the maze
         />
         <MenuKey />
         <DisplayGrid
@@ -188,6 +195,7 @@ class App extends Component {
           generateAlgorithm={this.state.algorithm}//the algorithm used to generate the maze
           solveAlgorithm={this.state.solve}//the algorithm used to solve the maze
           heuristic={this.state.heuristic}//the heuristic used for the greedy algorithm
+          speed={this.state.speed}//the speed of the animation
         />
         <Footer />
       </div>
