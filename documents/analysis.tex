@@ -611,6 +611,7 @@ Method to render the settings component if the settings button is clicked.
 %out of 15 marks, argument for why the project is complete. Which algorithms have been used?
 
 \section{Technical Solution}
+A running solution of the project is available at \url{https://olivertemple.github.io/nea/}.
 \subsection{Summary Of Skills Used}
 These tables are a list of some of the skills I have used in this project, with line numbers of where they are demonstrated.
 \begin{center}
@@ -680,6 +681,54 @@ These tables are a list of some of the skills I have used in this project, with 
 \lstinputlisting[language=JavaScript, linewidth=1.3\linewidth]{../react app/src/components/DisplayNode.jsx}
 
 \section{Testing}
+To test the project as a whole, I will check the following:
+\begin{enumerate}
+    \item[Test1.] Load the react app and check that and empty maze is generated correctly.
+    \item[Test2.] Change the size of the maze and check that the size changes and doesn't go below 1.
+    \item[Test3.] Run each of the maze generation algorithms and check that the maze is generated correctly and is solvable.
+    \item[Test4.] Solve an assortment of mazes with assorted sizes using each of the algorithms (including heuristics for the greedy search) and check that they run correctly.
+    \item[Test5.] Use different speeds when solving the mazes and check that the speed changes correctly.
+    \item[Test6.] Reset the maze and check that the maze is reset correctly.
+    \item[Test7.] Drag and drop the start and finnish nodes. Check that the maze resolves correctly. 
+\end{enumerate}
+
+\subsection{Test1: Pass}
+Upon loading the react app, an empty maze is generated.
+\newline
+\includegraphics[width=\linewidth]{assets/testing/test1.jpg}
+
+\subsection{Test2: Pass}
+The size can be changed down to 1 and the maze is still generated correctly, you cannot go blow 1.
+\newline
+\includegraphics[width=\linewidth]{assets/testing/test2a.jpg}
+\includegraphics[width=\linewidth]{assets/testing/test2b.jpg}
+
+\subsection{Test3: Pass}
+Blow are screenshots of a maze being generated using each of the different algorithms, with different size mazes.
+\subsubsection{Prim's Algorithm}
+\includegraphics[width=\linewidth]{assets/testing/test3a.jpg}
+\includegraphics[width=\linewidth]{assets/testing/test3b.jpg}
+
+\subsubsection{Recursive Backtracking}
+\includegraphics[width=\linewidth]{assets/testing/test3c.jpg}
+\includegraphics[width=\linewidth]{assets/testing/test3d.jpg}
+
+\subsection{Test4/Test5: Pass}
+Blow are links to videos assorted mazes being solved using each of the different algorithms, with different speeds and sizes.
+\subsubsection{Dijkstra's Algorithm}
+
+\subsubsection{Depth First Search}
+
+\subsubsection{Breadth First Search}
+
+\subsubsection{Greedy Search Manhattan}
+
+\subsubsection{Greedy Search Euclidean}
+
+\subsection{Test6: Pass}
+When the reset button is pressed, an empty grid of the current size is generated.
+\subsection{Test7}
+When moving the start and finish nodes, the maze is resolved, however, sometimes the colours of the start or end nodes are not update properly when they are moved.
 
 \section{Evaluation}
 \end{document}

@@ -1,2 +1,2 @@
-# Ideas for NEA
-<input type="checkbox">Enter own function to run as path finding algorithm or maze generating algorithm</input>
+# Path Finding Visualization
+This project was completed for my Computer Science A Level NEA, and is a maze generating and path finding visualization. The front end is a react app, with a python API as the backend, hosted using AWS lambda.

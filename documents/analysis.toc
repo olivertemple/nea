@@ -1,10 +1,10 @@
-\contentsline {section}{\numberline {1}analysis}{3}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Project Description}{3}{subsection.1.1}%
+\contentsline {section}{\numberline {1}analysis}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Project Description}{4}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Research}{4}{subsection.1.2}%
 \contentsline {subsubsection}{\numberline {1.2.1}Overview}{4}{subsubsection.1.2.1}%
 \contentsline {subsubsection}{\numberline {1.2.2}Research Log}{4}{subsubsection.1.2.2}%
 \contentsline {paragraph}{\numberline {1.2.2.1}Maze Generating Algorithms}{4}{paragraph.1.2.2.1}%
-\contentsline {paragraph}{\numberline {1.2.2.2}Path Finding Algorithms}{4}{paragraph.1.2.2.2}%
+\contentsline {paragraph}{\numberline {1.2.2.2}Path Finding Algorithms}{5}{paragraph.1.2.2.2}%
 \contentsline {subsection}{\numberline {1.3}Project Background}{6}{subsection.1.3}%
 \contentsline {subsubsection}{\numberline {1.3.1}Current Systems}{6}{subsubsection.1.3.1}%
 \contentsline {paragraph}{\numberline {1.3.1.1}Example 1}{6}{paragraph.1.3.1.1}%
@@ -100,4 +100,17 @@
 \contentsline {subsubsection}{\numberline {4.2.8}React App: DisplayGrid.jsx}{41}{subsubsection.4.2.8}%
 \contentsline {subsubsection}{\numberline {4.2.9}React App: DisplayNode.jsx}{43}{subsubsection.4.2.9}%
 \contentsline {section}{\numberline {5}Testing}{45}{section.5}%
-\contentsline {section}{\numberline {6}Evaluation}{45}{section.6}%
+\contentsline {subsection}{\numberline {5.1}Test1: Pass}{46}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Test2: Pass}{46}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Test3: Pass}{47}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Prim's Algorithm}{48}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}Recursive Backtracking}{49}{subsubsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.4}Test4/Test5: Pass}{49}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Dijkstra's Algorithm}{50}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.2}Depth First Search}{50}{subsubsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.3}Breadth First Search}{50}{subsubsection.5.4.3}%
+\contentsline {subsubsection}{\numberline {5.4.4}Greedy Search Manhattan}{50}{subsubsection.5.4.4}%
+\contentsline {subsubsection}{\numberline {5.4.5}Greedy Search Euclidean}{50}{subsubsection.5.4.5}%
+\contentsline {subsection}{\numberline {5.5}Test6: Pass}{50}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Test7}{50}{subsection.5.6}%
+\contentsline {section}{\numberline {6}Evaluation}{50}{section.6}%
