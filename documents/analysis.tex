@@ -7,6 +7,7 @@
 \usepackage{tikz}
 \usepackage{listings}
 \usepackage{xcolor}
+\usepackage{float}
 \usepackage[font=itshape]{quoting}
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -36,16 +37,19 @@
 \lstdefinelanguage{JavaScript}{
   keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
   keywordstyle=\color{blue}\bfseries,
-  ndkeywords={class, export, boolean, throw, implements, import, this},
-  ndkeywordstyle=\color{darkgray}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, this, extends, import},
+  ndkeywordstyle=\color{orange}\bfseries,
   identifierstyle=\color{black},
+  literate={
+        {\ \ }{{\ }}1
+    },
   sensitive=false,
   comment=[l]{//},
   morecomment=[s]{/*}{*/},
   commentstyle=\color{purple}\ttfamily,
   stringstyle=\color{red}\ttfamily,
   morestring=[b]',
-  morestring=[b]"
+  morestring=[b]",
 }
 
 \lstset{style=mystyle}
@@ -302,8 +306,8 @@ There should be "special" nodes that are different from walls or space. For exam
 
 \section{Documented Design}
 \subsection{Visualization Structure}
-
-There will be a python API for generating and solving the mazes, and a react website that will visualize the algorithms. There will be one API endpoint, however different parameters will be passed to determine weather the api should solve or generate, and which algorithms to use. These parameters will be:
+The project will be split into two main sections, the first being the visualization and the second being the python API.
+The python API will be for generating and solving the mazes, and the react website that will visualize the algorithms. The python API will can be subdivided into two sections, the first being the maze generation and the second being the maze solving. Different parameters will be passed to the API depending on the what the user has requested. These parameters will be:
 \begin{itemize}
     \item width
     \item height
@@ -317,17 +321,37 @@ There will be a python API for generating and solving the mazes, and a react web
 When solving the maze, the maze will be sent to the API as part of the body of the request.
 \newline
 \includegraphics[width=\linewidth]{assets/structure.jpg}
-\subsection{Flow Chart}
+\subsection{User Interaction Flow Chart}
 \includegraphics[width=\linewidth, height=17.5cm]{assets/flow chart.PNG}
 
 \subsection{User Interface}
 I have used Figma to create a design mockup of how the user interface will look. This allows me to plan what user inputs will be needed.
 \newline
 \includegraphics[width=\linewidth]{assets/gui.PNG}
-\subsection{Class Diagrams}
+\subsection{Classes Breakdown}
+
+\subsubsection{Genereator}
+
+The generator class will be responsible for generating the maze with different algorithms.
+\newline
 \includegraphics[width=0.5\linewidth]{assets/class diagrams/generator.PNG}
+
+\subsubsection{Solver}
+
+The solver class will be responsible for solving the maze with different algorithms.
+\newline
 \includegraphics[width=0.5\linewidth]{assets/class diagrams/solver.PNG}
+
+\subsubsection{Maze}
+
+The maze class will be responsible for storing the maze and any other information that is needed, as well as methods for loading a generated maze to be solved and a serialize method for sending the maze to the react app.
+\newline
 \includegraphics[width=0.5\linewidth]{assets/class diagrams/maze.PNG}
+
+\subsubsection{Node}
+
+The node class will be responsible for storing the nodes and any other information that is needed, as well as methods for loading the nodes from a generated maze and a serialize method for sending the maze to the react app.
+\newline
 \includegraphics[width=0.5\linewidth]{assets/class diagrams/node.PNG}
 
 \subsection{Algorithms}
@@ -361,137 +385,299 @@ Euclidean is calculated by
 \begin{equation}
     h(n) = \sqrt{(x_{current\ node} - x_{end\ node})^2 + (y_{current\ node} - y_{end\ node})^2}
 \end{equation}
-\comment{
-\subsection{Algorithms}
-\subsubsection{Maze generating algorithms}
-Pseudoscode for the maze generation algorithms.
-\paragraph{prims}
-\begin{verbatim}
-    function prims(Grid)
-        let inMaze = [[0,0]]
-        let frontier = [
-            [[0,1],["left"]],
-            [[1,0],["top"]]
-        ]
-        
-        while frontier.length > 0
-            new <- frontier.pop(rand(0, frontier.length - 1))
-            toAdd <- new[0]
-            wall <- new[1][rand(0, new[1].length - 1)]
-            inMaze.push(toAdd)
 
-            if wall == "bottom"
-                Grid.grid[toAdd[0]][toAdd[1]].wallBottom = false
-            if wall == "left"
-                Grid.grid[toAdd[0]][toAdd[1]].wallLeft = false
-            if wall == "top" and toAdd[0] > 0
-                Grid.grid[toAdd[0] - 1][toAdd[1]].wallBottom = false
-            if wall == "right" and toAdd[1] < Grid.width - 1
-                Grid.grid[toAdd[0]][toAdd[1] + 1].wallLeft = false
-            
-            possible <- [
-                [toAdd[0]-1, toAdd[1]],
-                [toAdd[0]+1,toAdd[1]],
-                [toAdd[0],toAdd[1]-1],
-                [toAdd[0], toAdd[1]+1]
-            ]
+\subsection{Subroutine Breakdown API}
+\subsubsection{generator.py: recursive\_backtracking}
+Parameters:\newline
+\indent Grid|2D array of Nodes\newline
+Setup the variables for recursive backtracking by creating a list in unvisited nodes.
 
-            walls <- ["bottom", "top", "right", "left"]
+\subsubsection{generator.py: recursive\_backtracking\_run}
+Parameters:\newline
+\indent Grid| 2D array of Nodes\newline
+\indent unvisited| list of Nodes\newline
+\indent current| Node\newline
+\indent previous| list of previous Nodes\newline
+The recursive backtracking algorithm.
 
-            for i in range 4
-                p <- possible[i]
-                wall <- walls[i]
-                if p[0] >= 0 and p[0] < Grid.height and p[1] >= 0 and p[1] < Grid.width
-                    if p not in inMaze
-                        found <- false
-                        for v in frontier
-                            if v[0] == p
-                                v[1].push(wall)
-                                found = true
-                        end for
-                        if not found
-                            frontier.push([p, [wall]])
-            end for
-        end while
-    end function
-\end{verbatim}
-\paragraph{Recusive backtracking}
-\begin{verbatim}
-    function recursiveBacktracking(Grid)
-        unvisited <- []
-        for row in Grid.grid
-            for items in row
-                unvisited.push(items)
-            end for
-        end for
+\subsubsection{generator.py: prims}
+Parameters:\newline
+\indent Grid| 2D array of Nodes\newline
+Generate the maze using Prim's algorithm.
 
-        start <- unvisited.pop(rand(0, unvisited.length - 1))
-        recursive_backtracking_run(Grid, unvisited, start, [])
-    end function
+\subsubsection{solver.py: get\_adjacent\_paths}
+Parameters:\newline
+\indent Grid| 2D array of Nodes\newline
+\indent node| Node to find adjacent paths\newline
+Calculate and return adjacent nodes that are not blocked by walls.
 
-    function recursive_backtracking_run(Grid, unvisited, current, previous)
-        orientation_options <- []
-        if current.x > 0 and Grid.grid[current.y][current.x - 1] in unvisited
-            orientation_options.push("left")
-        end if
+\subsubsection{solver.py: dijkstra}
+Parameters:\newline
+\indent Grid| 2D array of Nodes\newline
+\indent start| Node to start from\newline
+\indent end| Node to end at\newline
+Use Dijkstra's algorithm to find the shortest path from the start node to the end node and draw a path on the Grid.
 
-        if current.y > 0 and Grid.grid[current.y - 1][current.x] in unvisited
-            orientation_options.push("top")
-        end if
+\subsubsection{solver.py: dfs}
+Parameters:\newline
+\indent Grid| 2D array of Nodes\newline
+\indent start| Node to start from\newline
+\indent end| Node to end at\newline
+Use Depth First Search to find the path from the start node to the end node and draw a path on the Grid.
 
-        if current.x < Grid.width - 1 and Grid.grid[current.y][current.x + 1] in unvisited
-            orientation_options.push("right")
-        end if
+\subsubsection{solver.py: bfs}
+Parameters:\newline
+\indent Grid| 2D array of Nodes\newline
+\indent start| Node to start from\newline
+\indent end| Node to end at\newline
+Use Breadth First Search to find the path from the start node to the end node and draw a path on the Grid.
 
-        if current.y < Grid.height - 1 and Grid.grid[current.y + 1][current.x] in unvisited
-            orientation_options.push("bottom")
-        end if
+\subsubsection{solver.py: manhattan}
+Parameters:\newline
+\indent node1| Node to calculate distance from\newline
+\indent node2| Node to calculate distance to\newline
+Calculate and return the manhattan distance between two nodes.
 
-        if orientation_options.length > 0
-            orientation <- orientation_options[rand(0, orientation_options.length - 1)]
-            previous.push(current)
+\subsubsection{solver.py: euclidean}
+Parameters:\newline
+\indent node1| Node to calculate distance from\newline
+\indent node2| Node to calculate distance to\newline
+Calculate and return the euclidean distance between two nodes.
 
-            if orientation == "left"
-                connecting_cell <- Grid.grid[current.y][current.x - 1]
-                cell.wallLeft = false
-            
-            else if orientation == "bottom"
-                connecting_cell <- Grid.grid[current.y + 1][current.x]
-                cell.wallBottom = false
-            
-            else if orientation == "right"
-                connecting_cell <- Grid.grid[current.y][current.x + 1]
-                connecting_cell.wallLeft = false
-            
-            else if orientation == "top"
-                connecting_cell <- Grid.grid[current.y - 1][current.x]
-                connecting_cell.wallBottom = false
-            end if
+\subsubsection{solver.py: greedy}
+Parameters:\newline
+\indent Grid| 2D array of Nodes\newline
+\indent start| Node to start from\newline
+\indent end| Node to end at\newline
+\indent heuristic| function to use for heuristic\newline
+Use Greedy Search to find the path from the start node to the end node and draw a path on the Grid.
 
-            unvisited.remove(connecting_cell)
+\subsubsection{grid.py: Node: \_\_init\_\_}
+Parameters:\newline
+\indent x| x coordinate of node\newline
+\indent y| y coordinate of node\newline
+\indent type| type of node\newline
+Constructor for the Node class.
 
-            recursive_backtracking_run(Grid, unvisited, connecting_cell, previous)
-        else
-            if previous.length > 0
-                new <- previous.pop()
-                recursive_backtracking_run(Grid, unvisited, new, previous)
-            end if
-        end if
-    end function
-\end{verbatim}
-}
+\subsubsection{grid.py: Node: load}
+Parameters:\newline
+\indent wallLeft| boolean if there is a wall to the left\newline
+\indent wallRight| boolean if there is a wall to the right\newline
+Load the walls of the node. Used when loading the maze for solving.
+
+\subsubsection{grid.py: Node: serialize}
+Returns the Node as a dictionary to be sent to the react app.
+
+\subsubsection{grid.py: Grid: \_\_init\_\_}
+Parameters:\newline
+\indent height| height of the maze\newline
+\indent width| width of the maze\newline
+Constructor for the Grid class.
+
+\subsubsection{grid.py: Grid: load}
+Parameters:\newline
+\indent grid| 2D array of Nodes\newline
+Load the maze into the Grid. Used when loading the maze for solving.
+
+\subsubsection{grid.py: Grid: serialize}
+Returns the Grid as a dictionary to be sent to the react app.
+
+
+\subsubsection{grid.py: Grid: generateGrid}
+Generate an empty grid.
+
+\subsubsection{grid.py: Grid: printGrid}
+Print the grid, used when developing maze generation and solving algorithms.
+
+\subsection{Subroutine Breakdown react app}
+\subsubsection{App.js: App: Constructor}
+Parameters:\newline
+\indent props| props passed from react\newline
+Constructor for the App class.
+
+\subsubsection{App.js: App: componentDidMount}
+Method runs when the component mounts in the DOM, used to load an empty maze when the app loads.
+
+\subsubsection{App.js: App: setHeuristic}
+Parameters:\newline
+\indent heuristic| heuristic to use\newline
+Callback function to change the heuristic used for the greedy search from the settings component.
+
+\subsubsection{App.js: App: setSpeed}
+Parameters:\newline
+\indent speed| speed to use\newline
+Callback function to change the speed of the maze generation from the settings component.
+
+\subsubsection{App.js: App: setSize}
+Parameters:\newline
+\indent size| size to use\newline
+Callback function to change the size of the maze from the settings component, the maze is reset when the size is changed.
+
+\subsubsection{App.js: App: setStart}
+Parameters:\newline
+\indent start| start node to use\newline
+Callback function to change the start node of the maze when the start node is dragged and dropped to a new location.
+
+\subsubsection{App.js: App: setEnd}
+Parameters:\newline
+\indent end| end node to use\newline
+Callback function to change the end node of the maze when the end node is dragged and dropped to a new location.
+
+\subsubsection{App.js: App: setAlgorithm}
+Parameters:\newline
+\indent algorithm| algorithm to use for generating the maze\newline
+Callback function to change the algorithm used to generate the maze from the settings component.
+
+\subsubsection{App.js: App: setSolve}
+Parameters:\newline
+\indent algorithm| algorithm to use for solving the maze\newline
+Callback function to change the algorithm used to solve the maze from the settings component.
+
+\subsubsection{App.js: App: async should\_solve}
+Method to check if the maze should ber resolved after start or end nodes have moved, and if it should be resolved, then resolve the maze. This method is asynchronous, as it changes the state of the app, which is an asynchronous operation and must be awaited before continuing.
+
+\subsubsection{App.js: App: async clear\_node\_index}
+Method to clear the index of the nodes so that the maze can be solved again. This method is asynchronous, as it changes the state of the app, which is an asynchronous operation and must be awaited before continuing, and it returns a promise, which is resolved once the state has been updated.
+
+\subsubsection{App.js: App: async fetchGrid}
+Method to fetch the maze from the server. This method is asynchronous, as it changes the state of the app and is making a call to the API over the internet, both of which are asynchronous operations and must be awaited before continuing.
+
+\subsubsection{App.js: App: async solveGrid}
+Method to send the grid to the API to be solved and receive a response with a solved maze. This method is asynchronous, as it changes the state of the app and is making a call to the API over the internet, both of which are asynchronous operations and must be awaited before continuing.
+
+\subsubsection{App.js: App: async clearGrid}
+Method to get an empty grid from the API. This method is asynchronous, as it changes the state of the app and is making a call to the API over the internet, both of which are asynchronous operations and must be awaited before continuing.
+
+\subsubsection{App.js: App: render}
+Method to render the react component.
+
+\subsubsection{DisplayGrid.jsx: DisplayGrid: handelDrop}
+Parameters:\newline
+\indent pos| position of the node that is dropped\newline
+Callback function to handle the drop of a start or end node.
+
+\subsubsection{DisplayGrid.jsx: DisplayGrid: setDragObject}
+Parameters:\newline
+\indent type| type of node that is being dragged\newline
+Callback function to set the type of node that is being dragged.
+
+\subsubsection{DisplayGrid.jsx: DisplayGrid: renderTable}
+Method to render the table of the grid.
+
+\subsubsection{DisplayGrid.jsx: DisplayGrid: render}
+Method to render the react component. It will return a table of the grid if there is a grid, else it will show a message saying that there is no grid.
+
+\subsubsection{DisplayNode.jsx: DisplayNode: handelDragStart}
+Callback function to handle the start of the node being dragged. It will set the type of node being dragged to the type of node that is being dragged in the parent component using DisplayGrid.jsx: DisplayGrid: setDragObject.
+
+\subsubsection{DisplayNode.jsx: DisplayNode: handelDrop}
+Callback function to handle the drop of the node.
+
+\subsubsection{DisplayNode.jsx: DisplayNode: handelDragOver}
+Callback function to run when the node is dragged over this node. It will change the colour of the node to indicate that it is being dragged over.
+
+\subsubsection{DisplayNode.jsx: DisplayNode: handelDragLeave}
+Callback function to run when the node is dragged off this node. It will change the colour of the node to indicate that it is no longer being dragged over.
+
+\subsubsection{DisplayNode.jsx: DisplayNode: render}
+Method to render the react component. Selection is used to examine the props and apply the correct attributes to the node.
+
+\subsubsection{Settings.jsx: Settings: componentDidMount}
+Method to run when the component mounts in the DOM. It will add an event listener to the document to detect if the user clicks outside the settings component.
+
+\subsubsection{Settings.jsx: Settings: componentWillUnmount}
+Method to run when the component is unmounted from the DOM. It will remove the event listener from the document.
+
+\subsubsection{Settings.jsx: Settings: handelClickOutsize}
+Parameters:\newline
+\indent event| event that is triggered when the user clicks outside the settings component\newline
+Callback function to handle the click outside the settings component.
+
+\subsubsection{Settings.jsx: Settings: handelSizeChange}
+Parameters:\newline
+\indent event| event that is triggered when the user changes the size of the maze\newline
+Callback function to the change of the size of the maze in the parent component using App.jsx: App: setSize.
+
+\subsubsection{Settings.jsx: Settings: setHeuristic}
+Parameters:\newline
+\indent heuristic| selected heuristic\newline
+Callback function to change the heuristic used for the greedy search in the parent component using App.jsx: App: setHeuristic.
+
+\subsubsection{Settings.jsx: Settings: renderSettings}
+Method to render the settings component if the settings button is clicked.
+
+
 \section{Evidence of Completeness}  
 %out of 15 marks, argument for why the project is complete. Which algorithms have been used?
 
 \section{Technical Solution}
-\lstinputlisting[language=python]{../python api/lambda_function.py}
-\lstinputlisting[language=python]{../python api/generator.py}
-\lstinputlisting[language=python]{../python api/grid.py}
-\lstinputlisting[language=JavaScript]{../react app/src/App.js}
-\lstinputlisting[language=JavaScript]{../react app/src/components/Menu.jsx}
-\lstinputlisting[language=JavaScript]{../react app/src/components/MenuKey.jsx}
-\lstinputlisting[language=JavaScript]{../react app/src/components/DisplayGrid.jsx}
-\lstinputlisting[language=JavaScript]{../react app/src/components/DisplayNode.jsx}
+\subsection{Summary Of Skills Used}
+These tables are a list of some of the skills I have used in this project, with line numbers of where they are demonstrated.
+\begin{center}
+    
+    \begin{tabular}{ |p{0.4\linewidth}|p{0.8\linewidth}| }
+        \hline
+        Skill & Where to find \\
+        \hline
+        \hline
+        Stacks & Solver.py: dfs \\
+        \hline
+        Queues & Solver.py: bfs, Solver.py: dijkstra\\
+        \hline
+        Priority Queue & Solver.py: greedy \\
+        \hline
+        Recursive Algorithms & Generator.py: recursive\_backtracking\_run \\
+        \hline
+        Complex OOP & grid.py: Grid, grid.py: Node, App.js, DisplayGrid.jsx, DisplayNode.jsx, Settings.jsx,  \\
+        \hline
+        Dynamic generation of objects & Grid.py: Grid: generateGrid \\
+        \hline
+        Client-server model, parsing JSON & Called from App.js: 117, App.js: 131, App.js: 151, request handled in lambda\_function.py \\
+        \hline
+        Dictionaries & lambda\_function.py, grid.py: Grid: serialize, grid.py: Node: serialize \\
+        \hline
+        Multi-dimensional arrays & grid.py (used to store grid), generator.py: prims (inMaze, frontier) \\
+        \hline 
+        Simple mathematical calculations & solver.py: manhattan, solver.py: euclidean \\
+        \hline
+        Complex Algorithms & solver.py, generator.py \\
+        \hline
+        GUI & App.js, DisplayGrid.jsx, DisplayNode.jsx, Footer.jsx, GeneratorInfo.jsx, Menu.jsx, MenuKey.jsx, Settings.jsx, SolverInfo.jsx \\
+        \hline
+        Graph traversals & solver.py, generator.py \\
+        \hline
+    \end{tabular}
+
+\end{center}
+
+\subsection{The Full Code}
+
+\subsubsection{Python API: lambda\_function.py}
+\lstinputlisting[language=python, linewidth=1.3\linewidth]{../python api/lambda_function.py}
+
+\subsubsection{Python API: grid.py}
+\lstinputlisting[language=python, linewidth=1.3\linewidth]{../python api/grid.py}
+
+\subsubsection{Python API: generator.py}
+\lstinputlisting[language=python, linewidth=1.3\linewidth]{../python api/generator.py}
+
+\subsubsection{Python API: solver.py}
+\lstinputlisting[language=python, linewidth=1.3\linewidth]{../python api/solver.py}
+
+\subsubsection{React App: App.js}
+\lstinputlisting[language=JavaScript, linewidth=1.3\linewidth]{../react app/src/App.js}
+
+\subsubsection{React App: Menu.jsx}
+\lstinputlisting[language=JavaScript, linewidth=1.3\linewidth]{../react app/src/components/Menu.jsx}
+
+\subsubsection{React App: MenuKey.jsx}
+\lstinputlisting[language=JavaScript, linewidth=1.3\linewidth]{../react app/src/components/MenuKey.jsx}
+
+\subsubsection{React App: DisplayGrid.jsx}
+\lstinputlisting[language=JavaScript, linewidth=1.3\linewidth]{../react app/src/components/DisplayGrid.jsx}
+
+\subsubsection{React App: DisplayNode.jsx}
+\lstinputlisting[language=JavaScript, linewidth=1.3\linewidth]{../react app/src/components/DisplayNode.jsx}
 
 \section{Testing}
 
