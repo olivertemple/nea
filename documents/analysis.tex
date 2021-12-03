@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[titlepage]{article}
 
 \usepackage{fancyhdr}
 \usepackage{hyperref}
@@ -274,7 +274,7 @@ I asked some prospective users some questions about what they would like to see 
 \end{enumerate}
 \paragraph*{Answers}
 \begin{enumerate}
-    \item[A1.]I would like to see recursive backtracking and Prim's algorithms used for maze generation, as well as Kruskal's (less important). This is because Kruskal's and Prims are similar but each has their own advantages and disadvantages and recursive backtracking is different and uses recursion.
+    \item[A1.]I would like to see recursive backtracking and Prim's algorithms used for maze generation, as well as Kruskal's (less important). This is because recursive backtracking and Prims are similar but each has their own advantages and disadvantages and recursive backtracking is different and uses recursion.
     \item[A2.]I would like to see an algorithm(such as Dijkstra's) as well as a heuristic(such as A* or a greedy search), as this will show the difference between a heuristic and an algorithm.
     \item[A3.]Option to add your own png image for the drawing of final path - "a sussy imposter running around the maze".
     \item[A4.]I would find it useful to be able to code my own algorithms. This would allow me to use the visualization with other, lesser known algorithms that I may want to visualize.
@@ -606,10 +606,6 @@ Callback function to change the heuristic used for the greedy search in the pare
 \subsubsection{Settings.jsx: Settings: renderSettings}
 Method to render the settings component if the settings button is clicked.
 
-
-\section{Evidence of Completeness}  
-%out of 15 marks, argument for why the project is complete. Which algorithms have been used?
-
 \section{Technical Solution}
 A running solution of the project is available at \url{https://olivertemple.github.io/nea/}.
 \subsection{Summary Of Skills Used}
@@ -730,5 +726,71 @@ When the reset button is pressed, an empty grid of the current size is generated
 \subsection{Test7}
 When moving the start and finish nodes, the maze is resolved, however, sometimes the colours of the start or end nodes are not update properly when they are moved.
 
+
+\section{Evidence of Completeness}  
+\subsection{Objectives Again}
+\subsubsection{Generate Mazes}
+The website should be able to generate mazes using multiple algorithms, including, but not limited to: Prim's algorithm and recursive backtracking. There should also be a brief description of the algorithm that has been selected.
+
+\subsubsection{Solve Mazes}
+The website should be able to solve mazes using multiple algorithms, including, but not limited to: greedy search, Dijkstra's algorithms, depth-first search and breadth-first search. There should also be a brief description of the algorithm that has been selected.
+
+\subsubsection{Customisation}
+The user should be able to customize aspects of the visualization, including:
+\begin{itemize}
+    \item Size of the maze.
+    \item Speed of the animation.
+    \item The heuristic used in any heuristic algorithms.
+\end{itemize}
+
+\subsubsection{User written algorithms}
+The website should be able to run algorithms written by the user for both maze generation and solving. This will be done by supplying documentation on what parameters need to be taken in and what will need to be returned from the function for the visualizer to work.
+
+\subsubsection{Update Visualization}
+If the start or end nodes are moved once the visualization has been run, then it should update without the user having to rerun the visualization.
+
+\subsection{Analysis of Objectives}
+\subsubsection{Generate Mazes}
+The project is able to generate mazes using multiple algorithms, as stated in the objective above. The available algorithms for generating mazes are:
+\begin{itemize}
+    \item Prim's Algorithm
+    \item Recursive Backtracking
+\end{itemize}
+These were the algorithms that were asked for by the prospective user, and that were in the objective above, as well as give a brief description of each algorithm. Unfortunately, I was unable to implement Kruskal's algorithm, as I did not have time, however, this was less important to the end user, so I feel that this does not effect the completeness of the project.
+
+\subsubsection{Solve Mazes}
+The project is able to solve mazes using multiple algorithms, as stated in the objective above, as well as give a brief description of each algorithm. The available algorithms for solving mazes are:
+\begin{itemize}
+    \item Dijkstra's Algorithm
+    \item Depth First Search
+    \item Breadth First Search
+    \item Greedy Search (Manhattan)
+    \item Greedy Search (Euclidean)
+\end{itemize}
+These were the algorithms that were stated in the objective above, and include the request from the objective user, that there should be an algorithm as well as a heuristic. I feel that the breadth first search and depth first search make a good addition to the project, as they are algorithms that are studied in A Level Computer Science, and one of the purposes of this project is for it to be used in classrooms.
+
+\subsubsection{Customisation}
+All of the options for customization in the objective has been implemented into the project. The user can change the size of the maze, the speed of the animation, and the heuristic used in the greedy search algorithms.
+
+\subsubsection{User written algorithms}
+Unfortunately, the project is unable to run user written algorithms. This is because I have implemented a client server model, where the algorithms are run on the API, and it would be unsafe to run user written code on the API without first parsing and sanitizing the code, which is beyond the scope of this project.
+
+\subsubsection{Update Visualization}
+The project is able to update the visualization without the user having to rerun the visualization when the start or end nodes are moved, as stated in the objective above.
+
 \section{Evaluation}
+\subsection{Independent Feedback}
+I wanted to go back to the end users with the finished visualization, to see if they had any feedback on the project or any ideas on further improvements that could be made.
+There feedback was:
+\begin{itemize}
+    \item GET FEEDBACK AND PUT IT HERE
+\end{itemize}
+\subsection{Improvements that could be made}
+There a few improvements that I would make to this project if I had more time:
+\begin{enumerate}
+    \item Add a "via point" node that the user can drag and drop that the path must go through.
+    \item Make the size of the maze squares automatically scale with the size of the maze, so that the user does not need to zoom out for larger mazes.
+    \item Allow for rectangular mazes.
+    \item User drawn mazes.
+\end{enumerate}
 \end{document}
