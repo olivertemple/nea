@@ -16,7 +16,6 @@ export default function Menu(props) {//Menu bar for the app
                     <option value="recursive_backtracking">recursive backtracking</option>
                 </select>
                 <button className="button" onClick={props.generate}>Generate</button>
-                <button className="button" onClick={props.solve}>Solve</button>
                 <select className="algorithms" name="algorithms" id="algorithms" onChange={(e) => {props.setSolve(e.target.value)}}>
                     <option value="select">Select Solving Algorithm</option>
                     <option value="dijkstra">Dijkstra</option>
@@ -24,6 +23,7 @@ export default function Menu(props) {//Menu bar for the app
                     <option value="bfs">Breadth First Search</option>
                     <option value="greedy">Greedy</option>
                 </select>
+                <button className="button" onClick={props.solve}>Solve</button>
                 <button className="button clear" onClick={props.clearGrid}>Reset</button>
             </div>
         )

@@ -73,5 +73,5 @@ if __name__ == "__main__":
     myGenerator = Generator()
     myGenerator.prims(myGrid)
     mySolver = Solver()
-    mySolver.greedy(myGrid, myGrid.grid[0][0], myGrid.grid[14][14], "manhattan")
+    mySolver.dijkstra(myGrid, myGrid.grid[0][0], myGrid.grid[14][14])
     myGrid.printGrid()
