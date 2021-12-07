@@ -13,7 +13,12 @@
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
-
+\definecolor{lightgray}{rgb}{0.95, 0.95, 0.95}
+\definecolor{darkgray}{rgb}{0.4, 0.4, 0.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+\definecolor{ocherCode}{rgb}{1, 0.5, 0} % #FF7F00 -> rgb(239, 169, 0)
+\definecolor{blueCode}{rgb}{0, 0, 0.93} % #0000EE -> rgb(0, 0, 238)
+\definecolor{greenCode}{rgb}{0, 0.6, 0} % #009900 -> rgb(0, 153, 0) 
 
 \lstdefinestyle{mystyle}{
     backgroundcolor=\color{backcolour},   
@@ -51,6 +56,64 @@
   morestring=[b]',
   morestring=[b]",
 }
+
+\lstdefinelanguage{CSS}{
+      keywords={accelerator,azimuth,background,background-attachment,
+            background-color,background-image,background-position,
+            background-position-x,background-position-y,background-repeat,
+            behavior,border,border-bottom,border-bottom-color,
+            border-bottom-style,border-bottom-width,border-collapse,
+            border-color,border-left,border-left-color,border-left-style,
+            border-left-width,border-right,border-right-color,
+            border-right-style,border-right-width,border-spacing,
+            border-style,border-top,border-top-color,border-top-style,
+            border-top-width,border-width,bottom,caption-side,clear,
+            clip,color,content,counter-increment,counter-reset,cue,
+            cue-after,cue-before,cursor,direction,display,elevation,
+            empty-cells,filter,float,font,font-family,font-size,
+            font-size-adjust,font-stretch,font-style,font-variant,
+            font-weight,height,ime-mode,include-source,
+            layer-background-color,layer-background-image,layout-flow,
+            layout-grid,layout-grid-char,layout-grid-char-spacing,
+            layout-grid-line,layout-grid-mode,layout-grid-type,left,
+            letter-spacing,line-break,line-height,list-style,
+            list-style-image,list-style-position,list-style-type,margin,
+            margin-bottom,margin-left,margin-right,margin-top,
+            marker-offset,marks,max-height,max-width,min-height,
+            min-width,-moz-binding,-moz-border-radius,
+            -moz-border-radius-topleft,-moz-border-radius-topright,
+            -moz-border-radius-bottomright,-moz-border-radius-bottomleft,
+            -moz-border-top-colors,-moz-border-right-colors,
+            -moz-border-bottom-colors,-moz-border-left-colors,-moz-opacity,
+            -moz-outline,-moz-outline-color,-moz-outline-style,
+            -moz-outline-width,-moz-user-focus,-moz-user-input,
+            -moz-user-modify,-moz-user-select,orphans,outline,
+            outline-color,outline-style,outline-width,overflow,
+            overflow-X,overflow-Y,padding,padding-bottom,padding-left,
+            padding-right,padding-top,page,page-break-after,
+            page-break-before,page-break-inside,pause,pause-after,
+            pause-before,pitch,pitch-range,play-during,position,quotes,
+            -replace,richness,right,ruby-align,ruby-overhang,
+            ruby-position,-set-link-source,size,speak,speak-header,
+            speak-numeral,speak-punctuation,speech-rate,stress,
+            scrollbar-arrow-color,scrollbar-base-color,
+            scrollbar-dark-shadow-color,scrollbar-face-color,
+            scrollbar-highlight-color,scrollbar-shadow-color,
+            scrollbar-3d-light-color,scrollbar-track-color,table-layout,
+            text-align,text-align-last,text-decoration,text-indent,
+            text-justify,text-overflow,text-shadow,text-transform,
+            text-autospace,text-kashida-space,text-underline-position,top,
+            unicode-bidi,-use-link-source,vertical-align,visibility,
+            voice-family,volume,white-space,widows,width,word-break,
+            word-spacing,word-wrap,writing-mode,z-index,zoom},  
+      sensitive=true,
+      morecomment=[l]{//},
+      morecomment=[s]{/*}{*/},
+      morestring=[b]',
+      morestring=[b]",
+      alsoletter={:},
+      alsodigit={-}
+    }
 
 \lstset{style=mystyle}
 
@@ -300,9 +363,6 @@ The website should be able to run algorithms written by the user for both maze g
 
 \subsubsection{Update Visualization}
 If the start or end nodes are moved once the visualization has been run, then it should update without the user having to rerun the visualization.
-
-\subsubsection{Special Nodes}
-There should be "special" nodes that are different from walls or space. For example, nodes with different weights or a "via point" node that the path must go through.
 
 \section{Documented Design}
 \subsection{Visualization Structure}
@@ -712,20 +772,20 @@ Blow are screenshots of a maze being generated using each of the different algor
 \subsection{Test4/Test5: Pass}
 Blow are links to videos assorted mazes being solved using each of the different algorithms, with different speeds and sizes.
 \subsubsection{Dijkstra's Algorithm}
-
+\url{https://youtu.be/91A-1P_atU8}
 \subsubsection{Depth First Search}
-
+\url{https://youtu.be/wustNAgCnUk}
 \subsubsection{Breadth First Search}
-
+\url{https://youtu.be/9y0Rl22FHVo}
 \subsubsection{Greedy Search Manhattan}
-
+\url{https://youtu.be/vOa5Yzk5X8c}
 \subsubsection{Greedy Search Euclidean}
-
+\url{https://youtu.be/PcCLCc52ujs}
 \subsection{Test6: Pass}
-When the reset button is pressed, an empty grid of the current size is generated.
+When the reset button is pressed, an empty grid of the current size is generated. \url{https://youtu.be/kffa8GjnVL4}
 \subsection{Test7}
 When moving the start and finish nodes, the maze is resolved, however, sometimes the colours of the start or end nodes are not update properly when they are moved.
-
+\url{https://youtu.be/0yQi2wyBA7Y}
 
 \section{Evidence of Completeness}  
 \subsection{Objectives Again}
@@ -783,8 +843,28 @@ The project is able to update the visualization without the user having to rerun
 I wanted to go back to the end users with the finished visualization, to see if they had any feedback on the project or any ideas on further improvements that could be made.
 There feedback was:
 \begin{itemize}
-    \item GET FEEDBACK AND PUT IT HERE
+    \item[Item 1.]"The user interface was intuitive on the whole, however, I feel that the solve button should be on the other side of the solving algorithms dropdown."
+    \item[Item 2.]"I thought that the menus were intuitive, and that the key was very useful to know what the different coloured squares meant."
+    \item[Item 3.]"I thought that the information on the algorithms was of a good length."
+    \item[Item 4.]"If a size rather higher than 30 is entered, no message is shown as to why a new maze is not being generated."
+    \item[Item 5.]"I think it would be nice if I could download a gif of the maze being solved."    
+    \item[Item 6.]"I think that the visualization was high tier."
+    \item[Item 7.]"It would be nice if there were more maze generating algorithms, such as Kruskal's algorithm."  
 \end{itemize}
+\subsection{Response to Independent Feedback}
+\subsubsection{User Interface}
+In response to item 1, I have moved the solve button to the right of the solving algorithms dropdown, as shown in the image below.
+\newline
+\includegraphics[width=\linewidth]{assets/feedback/item1.jpg}
+
+\subsubsection{Max Size Error}
+In response to item 4, I have added an alert if a size above 30 is entered, which will tell the user why a new maze is not being generated, as shown in the image below.
+\newline
+\includegraphics[width=\linewidth]{assets/feedback/item4.jpg}
+
+\subsubsection{Gif}
+Although I think that being able to download a gif of the maze being solved would be a beneficial feature, it would require a lot of work on the back end, as there is no software for visualizing the maze being solved in the api. Because of this, I have put it into the "Improvements that could be made" section.
+
 \subsection{Improvements that could be made}
 There a few improvements that I would make to this project if I had more time:
 \begin{enumerate}
@@ -792,5 +872,9 @@ There a few improvements that I would make to this project if I had more time:
     \item Make the size of the maze squares automatically scale with the size of the maze, so that the user does not need to zoom out for larger mazes.
     \item Allow for rectangular mazes.
     \item User drawn mazes.
+    \item Allow the user to download a gif of the maze being solved.
 \end{enumerate}
+
+\subsection{Evaluation}
+I feel that this project has been a success, as almost all of the objectives have been completed. The only objective that was not completed was the user written algorithms, however, this was not completed due to the security risks of running user written code on the API.
 \end{document}

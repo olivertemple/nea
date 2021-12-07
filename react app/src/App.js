@@ -57,6 +57,8 @@ class App extends Component {
     }, () => {//setState is asynchronous, so we need to wait for it to finish before running the following code 
       if (size.width > 0 && size.height > 0 && size.width < 31 && size.height < 31){//if the size is valid, generate a new maze
         this.clearGrid();
+      }else if(size.width > 30 && size.height > 30){//if the size is too large, alert the user
+        alert("The size of the maze must be less than 30.")
       }
     })
   }

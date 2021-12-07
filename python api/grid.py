@@ -8,7 +8,7 @@ class Node:
         self.index = None
         self.parent = None
         self.visited = False
-        
+
         self.distance = "infinity"
 
         self.wallLeft = True
