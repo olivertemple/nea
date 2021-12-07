@@ -152,7 +152,7 @@
 
 \section{analysis}
 \subsection{Project Description}
-Path finding algorithms are essential in many aspects of computer science, from computer games to solving complex real world problems, however they can be complex things to visualize, especially when learning about them for the first time. This project's aim to create a path finding visualization tool that will generate and solve mazes, and to provide a general understanding of the algorithms used. 
+Path finding algorithms are essential in many aspects of computer science, from computer games to solving complex real world problems, however they can be difficult to visualize, especially when learning about them for the first time. This project's aim to create a path finding visualization tool that will generate and solve mazes, and to provide a general understanding of the algorithms used. 
 
 There are a number of different algorithms that can be used to solve and generate mazes, and this project will focus on the more common ones like Dijkstra's, Depth First Search, Prims and more. I intend to include algorithms that are different from each other to show the advantages and disadvantages of each.
 
@@ -160,7 +160,7 @@ There are a number of different algorithms that can be used to solve and generat
 \subsubsection{Overview}
 To complete this project, I will need a strong understanding of maze generation and path finding algorithms, how they work and how to model them, knowledge of react and javascript to create a website for the visualization as well as user opinions on what features are needed.
 \subsubsection{Research Log}
-I was introduced to path finding algorithms in one of my lessons, where we learned what they were used for and some examples, as well as how they can be modeled. For example, modelling the maze as a graph with weighted nodes of 1 and 0, for the walls and space respectively. The algorithms we looked at were Dijkstra's and A*. We also looked at Prim's algorithm, recursive backtracking, depth fist search and Kruskal's algorithms for maze generation.
+I was introduced to path finding algorithms in one of my lessons, where we learned what they were used for and some examples, as well as how they can be modeled. For example, modelling the maze as a graph with weighted nodes of 1 and 0, for the walls and space respectively. The algorithms we looked at were Dijkstra's and A*. We also looked at Prim's algorithm, recursive backtracking and Kruskal's algorithms for maze generation.
 
 \paragraph{Maze Generating Algorithms}
 \subparagraph*{Prims}
@@ -181,7 +181,7 @@ I used this along with another visualization that I found to write my own recurs
 
 \paragraph{Path Finding Algorithms}
 \subparagraph*{Depth First Search}
-For the depth first search, I looked \url{https://isaaccomputerscience.org/concepts/dsa_pathfinding_dfs_bfs?examBoard=ocr&stage=a_level}, a resource I often use for studying. I used their easy to understand description to write my own implementation of depth first search. Their website said:
+For the depth first search, I looked at \url{https://isaaccomputerscience.org/concepts/dsa_pathfinding_dfs_bfs?examBoard=ocr&stage=a_level}, a resource I often use for studying. I used their easy to understand description to write my own implementation of depth first search. Their website said:
 \begin{quoting}
     A depth-first search begins at the start node and then searches as far as possible down a branch of the graph, moving forward until there are no more nodes along the current branch to be explored. If the target node is found along the way, the search can stop. Otherwise, it must backtrack and find another branch to explore.
 
@@ -197,7 +197,7 @@ Isaaccomputerscience also have a page on breadth first search, also containing a
 \end{quoting} 
 
 \subparagraph*{Dijkstra's}
-For dijkstr's, i found this website:\url{https://daemianmack.org/posts/2019/12/mazes-for-programmers-dijkstras-algorithm.html}, that had a very good description of Dijkstra's algorithm. 
+For dijkstra's, i found this website:\url{https://daemianmack.org/posts/2019/12/mazes-for-programmers-dijkstras-algorithm.html}, that had a very good description of Dijkstra's algorithm. 
 \begin{quoting}
     \begin{enumerate}
         \item Determine the starting point of the grid.
@@ -339,7 +339,7 @@ I asked some prospective users some questions about what they would like to see 
 \begin{enumerate}
     \item[A1.]I would like to see recursive backtracking and Prim's algorithms used for maze generation, as well as Kruskal's (less important). This is because recursive backtracking and Prims are similar but each has their own advantages and disadvantages and recursive backtracking is different and uses recursion.
     \item[A2.]I would like to see an algorithm(such as Dijkstra's) as well as a heuristic(such as A* or a greedy search), as this will show the difference between a heuristic and an algorithm.
-    \item[A3.]Option to add your own png image for the drawing of final path - "a sussy imposter running around the maze".
+    \item[A3.]The ability to change the speed of the visualization.
     \item[A4.]I would find it useful to be able to code my own algorithms. This would allow me to use the visualization with other, lesser known algorithms that I may want to visualize.
 \end{enumerate}
 The answers to these questions confirms what is required from the visualization, which will be reflected in the objectives. The need for contrasting algorithms is something that I will consider when deciding what algorithms to use.
@@ -367,7 +367,7 @@ If the start or end nodes are moved once the visualization has been run, then it
 \section{Documented Design}
 \subsection{Visualization Structure}
 The project will be split into two main sections, the first being the visualization and the second being the python API.
-The python API will be for generating and solving the mazes, and the react website that will visualize the algorithms. The python API will can be subdivided into two sections, the first being the maze generation and the second being the maze solving. Different parameters will be passed to the API depending on the what the user has requested. These parameters will be:
+The python API will be for generating and solving the mazes, and the react website that will visualize the algorithms. The python API will can be subdivided into two further sections, the first being the maze generation and the second being the maze solving. Different parameters will be passed to the API depending on the what the user has requested. These parameters will be:
 \begin{itemize}
     \item width
     \item height
@@ -669,7 +669,7 @@ Method to render the settings component if the settings button is clicked.
 \section{Technical Solution}
 A running solution of the project is available at \url{https://olivertemple.github.io/nea/}.
 \subsection{Summary Of Skills Used}
-These tables are a list of some of the skills I have used in this project, with line numbers of where they are demonstrated.
+These tables are a list of some of the skills I have used in this project, with the location of where they are demonstrated.
 \begin{center}
     
     \begin{tabular}{ |p{0.4\linewidth}|p{0.8\linewidth}| }
@@ -873,6 +873,7 @@ There a few improvements that I would make to this project if I had more time:
     \item Allow for rectangular mazes.
     \item User drawn mazes.
     \item Allow the user to download a gif of the maze being solved.
+    \item Allow for the path finding visualization to be paused.
 \end{enumerate}
 
 \subsection{Evaluation}
