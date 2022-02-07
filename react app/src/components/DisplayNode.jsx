@@ -15,7 +15,7 @@ export default class DisplayNode extends React.Component{
         this.props.setDragObject(this.start ? "start" : this.end ? "end" : "")
     }
     handelDrop(){//move the node that was being dragged to the new position
-        this.setState({style:{}});
+        this.setState({style:{height:600/this.props.height, width:600/this.props.width}});
         this.props.handelDrop(this.props.pos)
     }
     handelDragOver(e){//when another node is dragged over this node, set the style of the node to be pink
