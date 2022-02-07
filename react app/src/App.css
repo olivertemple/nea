@@ -10,6 +10,10 @@
   background-color: #DDDDDD;
   margin:15px;
   border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: fit-content;
 }
 
 .node{
@@ -18,7 +22,7 @@
 }
 
 .info{
-  width: 20%;
+  width: fit-content;
   margin: 0px 20px 0px 20px;
 }
 

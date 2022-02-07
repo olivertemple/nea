@@ -21,20 +21,24 @@ export default class Settings extends React.Component {
     }
     handleClickOutside(event){//hide the settings dropdown menu if the user clicks outside of it
         const domNode = ReactDOM.findDOMNode(this);
-        if (!domNode || !domNode.contains(event.target)) {
-            this.setState({show: false});
+        if (domNode && domNode.contains(event.target)) {
+            return
         }
+        this.setState({show: false});
+
     }
     handelSizeChange(e){//change the size of the grid when it is changed in the settings
         let value = e.target.value;
         this.props.setSize({height:value, width:value})
     }
+    
     setHeuristic(heuristic){//set the heuristic to the selected heuristic
         this.setState({
             heuristic: heuristic
         })
         this.props.setHeuristic(heuristic)
     }
+
     renderSettings(){//render the settings dropdown menu
         return(
             <div className="settings_container">
@@ -51,7 +55,7 @@ export default class Settings extends React.Component {
                 </div>
                 <div className="column">
                     <p>Speed</p>
-                    <input type="range" defaultValue={this.props.speed} min={0.01} max={0.3} step={0.01} onChange={(e) => {this.props.setSpeed(e.target.value)}} />    
+                    <input type="range" defaultValue={0.3 - this.props.speed} min={0.01} max={0.3} step={0.01} onChange={(e) => {this.props.setSpeed(0.3 - e.target.value)}} />    
                 </div> 
                
             </div>

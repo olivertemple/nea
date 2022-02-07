@@ -25,6 +25,7 @@ class App extends Component {
 
     this.solved = false;
     this.maze = false;
+    this.api_endpoint = "https://jkrlv64tsl.execute-api.eu-west-2.amazonaws.com/default/NEA"
     //bind the methods to the object so that the "this" keyword refers to the object no matter where the method is called from
     this.fetchGrid = this.fetchGrid.bind(this);
     this.setAlgorithm = this.setAlgorithm.bind(this);
@@ -52,13 +53,15 @@ class App extends Component {
     this.setState({speed: speed});
   }
   setSize(size){//set the size of the grid when changed in settings
+    if(size.width > 30 && size.height > 30){//if the size is too large, alert the user
+      alert("The size of the maze must be less than 30.")
+      return;
+    }
     this.setState({
       size: size
     }, () => {//setState is asynchronous, so we need to wait for it to finish before running the following code 
       if (size.width > 0 && size.height > 0 && size.width < 31 && size.height < 31){//if the size is valid, generate a new maze
         this.clearGrid();
-      }else if(size.width > 30 && size.height > 30){//if the size is too large, alert the user
-        alert("The size of the maze must be less than 30.")
       }
     })
   }
@@ -116,7 +119,7 @@ class App extends Component {
   }
   async fetchGrid(){//generate a new maze from the python API using the selected algorithm
     if (this.state.algorithm){//check that there is an algorithm selected for generating the maze
-      let grid = await fetch(`https://jkrlv64tsl.execute-api.eu-west-2.amazonaws.com/default/NEA?type=generate&width=${this.state.size.width}&height=${this.state.size.height}&generate=${this.state.algorithm}`)//fetch the generated grid from the python API
+      let grid = await fetch(`${this.api_endpoint}?type=generate&width=${this.state.size.width}&height=${this.state.size.height}&generate=${this.state.algorithm}`)//fetch the generated grid from the python API
       grid = await grid.json();//convert the response to json
       this.setState({//update the state with the new grid
         grid:grid
@@ -129,24 +132,25 @@ class App extends Component {
   }
   async solveGrid(){//send the maze to the python API to be solved with the requested algorithm
     await this.clear_node_index();//clear the index of the nodes, as the maze is being solved again
-    if (this.maze && this.state.solve){//check that there is a maze and that there is an algorithm selected for solving the maze
-      let grid = await fetch(
-        `https://jkrlv64tsl.execute-api.eu-west-2.amazonaws.com/default/NEA?type=solve&width=${this.state.size.width}&height=${this.state.size.height}&solve=${this.state.solve}&start=${this.state.nodes.start}&end=${this.state.nodes.end}&heuristic=${this.state.heuristic}`, {
-        method: "POST",
-        body: JSON.stringify(this.state.grid)//set the body of the request to the grid
-      })//send the maze to the python API to be solved, with the selected algorithm as a parameter
-      grid = await grid.json();//convert the response to json
-      this.setState({//update the state with the new grid
-        grid:grid
-      })
-      this.solved = true;//the maze is now solved
-    }else{
-      if (!this.maze){//if there is no maze, alert the user that there is no maze to solve
-        alert("Please generate a maze")
+
+    if (!this.maze || !this.state.solve){
+      if (!this.maze){
+        alert("Please generate a maze before solving it")
       }else{
-        alert("Please select a solving algorithm")//If there is no algorithm selected to solve the maze, alert the user
+        alert("Please select a maze solving algorithm")
       }
+      return
     }
+    let grid = await fetch(
+      `${this.api_endpoint}?type=solve&width=${this.state.size.width}&height=${this.state.size.height}&solve=${this.state.solve}&start=${this.state.nodes.start}&end=${this.state.nodes.end}&heuristic=${this.state.heuristic}`, {
+      method: "POST",
+      body: JSON.stringify(this.state.grid)//set the body of the request to the grid
+    })//send the maze to the python API to be solved, with the selected algorithm as a parameter
+    grid = await grid.json();//convert the response to json
+    this.setState({//update the state with the new grid
+      grid:grid
+    })
+    this.solved = true;//the maze is now solved
     
   }
   async clearGrid(){//generate an empty maze from the API

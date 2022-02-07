@@ -21,7 +21,6 @@
 \definecolor{greenCode}{rgb}{0, 0.6, 0} % #009900 -> rgb(0, 153, 0) 
 
 \lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},   
     commentstyle=\color{codegreen},
     keywordstyle=\color{magenta},
     numberstyle=\tiny\color{codegray},
@@ -327,7 +326,7 @@ I will make a path-finding visualization that encompasses as many of the merits 
 \subsubsection{Prospective Users}
 The users of this system will most likely consist of teachers and students who are learning about path finding algorithms as it will clearly show how the algorithms function.
 \paragraph{Questions To Users}
-I asked some prospective users some questions about what they would like to see in the visualizer.
+I asked a student in my Computer Science class, who is a prospective user, some questions about what they would like to see in the visualizer.
 \paragraph*{Questions}
 \begin{enumerate}
     \item[Q1.]What algorithms would you like to see for maze generation?
@@ -345,21 +344,42 @@ I asked some prospective users some questions about what they would like to see 
 The answers to these questions confirms what is required from the visualization, which will be reflected in the objectives. The need for contrasting algorithms is something that I will consider when deciding what algorithms to use.
 \subsection{Objectives}
 \subsubsection{Generate Mazes}
-The website should be able to generate mazes using multiple algorithms, including, but not limited to: Prim's algorithm and recursive backtracking. There should also be a brief description of the algorithm that has been selected.
+The website should be able to generate mazes using multiple algorithms, including, but not limited to:
+\paragraph{Algorithms}
+\begin{itemize}
+    \item Prim's Algorithm
+    \item Recursive Backtracking
+\end{itemize}
+\paragraph{Information}
+There should also be a brief description of the algorithm that has been selected.
 
 \subsubsection{Solve Mazes}
-The website should be able to solve mazes using multiple algorithms, including, but not limited to: greedy search, Dijkstra's algorithms, depth-first search and breadth-first search. There should also be a brief description of the algorithm that has been selected.
+The website should be able to solve mazes using multiple algorithms, including, but not limited to:
+\paragraph{Algorithms}
+\begin{itemize}
+    \item Greedy Search
+    \item Dijkstra's Algorithm
+    \item Depth-first Search
+    \item Breadth-first Search
+\end{itemize}
+\paragraph{Information}
+There should also be a brief description of the algorithm that has been selected.
 
 \subsubsection{Customisation}
 The user should be able to customize aspects of the visualization, including:
-\begin{itemize}
+\begin{enumerate}
     \item Size of the maze.
     \item Speed of the animation.
     \item The heuristic used in any heuristic algorithms.
-\end{itemize}
+\end{enumerate}
 
 \subsubsection{User written algorithms}
-The website should be able to run algorithms written by the user for both maze generation and solving. This will be done by supplying documentation on what parameters need to be taken in and what will need to be returned from the function for the visualizer to work.
+The website should be able to run algorithms written by the user for both maze generation and solving. 
+\paragraph{Steps}
+\begin{itemize}
+    \item Supply documentation on parameters needed for the algorithm.
+    \item Supply documentation of the format the maze must be returned in.
+\end{itemize}
 
 \subsubsection{Update Visualization}
 If the start or end nodes are moved once the visualization has been run, then it should update without the user having to rerun the visualization.
@@ -710,82 +730,112 @@ These tables are a list of some of the skills I have used in this project, with 
 \subsection{The Full Code}
 
 \subsubsection{Python API: lambda\_function.py}
-\lstinputlisting[language=python, linewidth=1.3\linewidth]{../python api/lambda_function.py}
+\lstinputlisting[language=python, linewidth=\linewidth]{../python api/lambda_function.py}
 
 \subsubsection{Python API: grid.py}
-\lstinputlisting[language=python, linewidth=1.3\linewidth]{../python api/grid.py}
+\lstinputlisting[language=python, linewidth=\linewidth]{../python api/grid.py}
 
 \subsubsection{Python API: generator.py}
-\lstinputlisting[language=python, linewidth=1.3\linewidth]{../python api/generator.py}
+\lstinputlisting[language=python, linewidth=\linewidth]{../python api/generator.py}
 
 \subsubsection{Python API: solver.py}
-\lstinputlisting[language=python, linewidth=1.3\linewidth]{../python api/solver.py}
+\lstinputlisting[language=python, linewidth=\linewidth]{../python api/solver.py}
 
 \subsubsection{React App: App.js}
-\lstinputlisting[language=JavaScript, linewidth=1.3\linewidth]{../react app/src/App.js}
+\lstinputlisting[language=JavaScript, linewidth=\linewidth]{../react app/src/App.js}
 
 \subsubsection{React App: Menu.jsx}
-\lstinputlisting[language=JavaScript, linewidth=1.3\linewidth]{../react app/src/components/Menu.jsx}
+\lstinputlisting[language=JavaScript, linewidth=\linewidth]{../react app/src/components/Menu.jsx}
 
 \subsubsection{React App: MenuKey.jsx}
-\lstinputlisting[language=JavaScript, linewidth=1.3\linewidth]{../react app/src/components/MenuKey.jsx}
+\lstinputlisting[language=JavaScript, linewidth=\linewidth]{../react app/src/components/MenuKey.jsx}
 
 \subsubsection{React App: DisplayGrid.jsx}
-\lstinputlisting[language=JavaScript, linewidth=1.3\linewidth]{../react app/src/components/DisplayGrid.jsx}
+\lstinputlisting[language=JavaScript, linewidth=\linewidth]{../react app/src/components/DisplayGrid.jsx}
 
 \subsubsection{React App: DisplayNode.jsx}
-\lstinputlisting[language=JavaScript, linewidth=1.3\linewidth]{../react app/src/components/DisplayNode.jsx}
+\lstinputlisting[language=JavaScript, linewidth=\linewidth]{../react app/src/components/DisplayNode.jsx}
 
 \section{Testing}
 To test the project as a whole, I will check the following:
 \begin{enumerate}
     \item[Test1.] Load the react app and check that and empty maze is generated correctly.
-    \item[Test2.] Change the size of the maze and check that the size changes and doesn't go below 1.
+    \item[Test2.] Change the size of the maze and check that the size changes and doesn't go below 1 or above 30.
     \item[Test3.] Run each of the maze generation algorithms and check that the maze is generated correctly and is solvable.
+    \begin{enumerate}
+        \item[Test3.1.] Run Prim's algorithm for a range of different sized mazes.
+        \item[Test3.2.] Run recursive backtracking algorithm for a range of different sized mazes. 
+    \end{enumerate} 
     \item[Test4.] Solve an assortment of mazes with assorted sizes using each of the algorithms (including heuristics for the greedy search) and check that they run correctly.
+    \begin{enumerate}
+        \item[Test4.1.] Solve a variety of mazes of various sizes that have been generated with each algorithm with Dijkstra's algorithm.
+        \item[Test4.2.] Solve a variety of mazes of various sizes that have been generated with each algorithm with depth first search algorithm.
+        \item[Test4.3.] Solve a variety of mazes of various sizes that have been generated with each algorithm with breadth first search algorithm.
+        \item[Test4.4.] Solve a variety of mazes of various sizes that have been generated with each algorithm with Greedy Manhattan algorithm.
+        \item[Test4.5.] Solve a variety of mazes of various sizes that have been generated with each algorithm with Greedy Euclidean algorithm.
+    \end{enumerate} 
     \item[Test5.] Use different speeds when solving the mazes and check that the speed changes correctly.
     \item[Test6.] Reset the maze and check that the maze is reset correctly.
     \item[Test7.] Drag and drop the start and finnish nodes. Check that the maze resolves correctly. 
+    \item[Test 8.] Try to generate the maze without a generation algorithm selected and check that an error is thrown.
+    \item[Test 9.] Try to solve the maze without a maze to solve and check that an error is thrown.  
+    \item[Test 10.] Try to solve the maze without a solver algorithm selected and check that an error is thrown. 
 \end{enumerate}
 
-\subsection{Test1: Pass}
+\subsection*{Test1: Pass}
 Upon loading the react app, an empty maze is generated.
 \newline
 \includegraphics[width=\linewidth]{assets/testing/test1.jpg}
 
-\subsection{Test2: Pass}
-The size can be changed down to 1 and the maze is still generated correctly, you cannot go blow 1.
-\newline
-\includegraphics[width=\linewidth]{assets/testing/test2a.jpg}
-\includegraphics[width=\linewidth]{assets/testing/test2b.jpg}
+\subsection*{Test2: Pass}
+\url{https://www.youtube.com/watch?v=CAwgwoOV2gg}
+As seen in the video, the size of the maze can be changed, however it cannot go below 1 or above 30. If the size of the maze is set above 30, a message is displayed and the size is incremented, however the size of the maze does not change, and remains at 30 until the size is reduced to 30 or below.
 
-\subsection{Test3: Pass}
-Blow are screenshots of a maze being generated using each of the different algorithms, with different size mazes.
-\subsubsection{Prim's Algorithm}
-\includegraphics[width=\linewidth]{assets/testing/test3a.jpg}
-\includegraphics[width=\linewidth]{assets/testing/test3b.jpg}
+\subsection*{Test3: Pass}
+\subsubsection*{Test 3.1: Pass}
+\url{https://youtu.be/iKEupyaO_jk}
+As seen in the video, the maze is generated correctly using prims algorithm for a range of different sized mazes. All of these mazes are solvable. The requirements for this test have been met.
 
-\subsubsection{Recursive Backtracking}
-\includegraphics[width=\linewidth]{assets/testing/test3c.jpg}
-\includegraphics[width=\linewidth]{assets/testing/test3d.jpg}
+\subsubsection*{Test 3.2: Pass}
+\url{https://youtu.be/JaqfMnUv05w}
+As seen in the video, the maze is generated correctly using recursive backtracking algorithm for a range of different sized mazes. All of these mazes are solvable. The requirements for this test have been met.
 
-\subsection{Test4/Test5: Pass}
-Blow are links to videos assorted mazes being solved using each of the different algorithms, with different speeds and sizes.
-\subsubsection{Dijkstra's Algorithm}
-\url{https://youtu.be/91A-1P_atU8}
-\subsubsection{Depth First Search}
-\url{https://youtu.be/wustNAgCnUk}
-\subsubsection{Breadth First Search}
-\url{https://youtu.be/9y0Rl22FHVo}
-\subsubsection{Greedy Search Manhattan}
-\url{https://youtu.be/vOa5Yzk5X8c}
-\subsubsection{Greedy Search Euclidean}
-\url{https://youtu.be/PcCLCc52ujs}
-\subsection{Test6: Pass}
-When the reset button is pressed, an empty grid of the current size is generated. \url{https://youtu.be/kffa8GjnVL4}
-\subsection{Test7}
-When moving the start and finish nodes, the maze is resolved, however, sometimes the colours of the start or end nodes are not update properly when they are moved.
-\url{https://youtu.be/0yQi2wyBA7Y}
+\subsection*{Test4}
+\subsubsection*{Test 4.1: Pass}
+\url{https://youtu.be/SU7yRI-M01E}
+As seen in the video, the maze is solved correctly using Dijkstra's algorithm when the maze is generated with both prims and recursive backtracking algorithms as well as with varying sizes of maze. The requirements for this test have been met.
+\subsubsection*{Test 4.2: Pass}
+\url{https://youtu.be/6tOw_TfPZv8}
+As seen in the video, the maze is solved correctly using depth first search algorithm when the maze is generated with both prims and recursive backtracking algorithms as well as with varying sizes of maze. The requirements for this test have been met.
+\subsubsection*{Test 4.3: Pass}
+\url{https://youtu.be/wlYep7ihSd8}
+As seen in the video, the maze is solved correctly using breadth first search algorithm when the maze is generated with both prims and recursive backtracking algorithms as well as with varying sizes of maze. The requirements for this test have been met.
+\subsubsection*{Test 4.4: Pass}
+\url{https://youtu.be/iRUjr1lZdyY}
+As seen in the video, the maze is solved correctly using Greedy algorithm with the manhattan heuristic when the maze is generated with both prims and recursive backtracking algorithms as well as with varying sizes of maze. The requirements for this test have been met.
+\subsubsection*{Test 4.5: Pass}
+\url{https://youtu.be/VE-0nMJJ1DA}
+As seen in the video, the maze is solved correctly using Greedy algorithm with the euclidean heuristic when the maze is generated with both prims and recursive backtracking algorithms as well as with varying sizes of maze. The requirements for this test have been met.
+\subsection*{Test5: Pass}
+\url{https://youtu.be/NsGNPOV_UTQ}
+As shown in the video, the slider can be used to change the speed that the visualization runs. A lower value of the slider will lower the delay between the nodes being visited, hence speeding it up. A higher value of the slider will increase the delay between the nodes being visited, hence slowing it down. The requirements for this test have been met.
+\subsection*{Test6: Pass}
+\url{https://youtu.be/kffa8GjnVL4}
+When the reset button is pressed, an empty grid of the current size is generated.
+\subsection*{Test7: Pass}
+\url{https://youtu.be/SOVFP3Kz01c}
+As shown in the video, when the start and end nodes are dragged and dropped, the maze is solved correctly from the new start and end nodes. If the maze has been solved and either node is moved, then the maze with solve again. The requirements for this test have been met.
+\subsection{Test 8: Pass}
+\url{https://youtu.be/3qMWXevVs_s}
+As seen in the video, when the generation algorithm is not selected, an error is thrown in the form of an alert from the website, informing the user that a maze generation algorithm must first be chosen. The requirements for this test have been met.
+
+\subsection{Test 9: Pass}
+\url{https://youtu.be/_RUYGKPVKYk}
+As seen in the video, when there is no maze to solve, an error is thrown in the form of an alert from the website, informing the user that a maze must be generated before a solving algorithm can be used. The requirements for this test have been met.
+
+\subsection{Test 10: Pass}
+\url{https://youtu.be/JKMkkur1sIo}
+As seen in the video, when no maze solving algorithm is selected, an error is thrown in the form of an alert from the website, informing the user that a maze solving algorithm must be selected before the maze can be solved. The requirements for this test have been met.
 
 \section{Evidence of Completeness}  
 \subsection{Objectives Again}
@@ -840,31 +890,40 @@ The project is able to update the visualization without the user having to rerun
 
 \section{Evaluation}
 \subsection{Independent Feedback}
-I wanted to go back to the end users with the finished visualization, to see if they had any feedback on the project or any ideas on further improvements that could be made.
+I wanted to go back to the end users (students in my class and computer science teachers at my school) with the finished visualization, to see if they had any feedback on the project or any ideas on further improvements that could be made.
 There feedback was:
 \begin{itemize}
-    \item[Item 1.]"The user interface was intuitive on the whole, however, I feel that the solve button should be on the other side of the solving algorithms dropdown."
-    \item[Item 2.]"I thought that the menus were intuitive, and that the key was very useful to know what the different coloured squares meant."
-    \item[Item 3.]"I thought that the information on the algorithms was of a good length."
-    \item[Item 4.]"If a size rather higher than 30 is entered, no message is shown as to why a new maze is not being generated."
-    \item[Item 5.]"I think it would be nice if I could download a gif of the maze being solved."    
-    \item[Item 6.]"I think that the visualization was high tier."
-    \item[Item 7.]"It would be nice if there were more maze generating algorithms, such as Kruskal's algorithm."  
+    \item[Item 1.]"I thought that the menus were intuitive, and that the key was very useful to know what the different coloured squares meant."
+    \item[Item 2.]"It could be helpful to download a gif animation of the maze being solved, particularly in the case of a teacher sharing it with the class." 
+    \item[Item 3.]"I think it would be nice if I could download a gif of the maze being solved."    
+    \item[Item 4.]"I think that the visualization was high tier."
+    \item[Item 5.]"It would be nice if there were more maze generating algorithms, such as Kruskal's algorithm." 
+    \item[Item 6.]"It looks very nice, but the speed slider is counter intuitive, with a higher value being slower."
+    \item[Item 7.]"I especially like that there is information on the algorithms, however, the information for breadth first search has a typo in it. It says "depth first search" instead of "breadth first search", which is what the description is describing."   
 \end{itemize}
 \subsection{Response to Independent Feedback}
-\subsubsection{User Interface}
-In response to item 1, I have moved the solve button to the right of the solving algorithms dropdown, as shown in the image below.
-\newline
-\includegraphics[width=\linewidth]{assets/feedback/item1.jpg}
-
-\subsubsection{Max Size Error}
-In response to item 4, I have added an alert if a size above 30 is entered, which will tell the user why a new maze is not being generated, as shown in the image below.
-\newline
-\includegraphics[width=\linewidth]{assets/feedback/item4.jpg}
 
 \subsubsection{Gif}
-Although I think that being able to download a gif of the maze being solved would be a beneficial feature, it would require a lot of work on the back end, as there is no software for visualizing the maze being solved in the api. Because of this, I have put it into the "Improvements that could be made" section.
+\begin{quote}
+    \textit{
+        "It could be helpful to download a gif animation of the maze being solved, particularly in the case of a teacher sharing it with the class."
+    }
+\end{quote}
+Although I think that being able to download a gif of the maze being solved would be a beneficial feature, it would require a lot of work on the back end, as there is no software for rendering the maze being solved on the backend. Because of this, I have put it into the "Improvements that could be made" section.
 
+\subsubsection{Speed Slider}
+\begin{quote}
+    \textit{
+        "It looks very nice, but the speed slider is counter intuitive, with a higher value being slower."
+    }
+\end{quote}
+Having contemplated this user feedback, I have decided that the speed slider should be changed. To do this, I have altered the code so that a lower value of the slider will result in a faster visualization. This change has been reflected in the live version of the project.
+\paragraph*{Before}
+previously the value of the slider was used as the value of the speed. When the value of the slider was lower, the value of the animation was slower and hance the visualization was faster.
+\lstinputlisting[language=JavaScript, linewidth=1\linewidth]{./previous.jsx}
+\paragraph*{After}
+With the changes shown below, the current value of the slider is subtracted from the max value of the slider (0.3s). This is then used as the value of the animation, meaning that a lower value of the slider will result in a higher delay, and hence a slower visualization.
+\lstinputlisting[language=JavaScript, linewidth=1\linewidth]{./current.jsx}
 \subsection{Improvements that could be made}
 There a few improvements that I would make to this project if I had more time:
 \begin{enumerate}

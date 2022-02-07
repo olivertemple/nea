@@ -36,25 +36,25 @@ export default class DisplayGrid extends Component{
                 <tbody className="column">
                     {Array.from(Array(this.props.grid.height).keys()).map((_, i) => {//iterate through the rows of the grid
                         return(
-                                <tr className={`row wall_right ${i === 0 ? "wall_top" : ""}`} key={i}>
-                                    {Array.from(Array(this.props.grid.width).keys()).map((_, j) => {//iterate through the nodes in each row
-                                        return(
-                                            <DisplayNode 
-                                                key={j}
-                                                wallLeft={this.props.grid.grid[i][j].wallLeft} //bool: is there a wall to the left of this node
-                                                wallBottom={this.props.grid.grid[i][j].wallBottom} //bool: is there a wall below this node
-                                                pos={[i, j]} //position of the node
-                                                start={this.props.nodes.start} //position of the start node
-                                                end={this.props.nodes.end} //position of the end node
-                                                handelDrop = {this.handelDrop} //callback function to move the start or end node to a new position
-                                                setDragObject={this.setDragObject} // callback function to set weather the start or end node is being dragged
-                                                type={this.props.grid.grid[i][j].type} //type of node
-                                                index={this.props.grid.grid[i][j].index} //index of the node for visualization
-                                                speed={this.props.speed} //speed of the animation
-                                            /> 
-                                        )
-                                    })}
-                                </tr>
+                            <tr className={`row wall_right ${i === 0 ? "wall_top" : ""}`} key={i}>
+                                {Array.from(Array(this.props.grid.width).keys()).map((_, j) => {//iterate through the nodes in each row
+                                    return(
+                                        <DisplayNode 
+                                            key={j}
+                                            wallLeft={this.props.grid.grid[i][j].wallLeft} //bool: is there a wall to the left of this node
+                                            wallBottom={this.props.grid.grid[i][j].wallBottom} //bool: is there a wall below this node
+                                            pos={[i, j]} //position of the node
+                                            start={this.props.nodes.start} //position of the start node
+                                            end={this.props.nodes.end} //position of the end node
+                                            handelDrop = {this.handelDrop} //callback function to move the start or end node to a new position
+                                            setDragObject={this.setDragObject} // callback function to set weather the start or end node is being dragged
+                                            type={this.props.grid.grid[i][j].type} //type of node
+                                            index={this.props.grid.grid[i][j].index} //index of the node for visualization
+                                            speed={this.props.speed} //speed of the animation
+                                        /> 
+                                    )
+                                })}
+                            </tr>
                         )
                     })}
                 </tbody>
@@ -72,13 +72,12 @@ export default class DisplayGrid extends Component{
                     <SolverInfo solver={this.props.solveAlgorithm} heuristic={this.props.heuristic}/>
                 </div>
             )
-        }else{
-            return(
-                <div className="grid message column">
-                    <h1>No grid to display</h1>
-                    <h2>Check your internet connection</h2>
-                </div>
-            )
         }
+        return(
+            <div className="grid message column">
+                <h1>No grid to display</h1>
+                <h2>Check your internet connection</h2>
+            </div>
+        )
     }
 }
