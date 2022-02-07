@@ -75,20 +75,28 @@ export default class DisplayNode extends React.Component{
             if (this.props.type !== "path"){//Add css animations for to show the visited nodes
                 this.state.style = {
                     animation: `visit_node 2s linear forwards`,
-                    animationDelay: `${this.props.index*this.props.speed}s`
+                    animationDelay: `${this.props.index*this.props.speed}s`,
+                    height:600/this.props.height,
+                    width:600/this.props.width
                 }
             }else{//Add css animations for to show the path nodes
                 this.state.style = {
                     animation: "visit_node_path 2s linear forwards",
-                    animationDelay: `${this.props.index*this.props.speed}s`
+                    animationDelay: `${this.props.index*this.props.speed}s`,
+                    height:600/this.props.height,
+                    width:600/this.props.width
                 } 
             }
         }else{
             //removes the colour if the node is no longer visited after the maze is solved again
             if (!this.state.style.backgroundColor){
-                this.state.style = {}
+                this.state.style = {
+                    height:600/this.props.height,
+                    width:600/this.props.width
+                }
             }
         }
+      
         return(
             <td style={this.state.style} className={this.classList.join(" ")} draggable={this.draggable} onDragStart={this.handelDragStart} onDrop={this.handelDrop} onDragOver={this.handelDragOver} onDragLeave={this.handelDragLeave}>
             </td>

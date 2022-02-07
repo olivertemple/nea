@@ -12,17 +12,16 @@
   border-radius: 5px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   width: calc(100% - 50px);
 }
 
-.node{
+/* .node{
   height:40px;
   width:40px;
-}
+} */
 
 .info{
-  width: fit-content;
+  width: 25%;
   margin: 0px 20px 0px 20px;
 }
 

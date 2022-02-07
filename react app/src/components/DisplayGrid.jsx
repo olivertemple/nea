@@ -51,6 +51,8 @@ export default class DisplayGrid extends Component{
                                             type={this.props.grid.grid[i][j].type} //type of node
                                             index={this.props.grid.grid[i][j].index} //index of the node for visualization
                                             speed={this.props.speed} //speed of the animation
+                                            height={this.props.grid.height}
+                                            width={this.props.grid.width}
                                         /> 
                                     )
                                 })}
