@@ -3,7 +3,7 @@ export default class DisplayNode extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            style:{}
+            style:{height:600/this.props.height, width:600/this.props.width}
         }
         //bind the methods to the object so that the "this" keyword refers to the object no matter where the method is called from
         this.handelDragStart = this.handelDragStart.bind(this);
@@ -22,13 +22,15 @@ export default class DisplayNode extends React.Component{
         e.preventDefault();
         this.setState({
             style:{
-                backgroundColor:"pink"
+                backgroundColor:"pink",
+                height:600/this.props.height,
+                width:600/this.props.width
             }
         })
     }
     handelDragLeave(){//remove the pink style when the node is no longer being dragged over
         this.setState({
-            style:{}
+            style:{height:600/this.props.height, width:600/this.props.width}
         })
     }
     render(){//render the node as a table cell
