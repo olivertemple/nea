@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.25)  7 FEB 2022 15:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.25)  23 MAR 2022 10:26
 entering extended mode
 **"c:/Users/ollie/OneDrive - Exeter College/CS NEA/documents/analysis.tex"
 (c:/Users/ollie/OneDrive - Exeter College/CS NEA/documents/analysis.tex
@@ -517,7 +517,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.44 ...ve\_backtracking}{19}{subsubsection.2.6.1}
+l.44 ...6}solver.py: dfs}{19}{subsubsection.2.6.6}
                                                   % [1] [2])
 \tf@toc=\write5
 \openout5 = `analysis.toc'.
@@ -527,14 +527,19 @@ Overfull \hbox (4.15936pt too wide) in paragraph at lines 173--174
 []\OT1/cmr/m/it/10 Randomly choose a wall at that point and carve a pas-sage through
  []
 
-[4]
+
 Overfull \hbox (65.99643pt too wide) in paragraph at lines 178--180
 []$\OT1/cmtt/m/n/10 https : / / weblog . jamisbuck . org / 2010 / 12 / 27 / maze-[]generation-[]recursive-[]backtracking$[]
  []
 
-
+[4]
 Overfull \hbox (11.99689pt too wide) in paragraph at lines 183--185
 \OT1/cmtt/m/n/10 isaaccomputerscience . org / concepts / dsa _ pathfinding _ dfs _ bfs ? examBoard =
+ []
+
+
+Overfull \hbox (4.75813pt too wide) in paragraph at lines 191--193
+[] [] \OT1/cmr/bx/n/10 Breadth First Search[] \OT1/cmr/m/n/10 Isaac Com-puter Sci-ence also have a page on breadth
  []
 
 
@@ -557,13 +562,13 @@ Overfull \hbox (19.43062pt too wide) in paragraph at lines 218--221
 [] []|\OT1/cmr/bx/n/10 1.3.1.1 Ex-am-ple 1[] []\OT1/cmr/m/n/10 https://clementmihailescu.github.io/Pathfinding-Visualizer
  []
 
-<assets/Existing Solutions/example 1.PNG, id=689, 2057.43657pt x 1234.6125pt>
+<assets/Existing Solutions/example 1.PNG, id=668, 2057.43657pt x 1234.6125pt>
 File: assets/Existing Solutions/example 1.PNG Graphic file (type png)
 <use assets/Existing Solutions/example 1.PNG>
 Package pdftex.def Info: assets/Existing Solutions/example 1.PNG  used on input line 240.
 (pdftex.def)             Requested size: 345.0pt x 207.01787pt.
 [6] [7 <./assets/Existing Solutions/example 1.PNG>]
-<assets/Existing Solutions/example 2.PNG, id=708, 2058.94218pt x 1239.12938pt>
+<assets/Existing Solutions/example 2.PNG, id=683, 2058.94218pt x 1239.12938pt>
 File: assets/Existing Solutions/example 2.PNG Graphic file (type png)
 <use assets/Existing Solutions/example 2.PNG>
 Package pdftex.def Info: assets/Existing Solutions/example 2.PNG  used on input line 272.
@@ -573,69 +578,70 @@ Overfull \hbox (7.86174pt too wide) in paragraph at lines 280--281
 []\OT1/cmr/m/n/10 Visualization does not up-date when maze or start/finnish nodes are changed. 
  []
 
-<assets/Existing Solutions/example 3.PNG, id=710, 2058.18938pt x 1242.14063pt>
+<assets/Existing Solutions/example 3.PNG, id=685, 2058.18938pt x 1242.14063pt>
 File: assets/Existing Solutions/example 3.PNG Graphic file (type png)
 <use assets/Existing Solutions/example 3.PNG>
 Package pdftex.def Info: assets/Existing Solutions/example 3.PNG  used on input line 296.
 (pdftex.def)             Requested size: 345.0pt x 208.20436pt.
-[8 <./assets/Existing Solutions/example 2.PNG>] [9 <./assets/Existing Solutions/example 3.PNG>] [10] [11] [12]
-<assets/structure.jpg, id=737, 372.64218pt x 202.50656pt>
+[8 <./assets/Existing Solutions/example 2.PNG>] [9 <./assets/Existing Solutions/example 3.PNG>] [10] [11]
+<assets/structure.jpg, id=704, 372.64218pt x 202.50656pt>
 File: assets/structure.jpg Graphic file (type jpg)
 <use assets/structure.jpg>
-Package pdftex.def Info: assets/structure.jpg  used on input line 403.
+Package pdftex.def Info: assets/structure.jpg  used on input line 399.
 (pdftex.def)             Requested size: 345.0pt x 187.49174pt.
-<assets/flow chart.PNG, id=738, 400.49625pt x 662.90518pt>
+ [12]
+<assets/flow chart.PNG, id=713, 400.49625pt x 662.90518pt>
 File: assets/flow chart.PNG Graphic file (type png)
 <use assets/flow chart.PNG>
-Package pdftex.def Info: assets/flow chart.PNG  used on input line 405.
+Package pdftex.def Info: assets/flow chart.PNG  used on input line 401.
 (pdftex.def)             Requested size: 345.01894pt x 497.9363pt.
  [13 <./assets/structure.jpg>]
-<assets/gui.PNG, id=743, 777.33267pt x 448.67625pt>
+<assets/gui.PNG, id=718, 777.33267pt x 448.67625pt>
 File: assets/gui.PNG Graphic file (type png)
 <use assets/gui.PNG>
-Package pdftex.def Info: assets/gui.PNG  used on input line 410.
+Package pdftex.def Info: assets/gui.PNG  used on input line 406.
 (pdftex.def)             Requested size: 345.0pt x 199.13657pt.
  [14 <./assets/flow chart.PNG>]
-<assets/class diagrams/generator.PNG, id=749, 315.42844pt x 277.035pt>
+<assets/class diagrams/generator.PNG, id=724, 315.42844pt x 277.035pt>
 File: assets/class diagrams/generator.PNG Graphic file (type png)
 <use assets/class diagrams/generator.PNG>
-Package pdftex.def Info: assets/class diagrams/generator.PNG  used on input line 417.
+Package pdftex.def Info: assets/class diagrams/generator.PNG  used on input line 413.
 (pdftex.def)             Requested size: 172.5pt x 151.50313pt.
-<assets/class diagrams/solver.PNG, id=750, 321.45094pt x 325.215pt>
+<assets/class diagrams/solver.PNG, id=725, 321.45094pt x 325.215pt>
 File: assets/class diagrams/solver.PNG Graphic file (type png)
 <use assets/class diagrams/solver.PNG>
-Package pdftex.def Info: assets/class diagrams/solver.PNG  used on input line 423.
+Package pdftex.def Info: assets/class diagrams/solver.PNG  used on input line 419.
 (pdftex.def)             Requested size: 172.5pt x 174.52672pt.
  [15 <./assets/gui.PNG> <./assets/class diagrams/generator.PNG>]
-<assets/class diagrams/maze.PNG, id=757, 316.93407pt x 342.5297pt>
+<assets/class diagrams/maze.PNG, id=732, 316.93407pt x 342.5297pt>
 File: assets/class diagrams/maze.PNG Graphic file (type png)
 <use assets/class diagrams/maze.PNG>
-Package pdftex.def Info: assets/class diagrams/maze.PNG  used on input line 429.
+Package pdftex.def Info: assets/class diagrams/maze.PNG  used on input line 425.
 (pdftex.def)             Requested size: 172.5pt x 186.43716pt.
-<assets/class diagrams/node.PNG, id=758, 322.20375pt x 402.00188pt>
+<assets/class diagrams/node.PNG, id=733, 322.20375pt x 402.00188pt>
 File: assets/class diagrams/node.PNG Graphic file (type png)
 <use assets/class diagrams/node.PNG>
-Package pdftex.def Info: assets/class diagrams/node.PNG  used on input line 435.
+Package pdftex.def Info: assets/class diagrams/node.PNG  used on input line 431.
 (pdftex.def)             Requested size: 172.5pt x 215.23143pt.
  [16 <./assets/class diagrams/solver.PNG> <./assets/class diagrams/maze.PNG>] [17 <./assets/class diagrams/node.PNG>] [18] [19] [20] [21] [22] [23] [24]
-Underfull \hbox (badness 6428) in paragraph at lines 712--712
+Underfull \hbox (badness 6428) in paragraph at lines 707--707
 []\OT1/cmr/m/n/10 Client-server model, pars-ing
  []
 
 
-Underfull \hbox (badness 2035) in paragraph at lines 718--718
+Underfull \hbox (badness 2035) in paragraph at lines 713--713
 []\OT1/cmr/m/n/10 Simple math-e-mat-i-cal cal-cu-la-
  []
 
 
-Overfull \hbox (92.99895pt too wide) in paragraph at lines 695--727
+Overfull \hbox (92.99895pt too wide) in paragraph at lines 690--722
  [] 
  []
 
 [25] (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 733.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 727.
  (../python api/lambda_function.py [26] [27]) (../python api/grid.py [28] [29]) (../python api/generator.py [30] [31]) (../python api/solver.py [32] [33] [34] [35]) (../react app/src/App.js
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <8> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 1.
@@ -644,27 +650,27 @@ LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 1
  (C:\Users\ollie\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
 File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ) [39] [40]) (../react app/src/components/Menu.jsx [41]) (../react app/src/components/MenuKey.jsx) (../react app/src/components/DisplayGrid.jsx [42] [43]) (../react app/src/components/DisplayNode.jsx [44] [45]) [46]
-<assets/testing/test1.jpg, id=1866, 2041.6275pt x 1159.33125pt>
+<assets/testing/test1.jpg, id=1853, 2041.6275pt x 1159.33125pt>
 File: assets/testing/test1.jpg Graphic file (type jpg)
 <use assets/testing/test1.jpg>
-Package pdftex.def Info: assets/testing/test1.jpg  used on input line 788.
+Package pdftex.def Info: assets/testing/test1.jpg  used on input line 782.
 (pdftex.def)             Requested size: 345.0pt x 195.89848pt.
- [47 <./assets/testing/test1.jpg>] [48] [49] [50] [51] [52] (previous.jsx) (current.jsx) [53] (analysis.aux)
+ [47] [48 <./assets/testing/test1.jpg>] [49] [50] [51] [52] (previous.jsx) [53] (current.jsx) [54] (analysis.aux)
 Package rerunfilecheck Info: File `analysis.out' has not changed.
-(rerunfilecheck)             Checksum: 207E0557B72487F8C5936367ED970A71;22363.
+(rerunfilecheck)             Checksum: 375FFE8FC3655C80BE2FDAC09A651636;21778.
  ) 
 Here is how much of TeX's memory you used:
- 24734 strings out of 479334
- 469967 string characters out of 2857084
- 1530059 words of memory out of 3000000
- 40586 multiletter control sequences out of 15000+200000
+ 24737 strings out of 479334
+ 469982 string characters out of 2857084
+ 1530049 words of memory out of 3000000
+ 40581 multiletter control sequences out of 15000+200000
  408999 words of font info for 46 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,12n,89p,633b,2094s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\ollie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt0800.pk> <C:\Users\ollie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/ollie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on analysis.pdf (54 pages, 1448061 bytes).
+Output written on analysis.pdf (55 pages, 1446313 bytes).
 PDF statistics:
- 2211 PDF objects out of 2487 (max. 8388607)
- 1169 named destinations out of 1200 (max. 500000)
- 1092 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2205 PDF objects out of 2487 (max. 8388607)
+ 1177 named destinations out of 1200 (max. 500000)
+ 1052 words of extra memory for PDF output out of 10000 (max. 10000000)
 

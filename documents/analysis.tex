@@ -136,14 +136,14 @@
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{Path-finding Algorithms and Solving Mazes}
-\lhead{Oliver Temple [CN]}
+\lhead{Oliver Temple - -}
 \rfoot{\thepage}
 \lfoot{Path-finding Algorithms and Solving Mazes}
 
 \title{Path-finding Algorithms and Solving Mazes}
 
-\author{Oliver Temple}
-
+\author{Oliver Temple \\ -}
+\date{Spring 2022}
 \begin{document}
 
 \maketitle
@@ -188,7 +188,7 @@ For the depth first search, I looked at \url{https://isaaccomputerscience.org/co
 \end{quoting}
 
 \subparagraph*{Breadth First Search}
-Isaaccomputerscience also have a page on breadth first search, also containing a simple description that I used to implement my own breadth first search.
+Isaac Computer Science also have a page on breadth first search, also containing a simple description that I used to implement my own breadth first search.
 \begin{quoting}
     The algorithm starts searching at a designated start node and searches through all the adjacent nodes (neighbours) before moving on. You can think of this process as moving out in waves from a given point. Another simple way to visualise a breadth-first search algorithm is to imagine that you are making a cake one layer at a time. You can't add the next layer unless the previous one is complete.
 
@@ -208,7 +208,7 @@ For dijkstra's, i found this website:\url{https://daemianmack.org/posts/2019/12/
 \end{quoting}
 
 \subparagraph*{Greedy Search}
-Having researched the other path finding algorithms, and learnt about greedy algorithms in class, I used the knowledge I already had to write my own greedy search algorithm.
+Having researched the other path finding algorithms, and learnt about greedy algorithms in class, I used the knowledge I already had to write my own greedy search algorithm. A greedy algorithm is one that always chooses the best option at each step. This gives them the advantage of being faster, at the expense of accuracy, as greedy algorithms don't tend to grantee the optimal solution.
 
 \subsection{Project Background}
 \subsubsection{Current Systems}
@@ -312,9 +312,9 @@ In this example, mazes can be generated or drawn, however, mazes can only be gen
 \end{itemize}
 
 \subsubsection{Proposed Solution}
-I will make a path-finding visualization that encompasses as many of the merits of the existing solutions as possible, while also tackling as many of the drawbacks.
+I will make a path-finding visualization that encompasses as many of the merits of the existing solutions as possible, while also tackling as many of the drawbacks. To do this, I will take the following steps:
 \begin{itemize}
-    \item Research the different algorithms needed and write the corresponding pseudoscode.
+    \item Research the different algorithms needed and write the corresponding algorithm.
     \item Create a mockup of the user interface.
     \item Create the user interface in react.
     \item Code the algorithms in python.
@@ -345,24 +345,20 @@ The answers to these questions confirms what is required from the visualization,
 \subsection{Objectives}
 \subsubsection{Generate Mazes}
 The website should be able to generate mazes using multiple algorithms, including, but not limited to:
-\paragraph{Algorithms}
 \begin{itemize}
     \item Prim's Algorithm
     \item Recursive Backtracking
 \end{itemize}
-\paragraph{Information}
 There should also be a brief description of the algorithm that has been selected.
 
 \subsubsection{Solve Mazes}
 The website should be able to solve mazes using multiple algorithms, including, but not limited to:
-\paragraph{Algorithms}
 \begin{itemize}
     \item Greedy Search
     \item Dijkstra's Algorithm
     \item Depth-first Search
     \item Breadth-first Search
 \end{itemize}
-\paragraph{Information}
 There should also be a brief description of the algorithm that has been selected.
 
 \subsubsection{Customisation}
@@ -374,11 +370,11 @@ The user should be able to customize aspects of the visualization, including:
 \end{enumerate}
 
 \subsubsection{User written algorithms}
-The website should be able to run algorithms written by the user for both maze generation and solving. 
-\paragraph{Steps}
+The website should be able to run algorithms written by the user for both maze generation and solving. To do this I will:
 \begin{itemize}
     \item Supply documentation on parameters needed for the algorithm.
     \item Supply documentation of the format the maze must be returned in.
+    \item Supply documentation for any other information that the user may need to write an algorithm.
 \end{itemize}
 
 \subsubsection{Update Visualization}
@@ -387,15 +383,15 @@ If the start or end nodes are moved once the visualization has been run, then it
 \section{Documented Design}
 \subsection{Visualization Structure}
 The project will be split into two main sections, the first being the visualization and the second being the python API.
-The python API will be for generating and solving the mazes, and the react website that will visualize the algorithms. The python API will can be subdivided into two further sections, the first being the maze generation and the second being the maze solving. Different parameters will be passed to the API depending on the what the user has requested. These parameters will be:
+The python API will be for generating and solving the mazes, and the react website that will visualize the algorithms. The python API can be subdivided into two further sections, the first being the maze generation and the second being the maze solving. Different parameters will be passed to the API depending on the what the user has requested. These parameters will be:
 \begin{itemize}
     \item width
     \item height
     \item type (solve/generate/empty maze)
     \item generate (algorithm for generation)
     \item solve (algorithm for solving)
-    \item start
-    \item end
+    \item start node location
+    \item end node location
 \end{itemize} 
 
 When solving the maze, the maze will be sent to the API as part of the body of the request.
@@ -691,7 +687,6 @@ A running solution of the project is available at \url{https://nea.olivertemple.
 \subsection{Summary Of Skills Used}
 These tables are a list of some of the skills I have used in this project, with the location of where they are demonstrated.
 \begin{center}
-    
     \begin{tabular}{ |p{0.4\linewidth}|p{0.8\linewidth}| }
         \hline
         Skill & Where to find \\
@@ -724,7 +719,6 @@ These tables are a list of some of the skills I have used in this project, with 
         Graph traversals & solver.py, generator.py \\
         \hline
     \end{tabular}
-
 \end{center}
 
 \subsection{The Full Code}
@@ -859,7 +853,7 @@ The website should be able to run algorithms written by the user for both maze g
 \subsubsection{Update Visualization}
 If the start or end nodes are moved once the visualization has been run, then it should update without the user having to rerun the visualization.
 
-\subsection{Analysis of Objectives}
+\subsection{Evaluation of Objectives}
 \subsubsection{Generate Mazes}
 The project is able to generate mazes using multiple algorithms, as stated in the objective above. The available algorithms for generating mazes are:
 \begin{itemize}
@@ -917,9 +911,9 @@ Although I think that being able to download a gif of the maze being solved woul
         "It looks very nice, but the speed slider is counter intuitive, with a higher value being slower."
     }
 \end{quote}
-Having contemplated this user feedback, I have decided that the speed slider should be changed. To do this, I have altered the code so that a lower value of the slider will result in a faster visualization. This change has been reflected in the live version of the project.
+Having contemplated this user feedback, I have decided that the speed slider should be changed. To do this, I have altered the code so that a lower value of the slider will result in a slower visualization. This change has been reflected in the live version of the project.
 \paragraph*{Before}
-previously the value of the slider was used as the value of the speed. When the value of the slider was lower, the value of the animation was slower and hance the visualization was faster.
+previously the value of the slider was used as the value of the speed. When the value of the slider was higher, the delay for the animation was higher and hence the visualization was slower.
 \lstinputlisting[language=JavaScript, linewidth=1\linewidth]{./previous.jsx}
 \paragraph*{After}
 With the changes shown below, the current value of the slider is subtracted from the max value of the slider (0.3s). This is then used as the value of the animation, meaning that a lower value of the slider will result in a higher delay, and hence a slower visualization.
