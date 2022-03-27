@@ -1,5 +1,5 @@
-\contentsline {section}{\numberline {1}analysis}{3}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Project Description}{3}{subsection.1.1}%
+\contentsline {section}{\numberline {1}analysis}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Project Description}{4}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Research}{4}{subsection.1.2}%
 \contentsline {subsubsection}{\numberline {1.2.1}Overview}{4}{subsubsection.1.2.1}%
 \contentsline {subsubsection}{\numberline {1.2.2}Research Log}{4}{subsubsection.1.2.2}%
@@ -10,17 +10,17 @@
 \contentsline {paragraph}{\numberline {1.3.1.1}Example 1}{6}{paragraph.1.3.1.1}%
 \contentsline {paragraph}{\numberline {1.3.1.2}Example 2}{7}{paragraph.1.3.1.2}%
 \contentsline {paragraph}{\numberline {1.3.1.3}Example 3}{8}{paragraph.1.3.1.3}%
-\contentsline {subsubsection}{\numberline {1.3.2}Proposed Solution}{10}{subsubsection.1.3.2}%
-\contentsline {subsubsection}{\numberline {1.3.3}Prospective Users}{10}{subsubsection.1.3.3}%
-\contentsline {paragraph}{\numberline {1.3.3.1}Questions To Users}{10}{paragraph.1.3.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}Prospective Users}{10}{subsubsection.1.3.2}%
+\contentsline {paragraph}{\numberline {1.3.2.1}Questions To Users}{10}{paragraph.1.3.2.1}%
+\contentsline {subsubsection}{\numberline {1.3.3}Proposed Solution}{10}{subsubsection.1.3.3}%
 \contentsline {subsection}{\numberline {1.4}Objectives}{11}{subsection.1.4}%
 \contentsline {subsubsection}{\numberline {1.4.1}Generate Mazes}{11}{subsubsection.1.4.1}%
 \contentsline {subsubsection}{\numberline {1.4.2}Solve Mazes}{11}{subsubsection.1.4.2}%
-\contentsline {subsubsection}{\numberline {1.4.3}Customisation}{12}{subsubsection.1.4.3}%
+\contentsline {subsubsection}{\numberline {1.4.3}Customisation}{11}{subsubsection.1.4.3}%
 \contentsline {subsubsection}{\numberline {1.4.4}User written algorithms}{12}{subsubsection.1.4.4}%
 \contentsline {subsubsection}{\numberline {1.4.5}Update Visualization}{12}{subsubsection.1.4.5}%
-\contentsline {section}{\numberline {2}Documented Design}{12}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Visualization Structure}{12}{subsection.2.1}%
+\contentsline {section}{\numberline {2}Documented Design}{13}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Visualization Structure}{13}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}User Interaction Flow Chart}{14}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}User Interface}{15}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Classes Breakdown}{15}{subsection.2.4}%
@@ -85,39 +85,39 @@
 \contentsline {subsubsection}{\numberline {2.7.28}Settings.jsx: Settings: handelSizeChange}{25}{subsubsection.2.7.28}%
 \contentsline {subsubsection}{\numberline {2.7.29}Settings.jsx: Settings: setHeuristic}{25}{subsubsection.2.7.29}%
 \contentsline {subsubsection}{\numberline {2.7.30}Settings.jsx: Settings: renderSettings}{25}{subsubsection.2.7.30}%
-\contentsline {section}{\numberline {3}Technical Solution}{25}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Summary Of Skills Used}{25}{subsection.3.1}%
+\contentsline {section}{\numberline {3}Technical Solution}{26}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Summary Of Skills Used}{26}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}The Full Code}{26}{subsection.3.2}%
 \contentsline {subsubsection}{\numberline {3.2.1}Python API: lambda\_function.py}{26}{subsubsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.2}Python API: grid.py}{28}{subsubsection.3.2.2}%
 \contentsline {subsubsection}{\numberline {3.2.3}Python API: generator.py}{30}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.4}Python API: solver.py}{32}{subsubsection.3.2.4}%
-\contentsline {subsubsection}{\numberline {3.2.5}React App: App.js}{36}{subsubsection.3.2.5}%
-\contentsline {subsubsection}{\numberline {3.2.6}React App: Menu.jsx}{41}{subsubsection.3.2.6}%
+\contentsline {subsubsection}{\numberline {3.2.4}Python API: solver.py}{33}{subsubsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.5}React App: App.js}{37}{subsubsection.3.2.5}%
+\contentsline {subsubsection}{\numberline {3.2.6}React App: Menu.jsx}{42}{subsubsection.3.2.6}%
 \contentsline {subsubsection}{\numberline {3.2.7}React App: MenuKey.jsx}{42}{subsubsection.3.2.7}%
-\contentsline {subsubsection}{\numberline {3.2.8}React App: DisplayGrid.jsx}{42}{subsubsection.3.2.8}%
-\contentsline {subsubsection}{\numberline {3.2.9}React App: DisplayNode.jsx}{44}{subsubsection.3.2.9}%
-\contentsline {section}{\numberline {4}Testing}{46}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Test 8: Pass}{50}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Test 9: Pass}{50}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Test 10: Pass}{50}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Evidence of Completeness}{50}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Objectives Again}{50}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {5.1.1}Generate Mazes}{50}{subsubsection.5.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.2}Solve Mazes}{51}{subsubsection.5.1.2}%
-\contentsline {subsubsection}{\numberline {5.1.3}Customisation}{51}{subsubsection.5.1.3}%
-\contentsline {subsubsection}{\numberline {5.1.4}User written algorithms}{51}{subsubsection.5.1.4}%
-\contentsline {subsubsection}{\numberline {5.1.5}Update Visualization}{51}{subsubsection.5.1.5}%
-\contentsline {subsection}{\numberline {5.2}Evaluation of Objectives}{51}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {5.2.1}Generate Mazes}{51}{subsubsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2}Solve Mazes}{52}{subsubsection.5.2.2}%
-\contentsline {subsubsection}{\numberline {5.2.3}Customisation}{52}{subsubsection.5.2.3}%
-\contentsline {subsubsection}{\numberline {5.2.4}User written algorithms}{52}{subsubsection.5.2.4}%
-\contentsline {subsubsection}{\numberline {5.2.5}Update Visualization}{52}{subsubsection.5.2.5}%
-\contentsline {section}{\numberline {6}Evaluation}{52}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Independent Feedback}{52}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Response to Independent Feedback}{53}{subsection.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.1}Gif}{53}{subsubsection.6.2.1}%
-\contentsline {subsubsection}{\numberline {6.2.2}Speed Slider}{53}{subsubsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.3}Improvements that could be made}{54}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Evaluation}{54}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {3.2.8}React App: DisplayGrid.jsx}{43}{subsubsection.3.2.8}%
+\contentsline {subsubsection}{\numberline {3.2.9}React App: DisplayNode.jsx}{45}{subsubsection.3.2.9}%
+\contentsline {section}{\numberline {4}Testing}{48}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Test 8: Pass}{51}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Test 9: Pass}{51}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Test 10: Pass}{51}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Evidence of Completeness}{52}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Objectives Again}{52}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Generate Mazes}{52}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}Solve Mazes}{52}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.3}Customisation}{52}{subsubsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.4}User written algorithms}{52}{subsubsection.5.1.4}%
+\contentsline {subsubsection}{\numberline {5.1.5}Update Visualization}{52}{subsubsection.5.1.5}%
+\contentsline {subsection}{\numberline {5.2}Evaluation of Objectives}{52}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Generate Mazes}{52}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Solve Mazes}{53}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.3}Customisation}{53}{subsubsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.4}User written algorithms}{53}{subsubsection.5.2.4}%
+\contentsline {subsubsection}{\numberline {5.2.5}Update Visualization}{53}{subsubsection.5.2.5}%
+\contentsline {section}{\numberline {6}Evaluation}{54}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Independent Feedback}{54}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Response to Independent Feedback}{54}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Gif}{54}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}Speed Slider}{54}{subsubsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.3}Improvements that could be made}{55}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Evaluation}{55}{subsection.6.4}%

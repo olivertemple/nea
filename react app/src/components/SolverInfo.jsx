@@ -9,7 +9,7 @@ export default function SolverInfo(props) {
         info = "Depth First Search works by searching from a start node and fully exploring a path before moving on to the next node. It uses a stack to store the nodes that it needs to explore. It is not guaranteed to find the shortest path."
     }else if (props.solver === "bfs"){
         title = "Breadth First Search"
-        info = "Depth First Search works by searching from a start node and expanding outwards radially until it reaches the end node. It uses a queue to store the nodes that it needs to explore. It is not guaranteed to find the shortest path."
+        info = "Breadth First Search works by searching from a start node and expanding outwards radially until it reaches the end node. It uses a queue to store the nodes that it needs to explore. It is not guaranteed to find the shortest path."
     }else if (props.solver === "greedy"){
         title = "Greedy"
         info = "The greedy algorithm works by finding the node with the lowest heuristic value and expanding it. It is a greedy algorithm because it will always choose the node with the lowest heuristic value. It is not guaranteed to find the shortest path."

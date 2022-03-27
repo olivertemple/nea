@@ -1,3 +1,7 @@
+#Oliver Temple Computer Science NEA 2022
+#python version 3.10.4
+#https://github.com/olivertemple/nea
+#Generator class for generating mazes in the aws lambda function
 import random
 import sys
 

@@ -1,7 +1,14 @@
+#Oliver Temple Computer Science NEA 2022
+#python version 3.10.4
+#https://github.com/olivertemple/nea
+#AWS Lambda function for generating and solving mazes
+
 import json
 from generator import Generator
 from grid import Grid
 from solver import Solver
+
+##This function is where the python api is run from. It is hosted in an AWS lambda function, and this function is called when a request is made.
 def lambda_handler(event, context):
     #get the parameters from the url query
     width = event["queryStringParameters"]["width"]

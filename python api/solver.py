@@ -1,3 +1,7 @@
+#Oliver Temple Computer Science NEA 2022
+#python version 3.10.4
+#https://github.com/olivertemple/nea
+#Solver class for solving mazes in the aws lambda function
 import math
 class Solver:
     def __init__(self):

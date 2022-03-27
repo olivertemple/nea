@@ -136,25 +136,24 @@
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{Path-finding Algorithms and Solving Mazes}
-\lhead{Oliver Temple - -}
+\lhead{Oliver Temple - 1952}
 \rfoot{\thepage}
 \lfoot{Path-finding Algorithms and Solving Mazes}
 
 \title{Path-finding Algorithms and Solving Mazes}
 
-\author{Oliver Temple \\ -}
+\author{Oliver Temple \\ 1952}
 \date{Spring 2022}
 \begin{document}
 
 \maketitle
 \tableofcontents
-
+\newpage
 \section{analysis}
 \subsection{Project Description}
 Path finding algorithms are essential in many aspects of computer science, from computer games to solving complex real world problems, however they can be difficult to visualize, especially when learning about them for the first time. This project's aim to create a path finding visualization tool that will generate and solve mazes, and to provide a general understanding of the algorithms used. 
 
 There are a number of different algorithms that can be used to solve and generate mazes, and this project will focus on the more common ones like Dijkstra's, Depth First Search, Prims and more. I intend to include algorithms that are different from each other to show the advantages and disadvantages of each.
-
 \subsection{Research}
 \subsubsection{Overview}
 To complete this project, I will need a strong understanding of maze generation and path finding algorithms, how they work and how to model them, knowledge of react and javascript to create a website for the visualization as well as user opinions on what features are needed.
@@ -311,18 +310,6 @@ In this example, mazes can be generated or drawn, however, mazes can only be gen
     \item Fewer path finding algorithms to solve the maze.
 \end{itemize}
 
-\subsubsection{Proposed Solution}
-I will make a path-finding visualization that encompasses as many of the merits of the existing solutions as possible, while also tackling as many of the drawbacks. To do this, I will take the following steps:
-\begin{itemize}
-    \item Research the different algorithms needed and write the corresponding algorithm.
-    \item Create a mockup of the user interface.
-    \item Create the user interface in react.
-    \item Code the algorithms in python.
-    \item Create an AWS lambda function in python that runs the algorithms as an API.
-    \item Create the react website to visualize the algorithms.
-    \item Add additional features suggested by end users.
-    \item Test visualization and check that it meets all of the objectives.
-\end{itemize}
 \subsubsection{Prospective Users}
 The users of this system will most likely consist of teachers and students who are learning about path finding algorithms as it will clearly show how the algorithms function.
 \paragraph{Questions To Users}
@@ -337,11 +324,26 @@ I asked a student in my Computer Science class, who is a prospective user, some 
 \paragraph*{Answers}
 \begin{enumerate}
     \item[A1.]I would like to see recursive backtracking and Prim's algorithms used for maze generation, as well as Kruskal's (less important). This is because recursive backtracking and Prims are similar but each has their own advantages and disadvantages and recursive backtracking is different and uses recursion.
-    \item[A2.]I would like to see an algorithm(such as Dijkstra's) as well as a heuristic(such as A* or a greedy search), as this will show the difference between a heuristic and an algorithm.
+    \item[A2.]I would like to see an algorithm(such as Dijkstra's) as well as a heuristic(such as A* or a greedy search), as this will highlight what makes a heuristic different.
     \item[A3.]The ability to change the speed of the visualization.
     \item[A4.]I would find it useful to be able to code my own algorithms. This would allow me to use the visualization with other, lesser known algorithms that I may want to visualize.
 \end{enumerate}
 The answers to these questions confirms what is required from the visualization, which will be reflected in the objectives. The need for contrasting algorithms is something that I will consider when deciding what algorithms to use.
+
+
+\subsubsection{Proposed Solution}
+I will make a path-finding visualization that encompasses as many of the merits of the existing solutions as possible, while also tackling as many of the drawbacks. To do this, I will take the following steps:
+\begin{itemize}
+    \item Research the different algorithms needed and write the corresponding algorithm.
+    \item Create a mockup of the user interface.
+    \item Create the user interface in react.
+    \item Code the algorithms in python.
+    \item Create an AWS lambda function in python that runs the algorithms as an API.
+    \item Create the react website to visualize the algorithms.
+    \item Add additional features suggested by end users.
+    \item Test visualization and check that it meets all of the objectives.
+\end{itemize}
+
 \subsection{Objectives}
 \subsubsection{Generate Mazes}
 The website should be able to generate mazes using multiple algorithms, including, but not limited to:
@@ -379,7 +381,7 @@ The website should be able to run algorithms written by the user for both maze g
 
 \subsubsection{Update Visualization}
 If the start or end nodes are moved once the visualization has been run, then it should update without the user having to rerun the visualization.
-
+\newpage
 \section{Documented Design}
 \subsection{Visualization Structure}
 The project will be split into two main sections, the first being the visualization and the second being the python API.
@@ -682,6 +684,7 @@ Callback function to change the heuristic used for the greedy search in the pare
 \subsubsection{Settings.jsx: Settings: renderSettings}
 Method to render the settings component if the settings button is clicked.
 
+\newpage
 \section{Technical Solution}
 A running solution of the project is available at \url{https://nea.olivertemple.dev/}.
 \subsection{Summary Of Skills Used}
@@ -749,7 +752,7 @@ These tables are a list of some of the skills I have used in this project, with 
 
 \subsubsection{React App: DisplayNode.jsx}
 \lstinputlisting[language=JavaScript, linewidth=\linewidth]{../react app/src/components/DisplayNode.jsx}
-
+\newpage
 \section{Testing}
 To test the project as a whole, I will check the following:
 \begin{enumerate}
@@ -830,7 +833,7 @@ As seen in the video, when there is no maze to solve, an error is thrown in the 
 \subsection{Test 10: Pass}
 \url{https://youtu.be/JKMkkur1sIo}
 As seen in the video, when no maze solving algorithm is selected, an error is thrown in the form of an alert from the website, informing the user that a maze solving algorithm must be selected before the maze can be solved. The requirements for this test have been met.
-
+\newpage
 \section{Evidence of Completeness}  
 \subsection{Objectives Again}
 \subsubsection{Generate Mazes}
@@ -881,11 +884,11 @@ Unfortunately, the project is unable to run user written algorithms. This is bec
 
 \subsubsection{Update Visualization}
 The project is able to update the visualization without the user having to rerun the visualization when the start or end nodes are moved, as stated in the objective above.
-
+\newpage
 \section{Evaluation}
 \subsection{Independent Feedback}
 I wanted to go back to the end users (students in my class and computer science teachers at my school) with the finished visualization, to see if they had any feedback on the project or any ideas on further improvements that could be made.
-There feedback was:
+Their feedback was:
 \begin{itemize}
     \item[Item 1.]"I thought that the menus were intuitive, and that the key was very useful to know what the different coloured squares meant."
     \item[Item 2.]"It could be helpful to download a gif animation of the maze being solved, particularly in the case of a teacher sharing it with the class." 
@@ -918,6 +921,7 @@ previously the value of the slider was used as the value of the speed. When the 
 \paragraph*{After}
 With the changes shown below, the current value of the slider is subtracted from the max value of the slider (0.3s). This is then used as the value of the animation, meaning that a lower value of the slider will result in a higher delay, and hence a slower visualization.
 \lstinputlisting[language=JavaScript, linewidth=1\linewidth]{./current.jsx}
+
 \subsection{Improvements that could be made}
 There a few improvements that I would make to this project if I had more time:
 \begin{enumerate}

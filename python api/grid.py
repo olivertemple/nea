@@ -1,3 +1,8 @@
+#Oliver Temple Computer Science NEA 2022
+#python version 3.10.4
+#https://github.com/olivertemple/nea
+#Grid and Node classes for generating and solving mazes
+
 #Node class for each node in the grid
 class Node:
     def __init__(self, x, y, type):
