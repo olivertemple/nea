@@ -837,21 +837,38 @@ As seen in the video, when no maze solving algorithm is selected, an error is th
 \section{Evidence of Completeness}  
 \subsection{Objectives Again}
 \subsubsection{Generate Mazes}
-The website should be able to generate mazes using multiple algorithms, including, but not limited to: Prim's algorithm and recursive backtracking. There should also be a brief description of the algorithm that has been selected.
+The website should be able to generate mazes using multiple algorithms, including, but not limited to:
+\begin{itemize}
+    \item Prim's Algorithm
+    \item Recursive Backtracking
+\end{itemize}
+There should also be a brief description of the algorithm that has been selected.
 
 \subsubsection{Solve Mazes}
-The website should be able to solve mazes using multiple algorithms, including, but not limited to: greedy search, Dijkstra's algorithms, depth-first search and breadth-first search. There should also be a brief description of the algorithm that has been selected.
+The website should be able to solve mazes using multiple algorithms, including, but not limited to:
+\begin{itemize}
+    \item Greedy Search
+    \item Dijkstra's Algorithm
+    \item Depth-first Search
+    \item Breadth-first Search
+\end{itemize}
+There should also be a brief description of the algorithm that has been selected.
 
 \subsubsection{Customisation}
 The user should be able to customize aspects of the visualization, including:
-\begin{itemize}
+\begin{enumerate}
     \item Size of the maze.
     \item Speed of the animation.
     \item The heuristic used in any heuristic algorithms.
-\end{itemize}
+\end{enumerate}
 
 \subsubsection{User written algorithms}
-The website should be able to run algorithms written by the user for both maze generation and solving. This will be done by supplying documentation on what parameters need to be taken in and what will need to be returned from the function for the visualizer to work.
+The website should be able to run algorithms written by the user for both maze generation and solving. To do this I will:
+\begin{itemize}
+    \item Supply documentation on parameters needed for the algorithm.
+    \item Supply documentation of the format the maze must be returned in.
+    \item Supply documentation for any other information that the user may need to write an algorithm.
+\end{itemize}
 
 \subsubsection{Update Visualization}
 If the start or end nodes are moved once the visualization has been run, then it should update without the user having to rerun the visualization.
